@@ -15,22 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/inscription', function(){
-    return view('Inscription');
-});
+//on a nos route qui font appel au controller qui gérera l'inscription 
+Route::get('/inscription','Users_Sign_In_Control@Sign_in_page');
 
-Route::post('/inscription', function(){
-
-    $user= new App\Users;
-
-    $user->Name_user=request('name_user');
-    $user->Surname_user=request('surname_user');
-    $user->Localisation_user=request('localisation_user');
-    $user->Email_user=request('email_user');
-    $user->Password_user=request('password_user');
-    $user->Status_user='Etudiant';
-
-    $user->save();
-
-    return "Inscription recue";
-});
+Route::post('/inscription', 'Users_Sign_In_Control@Sign_in');
