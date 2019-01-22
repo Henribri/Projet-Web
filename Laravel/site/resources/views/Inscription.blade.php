@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Inscription</title>
-</head>
-<body>
+@extends('Layout')
+
+@section('contenu')
     <!--Ici on a notre formulaire et on affiche les erreurs à notre utilisateurs -->
     <form method='post'>
         {{ csrf_field() }}
@@ -42,6 +36,4 @@
             <option value='Paris'>Paris</option>
         </select>
         <input type='submit' name='validation' placeholder='OK'>
-
-</body>
-</html>
+@endsection

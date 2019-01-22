@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Utilisateur;
+use App\Users;
 
 class Users_Sign_In_Control extends Controller
 {
@@ -39,7 +39,7 @@ class Users_Sign_In_Control extends Controller
         'Localisation_user'=>request('localisation_user'),
         'Email_user'=>request('email_user'),
         'Password_user'=>request('password_user'),
-        'Status_user'=>'Etudiant',
+        'Id_status'=>'1',
 
     ]);
 
