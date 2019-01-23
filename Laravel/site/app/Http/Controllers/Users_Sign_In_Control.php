@@ -38,7 +38,7 @@ class Users_Sign_In_Control extends Controller
         'Surname_user'=>request('surname_user'),
         'Localisation_user'=>request('localisation_user'),
         'Email_user'=>request('email_user'),
-        'Password_user'=>request('password_user'),
+        'Password_user'=>bcrypt(request('password_user')),
         'Id_status'=>'1',
 
     ]);
