@@ -7,6 +7,6 @@
     <title>Acceuil</title>
 </head>
 <body>
-    
+    Bienvenue sur l'acceuil
 </body>
 </html>
