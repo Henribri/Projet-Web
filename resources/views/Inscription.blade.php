@@ -42,6 +42,6 @@
             <option value='Paris'>Paris</option>
         </select>
         <input type='submit' name='validation' placeholder='OK'>
-
+    </form>
 </body>
 </html>

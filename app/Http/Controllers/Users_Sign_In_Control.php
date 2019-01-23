@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Utilisateur;
+use App\Users;
 
 class Users_Sign_In_Control extends Controller
 {
@@ -26,10 +26,12 @@ class Users_Sign_In_Control extends Controller
         'name_user'=>['required'],
         'surname_user'=>['required'],
         'localisation_user'=>['required'],
-        'email_user'=>['required','email'],
+        'email_user'=>['required','email','unique:users,Email_user'], //on verifie qur l'utilisateur ne soit pas déjà inscrit
         'password_user'=>['required','confirmed','min:5'],
         'password_user_confirmation'=>['required'],
+        
         ]);
+
 
 
         //ORM
@@ -38,8 +40,8 @@ class Users_Sign_In_Control extends Controller
         'Surname_user'=>request('surname_user'),
         'Localisation_user'=>request('localisation_user'),
         'Email_user'=>request('email_user'),
-        'Password_user'=>request('password_user'),
-        'Status_user'=>'Etudiant',
+        'Password_user'=>bcrypt(request('password_user')),
+        'Id_Status'=>1,
 
     ]);
 
