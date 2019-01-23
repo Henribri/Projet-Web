@@ -24,3 +24,6 @@ Route::post('/inscription', 'Users_Sign_In_Control@Sign_in');
 Route::get('/connexion' , 'Users_Connexion@formulaire');
 
 Route::post('/connexion' , 'Users_Connexion@traitement');
+
+//route qui permettent d'accéder à la création d'idée
+Route::get('/Create_idea' , 'Create_idea_controller@Create_idea_page');
