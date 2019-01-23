@@ -2,6 +2,6 @@
 
 @section('contenu')
                 <div class="title m-b-md">
-                    Bonjour
+                    Bienvenue
                 </div>
 @endsection

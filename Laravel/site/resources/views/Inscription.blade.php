@@ -35,5 +35,5 @@
             <option value='Lille'>Lille</option>
             <option value='Paris'>Paris</option>
         </select><p>
-        <input type='submit' name='validation' placeholder='OK'>
+        <input type='submit' name='validation' placeholder='Inscription'>
 @endsection
