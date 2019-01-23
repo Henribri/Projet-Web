@@ -23,7 +23,33 @@ Route::get('/bonjour/{nom}', function(){
     return view('bonjour' , ['prenom' => request('nom')]);
 });
 
-//on a nos route qui font appel au controller qui gérera l'inscription 
-Route::get('/inscription','Users_Sign_In_Control@Sign_in_page');
+Route::get('/inscription', function(){
+    return view('inscription');
+});
 
-Route::post('/inscription', 'Users_Sign_In_Control@Sign_in');
+Route::post('/inscription', function(){
+    request()->validate([
+        'name_user' => ['required'],
+        'surname_user' => ['required'],
+        'localisation_user' => ['required'],
+        'email_user' => ['required' , 'email'],
+        'password_user' => ['required' , 'confirmed' , 'min:6'] ,
+        'password_user_confirmation' => ['required'],
+    ]);
+
+    $user = App\Users::create([
+        'Name_user' => request('name_user'),
+        'Surname_user' => request('surname_user'),
+        'Localisation_user' => request('localisation_user'),
+        'Email_user' => request('email_user'),
+        'Password_user' => request('password_user'),
+        'Id_status' => 1, 
+    ]);
+    
+    return "Formulaire reçu";
+});
+
+//on a nos route qui font appel au controller qui gérera l'inscription 
+//Route::get('/inscription','Users_Sign_In_Control@Sign_in_page');
+
+//Route::post('/inscription', 'Users_Sign_In_Control@Sign_in');
