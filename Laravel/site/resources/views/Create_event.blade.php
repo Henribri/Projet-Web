@@ -14,5 +14,15 @@
             {{$errors->first('description_event')}}
         @endif
 
-        <p><input type='submit' name='validation' placeholder=''></p>
+        <p><input type='text' name='date_event' placeholder='Date (format YYYY-MM-DD)' value="{{old('date_event')}}"></p>
+        @if($errors->has('date_event'))
+            {{$errors->first('date_event')}}
+        @endif
+
+        <p><input type='text' name='cost_event' placeholder='Prix' value="{{old('cost_event')}}"></p>
+        @if($errors->has('cost_event'))
+            {{$errors->first('cost_event')}}
+        @endif
+
+        <p><input type='submit' name='validation' placeholder='Valider'></p>
 @endsection

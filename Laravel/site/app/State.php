@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Vote extends Model
+class State extends Model
 {
     //pb de bdd sans ca
     public $timestamps = false;

@@ -26,4 +26,11 @@ Route::get('/connexion' , 'Users_Connexion@formulaire');
 Route::post('/connexion' , 'Users_Connexion@traitement');
 
 //route qui permettent d'accéder à la création d'idée
-Route::get('/Create_idea' , 'Create_idea_controller@Create_idea_page');
+Route::get('/create_idea' , 'Create_idea_controller@Create_idea_page');
+
+Route::post('/create_idea' , 'Create_idea_controller@Create_idea');
+
+//route qui permettent d'accéder à la création d'événements
+Route::get('/create_event' , 'Create_event_controller@Create_event_page');
+
+Route::post('/create_event' , 'Create_event_controller@Create_event');
