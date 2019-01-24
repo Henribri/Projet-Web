@@ -1,0 +1,48 @@
+h2{
+    text-align:center;
+    font-size: 1.5em;
+}
+.container{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+    flex-wrap: wrap;
+}
+
+.image img {
+/* La transition s'applique à la fois sur la largeur et la hauteur, avec une durée d'une seconde. */
+	transition: all 0.65s ease;
+	width: 15em;
+	height: 15em;
+	filter: opacity(50%);
+	border-radius: 25px;
+    overflow: hidden;
+    margin:auto;
+    padding: auto;
+    margin: 2em 2em 2em 2em;
+}
+
+main img:hover {
+	/* L'image est grossie de 25% */
+	-webkit-transform:scale(1.25); /* Safari et Chrome */
+	-moz-transform:scale(1.25); /* Firefox */
+	-ms-transform:scale(1.25); /* Internet Explorer 9 */
+	-o-transform:scale(1.25); /* Opera */
+	transform:scale(1.25);
+	filter: opacity(100%);
+	width: 17em;
+	height: 17em;
+}
+
+@media (min-width: 640px) {
+    .image img{
+        margin: 2em 2em 2em 2em;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .image img{
+        margin: 2em 2em 2em 2em;
+    }
+}
