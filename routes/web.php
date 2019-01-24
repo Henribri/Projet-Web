@@ -31,6 +31,10 @@ Route::get('/connexion','ConnexionCtrl@Formulaire');
 
 Route::post('/connexion', 'ConnexionCtrl@Log_in');
 
+Route::get('/deconnexion', 'Log_outCtrl@Log_out');
+
+Route::get('/updateevent', 'Create_eventCtrl@Update');
+
 /*
 Auth::routes();
 

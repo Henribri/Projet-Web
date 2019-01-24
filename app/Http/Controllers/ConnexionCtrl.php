@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 
 class ConnexionCtrl extends Controller
@@ -12,12 +13,11 @@ class ConnexionCtrl extends Controller
 
     function Formulaire(){
 
+
         return view('Connexion');
     }
 
     function Log_in(){
-
-
         request()->validate([
         'email_user'=>['required','email'], //on verifie qur l'utilisateur ne soit pas déjà inscrit
         'password_user'=>['required'],
@@ -26,7 +26,7 @@ class ConnexionCtrl extends Controller
 
 
 
-    $resultat=auth()->attempt([
+    auth()->attempt([
 
         'Email_user'=>request('email_user'),
         'password'=>request('password_user'),
@@ -38,10 +38,23 @@ class ConnexionCtrl extends Controller
 
         //on prend la personne log in
         $user=auth::user();
+
         //on declare une session pour dire que le user est bien log(auth ne fonctionnant pas sur les autres pages)
-        session()->put('connexion', true);
+
+        //inner join pour recuperer le status
+        $status_user = DB::table('users')
+            ->join('status', 'users.Id_status', '=', 'status.Id_status')
+            ->select('Status')
+            ->where('users.Id_user', $user->Id_user)
+            ->get();
+
+
+        session()->put('Status_user', $status_user[0]->Status);
         //on met en session l'id de l'utilissateur
-        session()->put('id_user', $user->Id_user);
+        session()->put('Id_user', $user->Id_user);
+        session()->put('Email_user', $user->Email_user);
+        session()->put('Name_user', $user->Name_user);
+        session()->put('Surname_user', $user->Surname_user);
         return redirect('/event');
         
     }

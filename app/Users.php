@@ -10,7 +10,7 @@ class Users extends Model implements Authenticatable{
 
     use BasicAuthenticatable;
 
-    //pb de bdd sans ca
+    //pb de bdd sans ca (on enleve les Create at etc...)
     public $timestamps = false;
 
     //les colonnes qu'on va remplir avec laravel
