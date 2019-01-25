@@ -9,23 +9,18 @@
 @endsection
 
 @section('main_content')
-
-<form action="/action_page.php">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-    <label for="country">Country</label>
+<div id="form">
+    <form>
+    <input id="name" type="text" name="event_name" placeholder="Nom de lévènement">
+    <input id="" type="text" name="event_name" placeholder="Date de lévènement">
+    <input id="" type="text" name="comment" placeholder="Description de l'évènements">
+    <input id="" type="text" name="recurence" placeholder="Nombre de récurence">
     <select id="country" name="country">
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
-    </select>
-  
-    <input type="submit" value="Submit">
-  </form>
+      <option value="public">Publique</option>
+      <option value="private">Privée</option>
+    <input id="" type="text" name="public_event" placeholder="Type de l'évènement">
+    </form>
+</div>
 
 @endsection
 
