@@ -9,6 +9,8 @@ class Image extends Model
     //pb de bdd sans ca
     public $timestamps = false;
 
+    protected $table = '_image';
+
     //les colonnes qu'on va remplir avec laravel
     protected $fillable=['Id_image' , 'Image'];
 }

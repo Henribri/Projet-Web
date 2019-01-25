@@ -1,0 +1,77 @@
+.global_container .events{
+    height: auto;
+    margin-top: 7px;
+}
+
+p{
+    height:100%;
+    text-align: center;
+}
+
+.global_container .container{
+    height: auto;
+    border-width:4px;
+    border-style: double;
+    border-color:black;
+}
+
+button{
+    background-color: #F2EFEF;
+    border:5px;
+    border-radius: 10px;
+    font-family: 'Cantarell';
+    padding:5px;
+    transition:0.2s;
+}
+.form img{
+    height: 3em;
+    width: 3em;
+    top:100px;
+}
+.form  {
+    float:right;
+    right:10px;
+    margin-bottom: 15px;
+
+}
+.comment{
+    display:inline-block;
+    text-align: center;
+    margin-top:10px;
+}
+.like img {
+    height: 3em;
+    width: 3em;
+    top:100px;
+    float: left;
+}
+.like{
+    float: left;
+}
+@media (min-width: 640px) {
+
+    .global_container{
+        margin:2px;
+        }        
+}
+
+@media (min-width: 1200px) {
+.events{
+     display: block;
+    width: 100%;
+    height: auto;
+        }
+
+.global_container{
+text-align: center;
+    }
+
+.global_container .container{
+    display: inline-block;
+    width: 25%;
+    margin: 50px;
+    margin-top: 50px;
+    padding:5px;
+            }
+}
+

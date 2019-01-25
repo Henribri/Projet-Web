@@ -15,15 +15,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//on a nos route qui font appel au controller qui gérera l'inscription 
+//route qui permettent de créer un utilisateur
 Route::get('/inscription','User_Sign_In_Control@Sign_in_page');
 
 Route::post('/inscription', 'User_Sign_In_Control@Sign_in');
 
-//route qui permettent d'accéder à la connexion
-Route::get('/connexion' , 'Users_Connexion@formulaire');
+//Route pour afficher les utilisateurs
+Route::get('/list_user', 'list_user_controller@display_user');
 
-Route::post('/connexion' , 'Users_Connexion@traitement');
+//route qui permettent d'accéder à la connexion
+Route::get('/connexion' , 'User_Connexion@formulaire');
+
+Route::post('/connexion' , 'User_Connexion@Log_in');
+
+route::get('/mon-compte', 'Connexion_controller@accueil');
 
 //route qui permettent d'accéder à la création d'idée
 Route::get('/create_idea' , 'Create_idea_controller@Create_idea_page');

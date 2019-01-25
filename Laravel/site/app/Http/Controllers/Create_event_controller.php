@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Events;
+use App\Event;
 
 class Create_event_controller extends Controller
 {
@@ -26,7 +26,7 @@ class Create_event_controller extends Controller
         ]);
 
         //ORM
-    $event= Events::create([
+    $event= Event::create([
         'Name_event'=>request('name_event'),
         'Description_event'=>request('description_event'),
         'Date_event'=>request('date_event'),
