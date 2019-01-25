@@ -24,7 +24,6 @@ p{
     text-align: center;
     width: 50%;
     transform: translateX(50%);
-    top:10px;
 }
 
 ul {
@@ -32,7 +31,6 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    /*border: 1px solid #e7e7e7;*/
     background-color: #f3f3f3;
 }
 
@@ -79,36 +77,41 @@ button{
     font-family: 'Cantarell';
     padding:5px;
     transition:0.2s;
+    margin:20px;
 }
 
-/*Form for subscribe*/
-.form img{
-    height: 3em;
-    width: 3em;
-    top:100px;
-}
-.form  {
-    float:right;
-    right:10px;
-    margin-bottom: 15px;
-
-}
-
-/*Comments*/
-.comment{
-    display:inline-block;
+/*div which contains like and comments*/
+.container_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin-top:10px;
 }
-/*Like*/
-.like img {
+
+/*Comments button*/
+#comment{
+    margin:20px;
+    cursor: pointer;
+}
+
+/*Like button*/
+#like{
+    margin-top:10px;
+    margin:20px;
+    cursor: pointer;
+}
+
+/*Like image*/
+#like img {
     height: 3em;
     width: 3em;
-    top:100px;
-    float: left;
 }
-.like{
-    float: left;
+
+/*Area of comment */
+#comment_text{
+    border-radius: 5px;
+    border-color: black;
+    height : 60px;
 }
 
 /*///////////////////////////////////*/
@@ -121,11 +124,7 @@ button{
 
 .global_container{
     margin:2px;
-    } 
-
-#hidden_tab{
-
-    }       
+    }     
 }
 
 /*///////////////////////////////////*/
@@ -161,3 +160,6 @@ text-align: center;
 
     }
 }
+
+
+

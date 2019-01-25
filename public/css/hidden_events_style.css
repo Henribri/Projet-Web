@@ -81,36 +81,6 @@ button{
     transition:0.2s;
 }
 
-/*Form for subscribe*/
-.form img{
-    height: 3em;
-    width: 3em;
-    top:100px;
-}
-.form  {
-    float:right;
-    right:10px;
-    margin-bottom: 15px;
-
-}
-
-/*Comments*/
-.comment{
-    display:inline-block;
-    text-align: center;
-    margin-top:10px;
-}
-/*Like*/
-.like img {
-    height: 3em;
-    width: 3em;
-    top:100px;
-    float: left;
-}
-.like{
-    float: left;
-}
-
 /*///////////////////////////////////*/
 /*									 */
 /*		      MEDIA QUERIES			 */

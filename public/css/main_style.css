@@ -9,7 +9,7 @@ body{
     font-family: 'Cantarell', sans-serif;
     text-justify: auto;
 }
-
+/*logo cesi*/
 img{
     width: 100%;
     height: auto;
@@ -17,10 +17,10 @@ img{
 
 /*make the header rounded and apply a shadow*/
 header {
-    height: 70px;
+    height: 90px;
     width: 100%;
 	border-radius: 500px/10px;
-	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 5px 5px rgba(18, 62, 207, 0.623);
 }
 
 /*make the header again a rectangle bar of white color*/
@@ -50,12 +50,14 @@ header #banner{
     transform: translateX(-50%);  
 }
 
+/*Title button*/
 header h1{
 	font-size: 1.5em;
 	text-align: center;
 	color:#111;
 }
 
+/*Subscribe button*/
 header button{
     position: fixed;
     right: 10px;
@@ -70,17 +72,18 @@ header button{
     border: 0px;
 }
 
+/*Pop-up subscribe*/
 .bg-modal{
     width: 100%;
     height: 100%;
     background-color:rgba(0, 0, 0, 0.7);
     position:absolute;
     top:0;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1;
-    /*display: none;*/
+    display: none;
 }
 
 .modal-content{
@@ -174,18 +177,35 @@ footer {
 /*///////////////////////////////////*/
 /*									 */
 /*		      MEDIA QUERIES			 */
-/*									 */
+/*			    Tablet				 */
 /*///////////////////////////////////*/
 
 
 @media (min-width: 640px) {
+
 #footer{
 	font-size: 0.75em;
-	}
+    }
+
+header{
+    height:70px;
+    }
 }
 
+/*///////////////////////////////////*/
+/*									 */
+/*		      MEDIA QUERIES			 */
+/*			    Computer			 */
+/*///////////////////////////////////*/
+
 @media (min-width: 1200px) {
+
 #footer{
 	font-size: 1em;
-	}
+    }
+
+header{
+    height: 70px;
+    }
+
 }

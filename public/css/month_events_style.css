@@ -91,26 +91,29 @@ button{
     float:right;
     right:10px;
     margin-bottom: 15px;
-
+}
+.price p{
+    transform: translateX(50%);
+    width: 50%;
+    border-color:black;
+    border-style: solid;
+    border-width: 1px;
 }
 
-/*Comments*/
-.comment{
-    display:inline-block;
-    text-align: center;
-    margin-top:10px;
+.date p{
+    transform: translateX(50%);
+    width: 50%;
+    border-color:black;
+    border-style: solid;
+    border-width: 1px;
 }
-/*Like*/
-.like img {
-    height: 3em;
-    width: 3em;
-    top:100px;
-    float: left;
+.recurent p{
+    transform: translateX(50%);
+    width: 50%;
+    border-color:black;
+    border-style: solid;
+    border-width: 1px;
 }
-.like{
-    float: left;
-}
-
 /*///////////////////////////////////*/
 /*									 */
 /*		      MEDIA QUERIES			 */
@@ -122,12 +125,7 @@ button{
 .global_container{
     margin:2px;
     } 
-
-#hidden_tab{
-
-    }       
 }
-
 /*///////////////////////////////////*/
 /*									 */
 /*		      MEDIA QUERIES			 */

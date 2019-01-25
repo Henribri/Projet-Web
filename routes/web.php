@@ -23,7 +23,21 @@ Route::get('/inscription','Users_Sign_In_Control@Sign_in');
 Route::post('/inscription', 'Users_Sign_In_Control@Sign_in');
 
 
-Route::get('/event', 'Event_user@View_event');
+
+
+Route::get('/events_month', 'Event_user@View_events_month');
+Route::post('/events_month', 'Event_user@Sign_in_event');
+
+Route::get('/events_past', 'Event_user@View_events_past');
+
+Route::get('/events_private', 'Event_user@View_events_private');
+
+Route::get('/events_idea', 'Event_user@View_events_idea');
+
+
+
+
+
 
 Route::post('/event', 'Event_user@Sign_in_event');
 
