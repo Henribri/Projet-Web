@@ -84,9 +84,9 @@
             @yield('contenu')
 
 <div class="links">
-                    <a href="127.0.0.1">Acceuil</a>
-                    <a href="127.0.0.1/Magasin">Boutique</a>
-                    <a href="127.0.0.1/Event">Evenements</a>
+                    <a href="\127.0.0.1">Acceuil</a>
+                    <a href="/127.0.0.1/Magasin">Boutique</a>
+                    <a href="/127.0.0.1/Event">Evenements</a>
                 </div>
             </div>
         </div>

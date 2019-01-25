@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Users;
+use App\User;
 
-class Users_Sign_In_Control extends Controller
+class User_Sign_In_Control extends Controller
 {
     //
 
@@ -33,13 +33,13 @@ class Users_Sign_In_Control extends Controller
 
 
         //ORM
-    $user= Users::create([
+    $user= \App\User::create([
         'Name_user'=>request('name_user'),
         'Surname_user'=>request('surname_user'),
         'Localisation_user'=>request('localisation_user'),
         'Email_user'=>request('email_user'),
         'Password_user'=>bcrypt(request('password_user')),
-        'Id_status'=>'1',
+        'Id_statue'=>'1',
 
     ]);
 

@@ -34,7 +34,7 @@ class Create_event_controller extends Controller
         'Cost_event'=>request('cost_event'),
         'Public_event'=>'1',
         'Id_user'=>'6',
-        'Id_state'=>'1',
+        'Id_state'=>'2',
         'Id_user_users'=>'6',
         'Id_image'=>'1',
     ]);

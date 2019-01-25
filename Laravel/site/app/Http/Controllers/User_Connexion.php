@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Users;
+use App\User;
 
-class Users_Connexion extends Controller
+class User_Connexion extends Controller
 {
     public function formulaire()
     {
