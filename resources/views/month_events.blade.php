@@ -15,8 +15,8 @@
         <ul>
             <li><a href="month_events">Evènements du mois</a></li>
             <li><a href="past_events">Evènements passés</a></li>
-            <li ><a href= "hidden_events">Evènements créer un évènement</a></li>
-            <li id="center"><a href= "">Evènements créer une idée</a></li>
+            <li ><a href= "create_event">Créer un évènement</a></li>
+            <li ><a href= "create_idea">Créer une idée</a></li>
             <li ><a href= "hidden_events">Evènements cachés</a></li>
         </ul>
     </div>
@@ -169,7 +169,7 @@
                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                         nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                         mollit anim id est laborum.</p>
-                        <div class="form"><button> <img src="/pictures/form.png" alt="Photo Cesi"/></button></div>
+                        <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
                         <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
 </div>
 @endsection

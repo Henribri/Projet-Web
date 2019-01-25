@@ -59,3 +59,13 @@ Route::get('/event-1', function () {
     return view('event-1');
 });
 
+Route::get('/create_idea', function () {
+    return view('create_idea');
+});
+
+
+Route::get('/create_event', function () {
+    return view('create_event');
+});
+
+

@@ -24,7 +24,7 @@
                     @yield('header_content')
                 </div>
                 <button>&#x2630;</button>
-                <div class="container">
+               <div class="container">
                      <button id ="Subscribe"> <img src="/pictures/inscription.png" alt="Photo Cesi"/></button>
                 </div>
             </div>
@@ -33,22 +33,6 @@
         </header>
 
         <main>
-        <div class ="bg-modal">
-            <div class ="modal-content">
-                <div class="close">+</div>
-                    <p>Inscription</p>
-                <form action="">
-                    <input class ="text" type ="email" name = "email_user" maxlength="255" placeholder = "E-mail">
-                    <input class ="text" type ="text" name = "name_user" maxlength="25" placeholder = "Nom">
-                    <input class ="text" type ="text" name = "surname_user" maxlength="25" placeholder = "Prénom">
-                    <input class ="text" type ="text" name = "localisation_user" maxlength="25" placeholder = "Campus">
-                    <input class ="text" type ="password" name = "password_user" maxlength="100" placeholder = "Mot de passe">
-                    <input id="submit"type = "submit" value="M'inscrire">
-                    <input id="submit"type = "submit" value="Se connecter">
-                </form>
-            </div>
-        </div>
-
              @yield('main_content')
         </main>
 
