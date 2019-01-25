@@ -1,10 +1,13 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
 use App\Sign_in;
+
+use App\Events;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -20,10 +23,12 @@ class Event_user extends Controller
 
         
 
+        
+        $Events=Events::all();
 
-
-
-        return view('Event');
+        return view('Event',[
+            'Events'=>$Events,
+        ]);
     }
 
 

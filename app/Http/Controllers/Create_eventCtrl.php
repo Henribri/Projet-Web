@@ -139,13 +139,14 @@ class Create_eventCtrl extends Controller
             ->where('status.Status', 'Tuteur')
             ->get();
 
+            //
         for($i=0; $i<count($BDE); $i++){
             
             $Member=$BDE[$i]->Email_user;
             $tuteur_name=session()->get('Name_user');
             $tuteur_surname=session()->get('Surname_user');
             $type='Evènement';
-            $Name_event='Evenement';//a changer
+            $Name_event='Evenement';//a changer par request(name_event)
     
             Mail::to($Member)->send(new Notification($tuteur_name, $tuteur_surname, $type, $Name_event));
 

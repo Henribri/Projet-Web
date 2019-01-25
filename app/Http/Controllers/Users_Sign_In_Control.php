@@ -27,7 +27,7 @@ class Users_Sign_In_Control extends Controller
         'surname_user'=>['required'],
         'localisation_user'=>['required'],
         'email_user'=>['required','email','unique:users,Email_user'], //on verifie qur l'utilisateur ne soit pas déjà inscrit
-        'password_user'=>['required','confirmed','min:5','regex:/([A-Z]\d)\w+/'],//on verifie qu'il y ai bien une maj et un chiffre
+        'password_user'=>['required','confirmed','min:5','regex:/[A-Z]/','regex:/[0-9]/'],//on verifie qu'il y ai bien une maj et un chiffre
         'password_user_confirmation'=>['required'],
         
         ]);
