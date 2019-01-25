@@ -15,9 +15,9 @@
         <ul>
             <li><a href="month_events">Evènements du mois</a></li>
             <li><a href="past_events">Evènements passés</a></li>
-            <li ><a href= "hidden_events">Evènements cachés</a></li>
             <li ><a href= "hidden_events">Evènements créer un évènement</a></li>
             <li id="center"><a href= "">Evènements créer une idée</a></li>
+            <li ><a href= "hidden_events">Evènements cachés</a></li>
         </ul>
     </div>
 </div>

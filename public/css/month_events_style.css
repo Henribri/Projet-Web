@@ -20,10 +20,10 @@ p{
     margin-top: 5px;
     border: 1px solid #e7e7e7;
 }
+
 #nav_bar{
-    text-align: center;
-    width: 50%;
-    transform: translateX(50%);
+
+    transform: translateX(-100%);
     top:10px;
     width: 100%;
     align-items: center;
@@ -36,10 +36,6 @@ ul {
     overflow: hidden;
     background-color: #f3f3f3;
     align-items:center;
-}
-
-li {
-   float: left;
 }
 
 li a {
