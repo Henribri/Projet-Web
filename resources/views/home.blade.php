@@ -23,7 +23,7 @@
                   
                   <div class="container">
                          
-                        <div class="image"><a href="events"><img src="/pictures/evenements.jpg" alt="Photo évènements"/></a></div>
+                        <div class="image"><a href="month_events"><img src="/pictures/evenements.jpg" alt="Photo évènements"/></a></div>
                         <div class="image"><a href="suggestion_box"><img src="/pictures/boite_a_idees.jpg" alt="Photo boîte à idées"/></a></div>
                         <div class="image"><a href="past_events"><img src="/pictures/past_events.png" alt="Photo évènements passé"/></a></div>
                   </div>

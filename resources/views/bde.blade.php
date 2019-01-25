@@ -5,7 +5,7 @@
 @endsection
 
 @section('header_content')
-<h1>Bureau des élèves</h1>
+<h1>BDE</h1>
 @endsection
 
 @section('main_content')
