@@ -17,7 +17,7 @@ img{
 
 /*make the header rounded and apply a shadow*/
 header {
-    height: 90px;
+    height: 70px;
     width: 100%;
 	border-radius: 500px/10px;
 	box-shadow: 0 5px 5px rgba(18, 62, 207, 0.623);
@@ -52,7 +52,7 @@ header #banner{
 
 /*Title button*/
 header h1{
-	font-size: 1.5em;
+	font-size: 1.2em;
 	text-align: center;
 	color:#111;
 }
@@ -67,7 +67,7 @@ header h1{
 header button{
     position: fixed;
     right: 10px;
-    top: 10px; 
+    top: 2px;
     width: 50px;
     height: 50px;
     font-size: 2.5em;
@@ -196,6 +196,11 @@ footer {
 header{
     height:70px;
     }
+
+    /*Title button*/
+header h1{
+    font-size: 1.4em;
+}
 }
 
 /*///////////////////////////////////*/
@@ -213,5 +218,9 @@ header{
 header{
     height: 70px;
     }
+
+    /*Title button*/
+header h1{
+	font-size: 1.6em;}
 
 }

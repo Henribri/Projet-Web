@@ -22,14 +22,12 @@
                   </div>
                   
                   <div class="container">
-                         
+                        <div class="image"><a href="associations"><img src="/pictures/associations.jpg" alt="Photo associations"/></a></div>       
                         <div class="image"><a href="month_events"><img src="/pictures/evenements.jpg" alt="Photo évènements"/></a></div>
                         <div class="image"><a href="suggestion_box"><img src="/pictures/boite_a_idees.jpg" alt="Photo boîte à idées"/></a></div>
-                        <div class="image"><a href="past_events"><img src="/pictures/past_events.png" alt="Photo évènements passé"/></a></div>
                   </div>
                   
                   <div class="container">
-                         <div class="image"><a href="associations"><img src="/pictures/associations.jpg" alt="Photo associations"/></a></div>
                         <div class="image"><a href="shop"><img src="/pictures/shop.jpg" alt="Photo boutique"/></a></div>
                   </div>
 

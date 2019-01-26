@@ -10,17 +10,18 @@
 
 @section('main_content')
 <div id="container_nav">
-    <div id="nav_bar">
         <ul>
             <li><a href="month_events">Evènements du mois</a></li>
             <li><a href="past_events">Evènements passés</a></li>
-            <li id="hidden_tab"><a href= "hidden_events">Evènements cachés</a></li>
+            <li ><a href= "create_event">Créer un évènement</a></li>
+            <li ><a href= "create_idea">Créer une idée</a></li>
+            <li ><a href= "hidden_events">Evènements cachés</a></li>
         </ul>
-    </div>
 </div>
 
 <div class ="global_container">
 <div class="container">
+    <h2>Titre de lévènement</h2>
             <img class= "events" src="/pictures/bde.jpg" alt="Photo Cesi"/></a>
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.
@@ -37,6 +38,7 @@
                     mollit anim id est laborum.</p>
 </div>
 <div class="container">
+    <h2>Titre de lévènement</h2>
             <img class= "events" src="/pictures/bde.jpg" alt="Photo Cesi"/></a>
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.
@@ -53,6 +55,7 @@
                     mollit anim id est laborum.</p>
 </div>
 <div class="container">
+    <h2>Titre de lévènement</h2>
             <img class= "events" src="/pictures/bde.jpg" alt="Photo Cesi"/></a>
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.
@@ -69,6 +72,7 @@
                     mollit anim id est laborum.</p>
 </div>
 <div class="container">
+    <h2>Titre de lévènement</h2>
             <img class= "events" src="/pictures/bde.jpg" alt="Photo Cesi"/></a>
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.
@@ -85,6 +89,7 @@
                     mollit anim id est laborum.</p>
 </div>
 <div class="container">
+    <h2>Titre de lévènement</h2>
             <img class= "events" src="/pictures/bde.jpg" alt="Photo Cesi"/></a>
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.
@@ -101,6 +106,7 @@
                     mollit anim id est laborum.</p>
 </div>
 <div class="container">
+    <h2>Titre de lévènement</h2>
             <img class= "events" src="/pictures/bde.jpg" alt="Photo Cesi"/></a>
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.

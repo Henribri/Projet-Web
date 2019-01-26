@@ -63,9 +63,16 @@ Route::get('/create_idea', function () {
     return view('create_idea');
 });
 
-
 Route::get('/create_event', function () {
     return view('create_event');
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/subscribe', function () {
+    return view('subscribe');
 });
 
 

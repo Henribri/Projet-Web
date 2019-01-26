@@ -16,15 +16,8 @@ p{
 
 #container_nav{
     width: 100%;
-    background-color: #f3f3f3;
     margin-top: 5px;
-    border: 1px solid #e7e7e7;
-}
-#nav_bar{
-    text-align: center;
-    width: 50%;
-    transform: translateX(50%);
-    top:10px;
+    background-color: aqua;
 }
 
 ul {
@@ -32,20 +25,16 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    /*border: 1px solid #e7e7e7;*/
     background-color: #f3f3f3;
-}
-
-li {
-    float: left;
 }
 
 li a {
     display: block;
     color: #666;
-    text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    text-align: center;
+    width: 100%;
 }
 
 li a:hover:not(.active) {
@@ -64,7 +53,9 @@ li a:hover:not(.active) {
     border-style: double;
     border-color:black;
 }
-
+.container h2{
+    text-align: center;
+}
 /*///////////////////////////////////*/
 /*									 */
 /*		   BUTTONS ON EVENTS		 */
@@ -72,43 +63,40 @@ li a:hover:not(.active) {
 /*///////////////////////////////////*/
 
 /*General button*/
+.button{
+    display: flex;
+	flex-direction: row;
+    justify-content: center;
+    }
+
 button{
     background-color: #F2EFEF;
     border:5px;
     border-radius: 10px;
     font-family: 'Cantarell';
-    padding:5px;
-    transition:0.2s;
-}
-
-/*Form for subscribe*/
-.form img{
-    height: 3em;
-    width: 3em;
-    top:100px;
-}
-.form  {
-    float:right;
-    right:10px;
-    margin-bottom: 15px;
-
-}
+    cursor: pointer;
+    margin: 3px;
+    padding: 5px;
+    }
 
 /*Comments*/
 .comment{
-    display:inline-block;
-    text-align: center;
-    margin-top:10px;
+    width: 30%;
+    height: 5%;
+}
+
+.comment p{
+    font-style: bold;
 }
 /*Like*/
 .like img {
-    height: 3em;
-    width: 3em;
-    top:100px;
-    float: left;
+    height: 2em;
+    width: 2em;
 }
 .like{
-    float: left;
+    width: 15%;
+    height: 5%;
+    margin-bottom: 5px;
 }
 
 /*///////////////////////////////////*/
@@ -122,10 +110,7 @@ button{
 .global_container{
     margin:2px;
     } 
-
-#hidden_tab{
-
-    }       
+    
 }
 
 /*///////////////////////////////////*/
@@ -153,11 +138,12 @@ text-align: center;
     margin-top: 50px;
     padding:5px;
     }
-#nav_bar{
-    text-align: center;
-    width: 50%;
-    transform: translateX(72%);
-    top:10px;
 
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    
     }
 }

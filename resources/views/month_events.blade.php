@@ -11,7 +11,6 @@
 @section('main_content')
 
 <div id="container_nav">
-    <div id="nav_bar">
         <ul>
             <li><a href="month_events">Evènements du mois</a></li>
             <li><a href="past_events">Evènements passés</a></li>
@@ -19,7 +18,6 @@
             <li ><a href= "create_idea">Créer une idée</a></li>
             <li ><a href= "hidden_events">Evènements cachés</a></li>
         </ul>
-    </div>
 </div>
 
 <div class ="global_container">
@@ -44,8 +42,10 @@
                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                         nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                         mollit anim id est laborum.</p>
-                        <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
-                        <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
+                        <div class="button">
+                            <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
+                            <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
+                        </div>
     </div>
 
     <div class="container">
@@ -69,8 +69,10 @@
                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                         nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                         mollit anim id est laborum.</p>
-                        <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
-                        <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
+                        <div class="button">
+                            <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
+                            <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
+                        </div>
     </div>
 
     <div class="container">
@@ -94,8 +96,10 @@
                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                         nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                         mollit anim id est laborum.</p>
-                        <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
-                        <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
+                        <div class="button">
+                            <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
+                            <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
+                        </div>
     </div>
 
     <div class="container">
@@ -119,8 +123,10 @@
                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                         nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                         mollit anim id est laborum.</p>
-                        <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
-                        <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>     
+                        <div class="button">
+                            <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
+                            <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
+                        </div>  
     </div>
 
     <div class="container">
@@ -144,8 +150,10 @@
                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                         nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                         mollit anim id est laborum.</p>
-                        <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
-                        <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
+                        <div class="button">
+                            <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
+                            <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
+                        </div>
     </div>
 
     <div class="container">
@@ -169,9 +177,10 @@
                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                         nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                         mollit anim id est laborum.</p>
-                        <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
-                        <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
-</div>
+                        <div class="button">
+                            <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
+                            <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
+                        </div>
 @endsection
 
 

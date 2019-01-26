@@ -11,6 +11,7 @@
 @section('main_content')
     <div class ="global_container">
         <div class="container">
+             <h2>Titre de l'idée</h2>
             <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.
@@ -25,12 +26,13 @@
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                     mollit anim id est laborum.</p>
-                        <div>
+                        <div class ="button">
                             <button class ="vote"> <img src="/pictures/vote.png" alt="Photo Cesi"/></button>
                             <button class ="suscribe"> <img src="/pictures/checkmark.png" alt="Photo Cesi"/></button>
                         </div>
     </div>
     <div class="container">
+        <h2>Titre de l'idée</h2>
             <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.
@@ -45,12 +47,13 @@
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                     mollit anim id est laborum.</p>
-                        <div>
+                        <div class ="button">
                             <button class ="vote"> <img src="/pictures/vote.png" alt="Photo Cesi"/></button>
                             <button class ="suscribe"> <img src="/pictures/checkmark.png" alt="Photo Cesi"/></button>
                         </div>
     </div>
     <div class="container">
+        <h2>Titre de l'idée</h2>
             <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.
@@ -65,12 +68,13 @@
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                     mollit anim id est laborum.</p>
-                        <div>
+                        <div class ="button">
                             <button class ="vote"> <img src="/pictures/vote.png" alt="Photo Cesi"/></button>
                             <button class ="suscribe"> <img src="/pictures/checkmark.png" alt="Photo Cesi"/></button>
                         </div>
     </div>
     <div class="container">
+        <h2>Titre de l'idée</h2>
             <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.
@@ -85,12 +89,13 @@
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                     mollit anim id est laborum.</p>
-                        <div>
+                        <div class ="button">
                             <button class ="vote"> <img src="/pictures/vote.png" alt="Photo Cesi"/></button>
                             <button class ="suscribe"> <img src="/pictures/checkmark.png" alt="Photo Cesi"/></button>
                         </div>
     </div>
     <div class="container">
+        <h2>Titre de l'idée</h2>
             <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.
@@ -105,12 +110,13 @@
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                     mollit anim id est laborum.</p>
-                        <div>
+                        <div class ="button">
                             <button class ="vote"> <img src="/pictures/vote.png" alt="Photo Cesi"/></button>
                             <button class ="suscribe"> <img src="/pictures/checkmark.png" alt="Photo Cesi"/></button>
                         </div>
     </div>
     <div class="container">
+        <h2>Titre de l'idée</h2>
             <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.
@@ -125,12 +131,12 @@
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                     mollit anim id est laborum.</p>
-                        <div>
+                        <div class ="button">
                             <button class ="vote"> <img src="/pictures/vote.png" alt="Photo Cesi"/></button>
                             <button class ="suscribe"> <img src="/pictures/checkmark.png" alt="Photo Cesi"/></button>
                         </div>
     </div>
-        <form method="post">
+       <!-- <form method="post">
             <input type ="email" name = "email_user" maxlength="255" placeholder = "Email">
             <input type ="text" name = "name_user" maxlength="25" placeholder = "Nom">
             <input type ="text" name = "surname_user" maxlength="25" placeholder = "Prénom">
@@ -138,6 +144,7 @@
             <input type ="password" name = "password_user" maxlength="100" placeholder = "Mot de passe">
             <input type = "submit" value="M'inscrire">
         </form>
+    </div>-->
     </div>
 
 @endsection

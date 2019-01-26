@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('css_link')
-<link rel="stylesheet" type="text/css" href="/css/_style.css">
+<link rel="stylesheet" type="text/css" href="/css/create_style.css">
 @endsection
 
 @section('header_content')
@@ -9,6 +9,30 @@
 @endsection
 
 @section('main_content')
+
+<div id="container_nav">
+        <ul>
+            <li><a href="month_events">Evènements du mois</a></li>
+            <li><a href="past_events">Evènements passés</a></li>
+            <li ><a href= "create_event">Créer un évènement</a></li>
+            <li ><a href= "create_idea">Créer une idée</a></li>
+            <li ><a href= "hidden_events">Evènements cachés</a></li>
+        </ul>
+</div>
+<div class="form">
+    <form>
+      <input class="field" type="text" name="idea_name" placeholder="Nom de l'idée">
+      <input class="field" type="text" name="idea_date" placeholder="Date de l'idée">
+      <textarea class="field" name="description" id="description" cols="30" rows="10"placeholder="Description de l'idée"></textarea>
+      <input class="field"id="number" type="text" name="recurence" placeholder="Nombre de récurence" rows="5" cols="40" >
+      <select class="field" id="state" name="state">
+        <option value="public">Publique</option>
+        <option value="private">Privée</option>
+      </select>
+      <input class="field" id="type"type="text" name="public_event" placeholder="Type d'idée">
+      <input class="field" type="submit" value="Envoyer"/> 
+    </form>
+</div>
 
 @endsection
 
