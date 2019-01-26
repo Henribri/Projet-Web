@@ -37,8 +37,7 @@
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                     mollit anim id est laborum.</p>
                     <div class="button">
-                        <button class ="comment">Commenter</button>
-                        <button class="like"><img src="pictures/like.png" alt="Like"/></button>
+                        <a href="event-1">En savoir plus</a> 
                     </div>
     </div>
 
@@ -59,8 +58,7 @@
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                     mollit anim id est laborum.</p>
                     <div class="button">
-                        <button class ="comment">Commenter</button>
-                        <button class="like"><img src="pictures/like.png" alt="Like"/></button>
+                        <a href="event-1">En savoir plus</a> 
                     </div>
 </div>
 <div class="container">
@@ -80,8 +78,7 @@
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                     mollit anim id est laborum.</p>
                     <div class="button">
-                        <button class ="comment"><p>Commenter</p></button>
-                        <button class="like"><img src="pictures/like.png" alt="Like"/></button>
+                        <a href="event-1">En savoir plus</a> 
                     </div>
 </div>
 <div class="container">
@@ -101,8 +98,7 @@
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                     mollit anim id est laborum.</p>
                     <div class="button">
-                        <button class ="comment">Commenter</button>
-                        <button class="like"><img src="pictures/like.png" alt="Like"/></button>
+                        <a href="event-1">En savoir plus</a> 
                     </div>
 </div>
 <div class="container">
@@ -122,8 +118,7 @@
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                     mollit anim id est laborum.</p>
                     <div class="button">
-                        <button class ="comment">Commenter</button>
-                        <button class="like"><img src="pictures/like.png" alt="Like"/></button>
+                        <a href="event-1">En savoir plus</a> 
                     </div>
 </div>
 <div class="container">
@@ -143,8 +138,7 @@
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                     mollit anim id est laborum.</p>
                     <div class="button">
-                        <button class ="comment">Commenter</button>
-                        <button class="like"><img src="pictures/like.png" alt="Like"/></button>
+                        <a href="event-1">En savoir plus</a> 
                     </div>
     </div>
 </div>

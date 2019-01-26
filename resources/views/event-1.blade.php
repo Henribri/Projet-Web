@@ -11,13 +11,13 @@
 @section('main_content')
 
 <div id="container_nav">
-    <div id="nav_bar">
         <ul>
             <li><a href="month_events">Evènements du mois</a></li>
             <li><a href="past_events">Evènements passés</a></li>
-            <li id="hidden_tab"><a href= "hidden_events">Evènements cachés</a></li>
+            <li ><a href= "create_event">Créer un évènement</a></li>
+            <li ><a href= "create_idea">Créer une idée</a></li>
+            <li ><a href= "hidden_events">Evènements cachés</a></li>
         </ul>
-    </div>
 </div>
 
 <div class ="global_container">
@@ -38,12 +38,18 @@
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                     mollit anim id est laborum.</p>
 
-                        <div class="container_button"></div>
-                            <button id ="comment">Commenter</button>
-                            <button id ="like"><img src="/pictures/like.png" alt="Like"/></button>
-                            <div> <input id="comment_text" type="text" id= "comment" size= "30" name = "Comment" maxlenght="500" placeholder="Ajouter un commentaire"/>
+                        <div class="button">
+                            <textarea name="comment" cols="30" rows="3"placeholder="Taper votre commentaire"></textarea>
+                            <button class="comment">Commenter</button>
                         </div>
-                        
+                        <div class="button">
+                            <button class="like"> <img src="/pictures/like.png" alt="Cloche notifié"/></button>
+                        </div>
+                        <h3>Les commentaires</h3>
+                        <div class ="comments">
+                        </div>
+
+          
 </div>
 </div>
 @endsection

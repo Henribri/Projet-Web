@@ -97,8 +97,7 @@ button{
 .form img{
     height: 3em;
     width: 3em;
-
-    }
+}
 
 .form {
     width: 20%;
@@ -230,7 +229,14 @@ ul {
 	flex-direction: row;
 	justify-content: center;
     flex-wrap: wrap;
-
     }
 
+.notify{
+    width: 15%;
+    height: 5%;
+    }
+.form {
+    width: 15%;
+    height: 5%;
+}
 }
