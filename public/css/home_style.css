@@ -14,12 +14,12 @@ h2{
 	transition: all 0.65s ease;
 	width: 15em;
 	height: 15em;
-	filter: opacity(50%);
+	filter: opacity(25%);
 	border-radius: 25px;
     overflow: hidden;
     margin:auto;
     padding: auto;
-    margin: 2em 2em 2em 2em;
+	margin: 2em 2em 2em 2em;
 }
 
 main img:hover {
@@ -36,13 +36,13 @@ main img:hover {
 
 @media (min-width: 640px) {
     .image img{
-        margin: 2em 2em 2em 2em;
+        margin: 2em;
     }
 }
 
 @media (min-width: 1200px) {
 
     .image img{
-        margin: 2em 2em 2em 2em;
+        margin: 2em;
     }
 }

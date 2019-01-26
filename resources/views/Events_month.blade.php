@@ -11,9 +11,6 @@
 @section('main_content')
 
 <div id="container_nav">
-
-
-    <div id="nav_bar">
         <ul>
             <li><a href="events_month">Evènements du mois</a></li>
             <li><a href="events_past">Evènements passés</a></li>
@@ -21,7 +18,6 @@
             <li ><a href= "create_idea">Créer une idée</a></li>
             <li ><a href= "hidden_events">Evènements cachés</a></li>
         </ul>
-    </div>
 </div>
 
 @foreach($Events as $Event)
@@ -30,9 +26,16 @@
 <div class ="global_container">
 <div class="container">
                     <h2>{{$Event->Name_event}}</h2>
-                    <div class ="price"><p>5€</p></div>
-                    <div class="date"><p>12/5/2018</p></div>
-                    <div class="recurent"><p>Une fois par mois</p></div>
+                    <div class ="price"><p>{{$Event->Cost_event}}</p></div>
+                    <div class="date"><p>{{$Event->Date_event}}</p></div>
+                    <div class="recurent">
+                    @if($Event->Recurent_event==1)
+                    <p>Récurent</p>
+                    
+                    @else
+                    <p>Ponctuel</p>
+                    @endif
+                    </div>
 
             <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
                      <p>{{$Event->Description_event}}</p>

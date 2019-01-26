@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Comments;
+use App\Likes;
 use Illuminate\Support\Facades\DB;
 class PhotosCtrl extends Controller
 {
@@ -26,11 +27,11 @@ class PhotosCtrl extends Controller
 
         $comments=Comments::all();
 
-        
 
         return view('Photos',[
             'Photos'=>$photos,
             'Comments'=>$comments,
+
         ]);
 
     }
@@ -39,6 +40,7 @@ class PhotosCtrl extends Controller
 
         if(session()->get('Status_user')){
 
+    
         $Comment= Comments::create([
             'Comment_comment'=>request('comment_comment'),
             'Id_user'=>session()->get('Id_user'),
@@ -48,6 +50,7 @@ class PhotosCtrl extends Controller
         ]);
 
         return back();
+
         }
 
         return redirect('/connexion')->withErrors([
@@ -68,6 +71,29 @@ class PhotosCtrl extends Controller
             //TO DO send mail notif
         }
 
+    }
+
+
+    function Like(){
+
+        try{
+        if(session()->get('Status_user')){
+
+            $Like= Likes::create([
+                'Id_user'=>session()->get('Id_user'),
+                'Id_photo'=>request('photo'),       
+            ]);
+
+            return back();
+
+
+        }}catch(\Illuminate\Database\QueryException $e){
+                
+              return "vous avez deja like la photo";
+            }
+        return redirect('/connexion')->withErrors([
+            'email_user' => 'Veuillez vous authentifier'
+            ]);
     }
 
 }

@@ -11,7 +11,7 @@ class Log_outCtrl extends Controller
     public function Log_out(){
         
         
-        if(auth()->check()||session()->get('connexion')){
+        if(session()->get('Status_user')){
 
             session()->flush();
 
