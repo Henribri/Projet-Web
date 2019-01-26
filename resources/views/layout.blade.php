@@ -11,7 +11,6 @@
         <link href="https://fonts.googleapis.com/css?family=Cantarell" rel="stylesheet"/>
         <link rel="icon" type="image/ico" href="pictures/favicon.ico"/>
         <link rel="stylesheet" type="text/css" href="css/main_style.css"/>
-        
         @yield('css_link')
     </head>
 
@@ -20,16 +19,29 @@
             <div class="header_bar">
                <div> <a href="home"><img src="pictures/logo_cesi.png" alt="Logo de CESI"  /></a></div>
 
-                <div id="banner">
-                    @yield('header_content')
-                </div>
-                <button>&#x2630;</button>
-              <!-- <div class="container">
-                     <button id ="Subscribe"> <img src="/pictures/inscription.png" alt="Photo Cesi"/></button>
-                </div>-->
+                    <div id="banner">
+                        @yield('header_content')
             </div>
-
-
+                <nav role="navigation">
+                    <div id="menuToggle">
+                        <input type="checkbox" />
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <ul id="menu">
+                            <a href="subscribe"><li>Inscription</li></a>
+                            <a href="login"><li>Connexion</li></a>
+                            <a href=""><li>Déconnexion</li></a>
+                            <a href="cesi"><li>Cesi</li></a>
+                            <a href="bde"><li>BDE</li></a>
+                            <a href="associations"><li>Associations</li></a>
+                            <a href="month_events"><li>Evènements</li></a>
+                            <a href="shop"><li>Boutique</li></a>
+                            <a href="suggestion_box"><li>Boîte à idées</li></a>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
         </header>
 
         <main>

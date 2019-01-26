@@ -41,6 +41,21 @@ li a:hover:not(.active) {
     background-color: #ddd;
 }
 
+button:hover{
+    box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
+    transform: scale(1.01);
+}
+
+button:active{
+    box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
+    transform: scale(0.98);
+}
+
+button img{
+    height: 3em;
+    width: 3em;
+}
+
 /*///////////////////////////////////*/
 /*									 */
 /*		      EVENTS		         */

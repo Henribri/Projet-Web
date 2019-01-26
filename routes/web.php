@@ -23,10 +23,6 @@ Route::get('/cesi', function () {
     return view('cesi');
 });
 
-Route::get('/arras', function () {
-    return view('arras');
-});
-
 Route::get('/bde', function () {   
     return view('bde');
 });
@@ -45,9 +41,8 @@ Route::get('/shop', function () {
 
 Route::get('/past_events', function () {
     return view('past_events');
-});
-
-Route::get('/month_events', function () {
+    
+});Route::get('/month_events', function () {
     return view('month_events');
 });
 

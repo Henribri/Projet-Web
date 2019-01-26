@@ -18,7 +18,8 @@ p{
     height: auto;
     border-width:4px;
     border-style: double;
-    border-color:black;
+    border-color:rgba(18, 62, 207, 0.623);
+    margin-top: 10px;
 }
 
 .container h2{
@@ -45,6 +46,7 @@ button{
     cursor: pointer;
     margin: 3px;
     padding: 5px;
+    margin-bottom: 10px;
     }
 
 button:hover{
