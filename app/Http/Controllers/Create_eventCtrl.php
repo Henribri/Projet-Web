@@ -36,13 +36,13 @@ class Create_eventCtrl extends Controller
             ->get();
 
     $Event= Events::create([
-        'Name_event'=>request('name_event','unique:users,name_event'),
+        'Name_event'=>request('name_event'),
         'Description_event'=>request('description_event'),
         'Date_event'=>request('date_event'),
         'Recurent_event'=>request('recurent_event'),
         'Cost_event'=>request('cost_event'),
         'Public_event'=>1,//public
-        'Id_user'=>session('Id_user'),// Utilisateur session en cour
+        'Id_user'=>session()->get('id_user'),// Utilisateur session en cour
         'Id_state'=>$Evenement[0]->Id_state,//Evenement jointure
         'Id_user_suggest'=>session('Id_user'),// Utilisateur session en cour
         'Id_image'=>request('id_image'),
@@ -77,7 +77,7 @@ class Create_eventCtrl extends Controller
         'Description_event'=>request('description_event'),
         'Public_event'=>request('public_event'),
         'Id_state'=>$Evenement[0]->Id_state,
-        'Id_user_suggest'=>session('id_user'),// Session utilisateur en cour
+        'Id_user_suggest'=>session()->get('id_user'),// Session utilisateur en cour
         ]); 
          }
          return redirect('/connexion')->withErrors([
@@ -105,7 +105,7 @@ class Create_eventCtrl extends Controller
                 'Description_event' => request('description_event'),
                 'Recurent_event' => request('recurent_event'),
                 'Cost_event' => request('cost_event'),
-                'Id_user' => session('id_user'),//Session utilisateur en cour
+                'Id_user' => session()->get('id_user'),//Session utilisateur en cour
                 'Id_state'=>request('id_state'),//evenement
                 'Id_image'=>request('id_image'),
                 ]);
@@ -124,7 +124,7 @@ class Create_eventCtrl extends Controller
         DB::table('Events')
             ->where('Name_event', request('name_event'))
             ->update([
-                'Id_user_approve'=>session('Id_user'),//Session utilisateur 
+                'Id_user_approve'=>session()->get('id_user'),//Session utilisateur 
                 'Date_Approbation'=>request('date_Approbation'),
                 'Public_event'=>2,//rend non public
         ]);

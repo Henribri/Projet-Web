@@ -111,7 +111,7 @@ class Event_user extends Controller
             //try catch pour tester si un utilisateur s'est déja inscrit à un évènement.
            try{ 
             Sign_in::create([
-                'Id_user'=>session()->get('id_user'),
+                'Id_user'=>session()->get('Id_user'),
                 'Id_event'=> request('id_event'),
             ]);
         }

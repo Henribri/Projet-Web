@@ -36,8 +36,9 @@ Route::get('/events_idea', 'Event_user@View_events_idea');
 
 
 
+Route::get('/photos', 'PhotosCtrl@View_photos');
 
-
+Route::post('/photos', 'PhotosCtrl@Create_comments');
 
 Route::post('/event', 'Event_user@Sign_in_event');
 
