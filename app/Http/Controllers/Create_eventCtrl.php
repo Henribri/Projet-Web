@@ -28,7 +28,24 @@ class Create_eventCtrl extends Controller
     public function View_create_event(){
         
         if(session()->get('Status_user')=='BDE'){
-            return view('create_event');
+
+
+            if(request('Id_event')){
+
+                $Ideas = DB::table('events')
+                ->select('*')
+                ->where([
+                    ['Id_event', request('Id_event')],
+                ])
+                ->get();
+            }
+
+
+
+
+            return view('create_event',[
+                'Ideas'=>$Ideas,
+            ]);
         }
 
 
@@ -116,26 +133,33 @@ class Create_eventCtrl extends Controller
     
     public function Upgrade(){
         //TO DO Session a verifier status=BDE
+
+
         if(session()->get('Status_user')=='BDE'){
 
+            $Prochainement = DB::table('state')
+            ->select('Id_state')
+            ->where('State', 'Prochainement')
+            ->get();//on recupere l'id correspondant a Idee
+
         request()->validate([
-            'name_event'=>['required','unique:users,name_event'],
             'date_event'=>['required'],
             'recurent_event'=>['required'], 
-            'id_image'=>['required'], 
+            'cost_event'=>['required'],
+            //'id_image'=>['required'], 
             ]);
         
         DB::table('Events')
-            ->where('Name_event', request('name_event'))
+            ->where('Id_event', request('id_event'))
             ->update([
-                'Name_event' => request('new_name_event'),
+                'Name_event' => request('name_event'),
                 'Date_event' => request('date_event'),
                 'Description_event' => request('description_event'),
                 'Recurent_event' => request('recurent_event'),
                 'Cost_event' => request('cost_event'),
                 'Id_user' => session()->get('id_user'),//Session utilisateur en cour
-                'Id_state'=>request('id_state'),//evenement
-                'Id_image'=>request('id_image'),
+                'Id_state'=>$Prochainement[0]->Id_state,//evenement
+                //'Id_image'=>request('id_image'),
                 ]);
          }
          return redirect('/connexion')->withErrors([

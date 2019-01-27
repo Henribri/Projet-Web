@@ -64,7 +64,7 @@ Route::post('/connexion', 'ConnexionCtrl@Log_in');
 
 Route::get('/deconnexion', 'Log_outCtrl@Log_out');
 
-Route::get('/updateevent', 'Create_eventCtrl@Upgrade');
+Route::post('/update_event', 'Create_eventCtrl@Upgrade');
 
 /*
 Auth::routes();

@@ -22,34 +22,31 @@
 </div>
 
 <div class="form">
-    <form action='' method='post'>
-    {{ csrf_field() }}
-      <input class="field" type="text" name="name_event" placeholder="Nom de lévènement">
-      <input class="field" type="number" name="cost_event" placeholder="Prix de lévènement">
-      <input class="field" type="date" name="date_event" placeholder="Date de l'évènement">
-      <textarea class="field" name="description_event" id="description" cols="30" rows="10"placeholder="Description de l'évènements"></textarea>
-      <select class="field" id="state" name="recurent_event">
-        <option value="1">Récurent</option>
-        <option value="0">Ponctuel</option>
-      </select>
-
-      <select class="field" id="state" name="public_event">
-        <option value="1">Publique</option>
-        <option value="0">Privée</option>
-      </select>
-
-      <!-- Rajouter import d'image -->
-
-      <input class="field" type="submit" value="Envoyer"/> 
-    </form>
-    
-</div>
-
-
-
-<div class="form">
+@if($Ideas)
     <form action='/update_event' method='post'>
     {{ csrf_field() }}
+      <input class="field" type="text" name="name_event" placeholder="Nom de lévènement" value="{{$Ideas[0]->Name_event}}">
+      <input class="field" type="number" name="cost_event" placeholder="Prix de lévènement">
+      <input class="field" type="date" name="date_event" placeholder="Date de l'évènement">
+      <textarea class="field" name="description_event" id="description_event" cols="30" rows="10"placeholder="Description de l'évènements" value="{{$Ideas->Description_event}}"></textarea>
+      <select class="field" id="state" name="recurent_event">
+        <option value="1">Récurent</option>
+        <option value="0">Ponctuel</option>
+      </select>
+
+      <select class="field" id="state" name="public_event">
+        <option value="1">Publique</option>
+        <option value="0">Privée</option>
+      </select>
+
+      <!-- Rajouter import d'image -->
+
+      <input class="field" type="submit" value="Envoyer"/> 
+    </form>
+  @else
+
+  <form action='' method='post'>
+    {{ csrf_field() }}
       <input class="field" type="text" name="name_event" placeholder="Nom de lévènement">
       <input class="field" type="number" name="cost_event" placeholder="Prix de lévènement">
       <input class="field" type="date" name="date_event" placeholder="Date de l'évènement">
@@ -68,8 +65,16 @@
 
       <input class="field" type="submit" value="Envoyer"/> 
     </form>
-    
+
+
+  @endif
+
+
+
+
 </div>
+
+
 
 @endsection
 
