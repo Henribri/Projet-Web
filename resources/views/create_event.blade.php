@@ -23,15 +23,17 @@
 <div class="form">
     <form>
       <input class="field" type="text" name="event_name" placeholder="Nom de lévènement">
+      <input class="field" id="type"type="text" name="public_event" placeholder="Type de l'évènement">
       <input class="field" type="text" name="event_date" placeholder="Date de l'évènement">
-      <textarea class="field" name="description" id="description" cols="30" rows="10"placeholder="Description de l'évènements"></textarea>
       <input class="field"id="number" type="text" name="recurence" placeholder="Nombre de récurence" rows="5" cols="40" >
+      <textarea class="field" name="description" id="description" cols="30" rows="10"placeholder="Description de l'évènements"></textarea>
       <select class="field" id="state" name="state">
         <option value="public">Publique</option>
         <option value="private">Privée</option>
       </select>
-      <input class="field" id="type"type="text" name="public_event" placeholder="Type de l'évènement">
-      <input class="field" type="submit" value="Envoyer"/> 
+      <label for="file" class="label-file">Choisir une image</label>
+      <input id="file" class="input-file" type="file">  
+      <input class="field" type="submit" value="Envoyer"/>
     </form>
     
 </div>

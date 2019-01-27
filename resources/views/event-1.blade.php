@@ -24,6 +24,10 @@
     <div class="container">
         <h2>Titre de lévènement</h2>
             <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
+            <div class="import">
+                <label for="file" class="label-file">Choisir une image</label>
+                <input id="file" class="input-file" type="file">
+            </div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -46,14 +50,12 @@
                             <button class="like"> <img src="/pictures/like.png" alt="Cloche notifié"/></button>
                         </div>
                         <h3>Les commentaires</h3>
-                        <div class ="comments">
-                        </div>
+                        <div class ="comments"></div>
 
           
 </div>
 </div>
 @endsection
-
 
 @section('script_link')
 

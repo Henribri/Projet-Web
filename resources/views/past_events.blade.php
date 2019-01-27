@@ -22,7 +22,7 @@
 <div class ="global_container">
     <div class="container">
         <h2>Titre de lévènement</h2>
-         <a><img class= "events" src="pictures/shop.jpg" alt="Photo Cesi"/></a>
+            <img class= "events" src="pictures/shop.jpg" alt="Photo Cesi"/>
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -43,7 +43,7 @@
 
 <div class="container">
     <h2>Titre de lévènement</h2>
-            <a><img class= "events" src="pictures/shop.jpg" alt="Photo Cesi"/></a>
+            <img class= "events" src="pictures/shop.jpg" alt="Photo Cesi"/>
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -63,7 +63,7 @@
 </div>
 <div class="container">
     <h2>Titre de lévènement</h2>
-            <a><img class= "events" src="pictures/shop.jpg" alt="Photo Cesi"/></a>
+            <img class= "events" src="pictures/shop.jpg" alt="Photo Cesi"/>
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -83,7 +83,7 @@
 </div>
 <div class="container">
     <h2>Titre de lévènement</h2>
-            <a><img class= "events" src="pictures/shop.jpg" alt="Photo Cesi"/></a>
+            <img class= "events" src="pictures/shop.jpg" alt="Photo Cesi"/>
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -103,7 +103,7 @@
 </div>
 <div class="container">
     <h2>Titre de lévènement</h2>
-            <a><img class= "events" src="pictures/shop.jpg" alt="Photo Cesi"/></a>
+            <img class= "events" src="pictures/shop.jpg" alt="Photo Cesi"/>
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -123,7 +123,7 @@
 </div>
 <div class="container">
     <h2>Titre de lévènement</h2>
-            <a><img class= "events" src="pictures/shop.jpg" alt="Photo Cesi"/></a>
+            <img class= "events" src="pictures/shop.jpg" alt="Photo Cesi"/>
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

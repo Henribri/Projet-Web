@@ -63,6 +63,22 @@ form{
     vertical-align: top;
 }
 
+/*Picture import*/
+.label-file {
+    cursor: pointer;
+    color: rgba(18, 62, 207, 0.623);
+    font-weight: bold;
+}
+
+.label-file:hover {
+    color: black;
+}
+
+.input-file {
+    display: none;
+}
+
+
 /*///////////////////////////////////*/
 /*									 */
 /*		      MEDIA QUERIES			 */

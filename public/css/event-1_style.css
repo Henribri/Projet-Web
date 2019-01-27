@@ -94,6 +94,7 @@ button{
 .button textarea {
     border-radius: 5px;
     border-color:rgba(18, 62, 207, 0.623);
+    margin:5px;
 }
 
 /*Like button*/
@@ -138,6 +139,29 @@ button:active{
     transform: scale(0.98);
 }
 
+/*Picture import*/
+.import{
+    margin: 10px;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.label-file {
+    cursor: pointer;
+    color: rgba(18, 62, 207, 0.623);
+    font-weight: bold;
+}
+
+.label-file:hover {
+    color: black;
+}
+
+.input-file {
+    display: none;
+}
+
+
 /*///////////////////////////////////*/
 /*									 */
 /*		      MEDIA QUERIES			 */
@@ -148,7 +172,12 @@ button:active{
 
 .global_container{
     margin:2px;
-    }     
+    }  
+
+.like{
+    width: 10%;
+    height: 5%;
+}
 }
 
 /*///////////////////////////////////*/
@@ -160,7 +189,7 @@ button:active{
 @media (min-width: 1200px) {
 
 .events{
-     display: block;
+    display: block;
     width: 100%;
     height: auto;
     }
@@ -176,20 +205,21 @@ text-align: center;
     margin-top: 50px;
     padding:5px;
     }
-    #nav_bar{
-        text-align: center;
-        width: 50%;
-        transform: translateX(72%);
-        top:10px;
+
+#nav_bar{
+    text-align: center;
+    width: 50%;
+    transform: translateX(72%);
+    top:10px;
+}
     
-        }
-    
-    ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        }
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 }
 
 
