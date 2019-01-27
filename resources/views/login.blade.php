@@ -12,17 +12,24 @@
 
 <div id="container_nav">
         <ul>
-            <li><a href="login">Se connecter</a></li>
-            <li><a href="subscribe">S'inscrire</a></li>
+            <li><a href="/connexion">Se connecter</a></li>
+            <li><a href="/subscribe">S'inscrire</a></li>
         </ul>
 </div>
 
 <div class="form">
-    <form>
-      <input class="field" type="text" name="name" placeholder="Nom">
-      <input class="field" type="text" name="first_name" placeholder="Prénom">
-      <input class="field" type="email" name="email" placeholder="Adresse mail">
-      <input class="field" type="password" name="password" placeholder="Mot de passe">
+    <form action="/connexion" method="post">
+    {{ csrf_field() }}  
+      <input class="field" type="email" name="email_user" placeholder="Adresse mail">
+      @if($errors->has('email_user'))
+            {{$errors->first('email_user')}}
+        @endif
+
+      <input class="field" type="password" name="password_user" placeholder="Mot de passe">
+      @if($errors->has('password_user'))
+            {{$errors->first('password_user')}}
+        @endif
+      
       <input class="field" type="submit" value="Se connecter"/> 
     </form>
 </div>

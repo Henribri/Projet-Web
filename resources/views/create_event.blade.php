@@ -9,17 +9,66 @@
 @endsection
 
 @section('main_content')
-<div id="form">
-    <form>
-    <input id="name" type="text" name="event_name" placeholder="Nom de lévènement">
-    <input id="" type="text" name="event_name" placeholder="Date de lévènement">
-    <input id="" type="text" name="comment" placeholder="Description de l'évènements">
-    <input id="" type="text" name="recurence" placeholder="Nombre de récurence">
-    <select id="country" name="country">
-      <option value="public">Publique</option>
-      <option value="private">Privée</option>
-    <input id="" type="text" name="public_event" placeholder="Type de l'évènement">
+
+<div id="container_nav">
+        <ul>
+            <li><a href="events_month">Evènements du mois</a></li>
+            <li><a href="events_past">Evènements passés</a></li>
+            <li ><a href= "create_events">Créer un évènement</a></li>
+            <li ><a href= "create_events_idea">Créer une idée</a></li>
+            <li ><a href= "hidden_events">Evènements cachés</a></li>
+            <li ><a href= "events_idea">Idea Box</a></li>
+        </ul>
+</div>
+
+<div class="form">
+    <form action='' method='post'>
+    {{ csrf_field() }}
+      <input class="field" type="text" name="name_event" placeholder="Nom de lévènement">
+      <input class="field" type="number" name="cost_event" placeholder="Prix de lévènement">
+      <input class="field" type="date" name="date_event" placeholder="Date de l'évènement">
+      <textarea class="field" name="description_event" id="description" cols="30" rows="10"placeholder="Description de l'évènements"></textarea>
+      <select class="field" id="state" name="recurent_event">
+        <option value="1">Récurent</option>
+        <option value="0">Ponctuel</option>
+      </select>
+
+      <select class="field" id="state" name="public_event">
+        <option value="1">Publique</option>
+        <option value="0">Privée</option>
+      </select>
+
+      <!-- Rajouter import d'image -->
+
+      <input class="field" type="submit" value="Envoyer"/> 
     </form>
+    
+</div>
+
+
+
+<div class="form">
+    <form action='/update_event' method='post'>
+    {{ csrf_field() }}
+      <input class="field" type="text" name="name_event" placeholder="Nom de lévènement">
+      <input class="field" type="number" name="cost_event" placeholder="Prix de lévènement">
+      <input class="field" type="date" name="date_event" placeholder="Date de l'évènement">
+      <textarea class="field" name="description_event" id="description" cols="30" rows="10"placeholder="Description de l'évènements"></textarea>
+      <select class="field" id="state" name="recurent_event">
+        <option value="1">Récurent</option>
+        <option value="0">Ponctuel</option>
+      </select>
+
+      <select class="field" id="state" name="public_event">
+        <option value="1">Publique</option>
+        <option value="0">Privée</option>
+      </select>
+
+      <!-- Rajouter import d'image -->
+
+      <input class="field" type="submit" value="Envoyer"/> 
+    </form>
+    
 </div>
 
 @endsection

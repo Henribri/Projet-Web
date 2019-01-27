@@ -89,7 +89,7 @@ class PhotosCtrl extends Controller
 
         }}catch(\Illuminate\Database\QueryException $e){
                 
-              return "vous avez deja like la photo";
+              return "vous avez deja like la photo";//renvoyer erreur dans la div info
             }
         return redirect('/connexion')->withErrors([
             'email_user' => 'Veuillez vous authentifier'

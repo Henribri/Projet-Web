@@ -9,6 +9,8 @@ use App\Sign_in;
 
 use App\Events;
 
+use App\Vote;
+
 use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Support\Facades\DB;
@@ -16,6 +18,7 @@ use Illuminate\Support\Facades\DB;
 class Event_user extends Controller
 {
     //
+
 
     public function View_events_month(){
         
@@ -47,7 +50,6 @@ class Event_user extends Controller
     public function View_events_idea(){
         
 
-        //on verifie si on est connecté
 
             $Events = DB::table('events')
                 ->join('state', 'events.Id_state', '=', 'state.Id_state')
@@ -132,17 +134,27 @@ class Event_user extends Controller
 
     public function Vote_event(){
 
-        if(session()->get('Status_user')){
+        try{
+            if(session()->get('Status_user')){
             Vote::create([
 
-                'Id_user'=>session()->get('id_user'),
-                'Id_event'=> request('num_event'),
+                'Id_user'=>session()->get('Id_user'),
+                'Id_event'=> request('id_event'),
 
             ]);
+           
             return 'Vote bien pris en compte';
+            }
+        
+            }catch(\Illuminate\Database\QueryException $e){
+                
+            return "vous avez deja voté pour l'idée";//renvoyer erreur dans la div info
 
+            }
 
-        }
+        return redirect('/connexion')->withErrors([
+            'email_user' => 'Veuillez vous authentifier'
+            ]);
 
     }
 

@@ -11,15 +11,24 @@ class Users_Sign_In_Control extends Controller
 
     //Ici on affiche juste la page inscription
     public function Sign_in_page(){
+        if(!session()->get('Status_user')){
 
-        return view('Inscription');
+         return view('subscribe');
+
+        }
+
+        //TO DO afficher l'erreur dans la div adapté
+        return back()->withErrors([
+        'email_user' => 'Vous devez être déconnecté pour pouvoir vous inscrire'
+        ]);
     }
-
 
 
 
     //Ici on gère l'inscription
     public function Sign_in(){
+
+        
 
     //On demande a ce que ces champs soit remplies sous certaines conditions
     request()->validate([
@@ -51,6 +60,10 @@ class Users_Sign_In_Control extends Controller
     ]);
 
 
-    return "Inscription recue";
+    return view('login');
+    }
+
+
+    
 }
-}
+

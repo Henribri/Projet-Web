@@ -18,14 +18,15 @@ Route::get('/', function () {
 Route::view('/home','home');
 
 //on a nos route qui font appel au controller qui gérera l'inscription 
-Route::get('/inscription','Users_Sign_In_Control@Sign_in');
+Route::get('/subscribe','Users_Sign_In_Control@Sign_in_page');
 
-Route::post('/inscription', 'Users_Sign_In_Control@Sign_in');
+Route::post('/subscribe', 'Users_Sign_In_Control@Sign_in');
 
 
 
 
 Route::get('/events_month', 'Event_user@View_events_month');
+
 Route::post('/events_month', 'Event_user@Sign_in_event');
 
 Route::get('/events_past', 'Event_user@View_events_past');
@@ -33,6 +34,19 @@ Route::get('/events_past', 'Event_user@View_events_past');
 Route::get('/events_private', 'Event_user@View_events_private');
 
 Route::get('/events_idea', 'Event_user@View_events_idea');
+
+Route::post('/events_idea', 'Event_user@Vote_event');
+
+//creer idees
+Route::get('/create_events_idea', 'Create_eventCtrl@View_create_idea');
+
+Route::post('/create_events_idea', 'Create_eventCtrl@Suggest');
+
+
+//creer event
+Route::get('/create_events', 'Create_eventCtrl@View_create_event');
+
+Route::post('/create_events', 'Create_eventCtrl@Create_event');
 
 
 

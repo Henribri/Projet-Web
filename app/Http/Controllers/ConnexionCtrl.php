@@ -13,11 +13,20 @@ class ConnexionCtrl extends Controller
 
     function Formulaire(){
 
-
-        return view('Connexion');
+        if(!session()->get('Status_user')){
+            
+        return view('login');
+      
+    }
+        //TO DO mettre erreur dans la div adapté
+        return back()->withErrors([
+            'email_user' => 'Vous devez être déconnecté pour pouvoir vous inscrire'
+            ]);
     }
 
     function Log_in(){
+
+
         request()->validate([
         'email_user'=>['required','email'], //on verifie qur l'utilisateur ne soit pas déjà inscrit
         'password_user'=>['required'],
@@ -55,13 +64,17 @@ class ConnexionCtrl extends Controller
         session()->put('Email_user', $user->Email_user);
         session()->put('Name_user', $user->Name_user);
         session()->put('Surname_user', $user->Surname_user);
-        return redirect('/event');
+        return redirect('/home');
         
     }
 
     return back()->withInput()->withErrors([
         'email_user' => 'Vos identifiants sont incorrectes',
     ]);
+        
 
-    }
+        }
+
+
+
 }

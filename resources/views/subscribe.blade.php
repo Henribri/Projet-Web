@@ -12,18 +12,50 @@
 
 <div id="container_nav">
         <ul>
-            <li><a href="login">Se connecter</a></li>
-            <li><a href="subscribe">S'inscrire</a></li>
+            <li><a href="/connexion">Se connecter</a></li>
+            <li><a href="/subscribe">S'inscrire</a></li>
         </ul>
 </div>
 
-<div class="form">
-    <form>
-      <input class="field" type="text" name="name" placeholder="Nom">
-      <input class="field" type="text" name="first_name" placeholder="Prénom">
-      <input class="field" type="Text" name="campus" placeholder="Campus">
-      <input class="field" type="email" name="email" placeholder="Adresse mail">
-      <input class="field" type="password" name="password" placeholder="Mot de passe">
+<div class="form"  >
+    <form method="post" action="">
+    {{ csrf_field() }}  
+      <input class="field" type="text" name="name_user" placeholder="Nom">
+      @if($errors->has('name_user'))
+            {{$errors->first('name_user')}}
+        @endif
+
+      <input class="field" type="text" name="surname_user" placeholder="Prénom">
+      @if($errors->has('surname_user'))
+            {{$errors->first('surname_user')}}
+        @endif
+
+      <select name="localisation_user">
+            <option value="Arras">Arras</option>
+            <option value="Rouen">Rouen</option>
+            <option value="Lyon">Lyon</option>
+            <option value="Paris">Paris</option>
+            <option value="Lille">Lille</option>
+        </select>
+       <p> @if($errors->has('localisation_user'))
+            {{$errors->first('localisation_user')}}
+        @endif</p>
+
+      <input class="field" type="email" name="email_user" placeholder="Adresse mail">
+      @if($errors->has('email_user'))
+            {{$errors->first('email_user')}}
+        @endif
+
+      <input class="field" type="password" name="password_user" placeholder="Mot de passe">
+      @if($errors->has('password_user'))
+            {{$errors->first('password_user')}}
+        @endif
+
+      <input class="field" type="password" name="password_user_confirmation" placeholder="Confirmation">
+      @if($errors->has('password_user_confirmation'))
+            {{$errors->first('password_user_confirmation')}}
+        @endif
+        
       <input class="field" id ="blocked" type="submit" value="S'inscrire"/> 
     </form>
 </div>

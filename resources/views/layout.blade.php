@@ -29,13 +29,13 @@
                         <span></span>
                         <span></span>
                         <ul id="menu">
-                            <a href="subscribe"><li>Inscription</li></a>
-                            <a href="login"><li>Connexion</li></a>
-                            <a href=""><li>Déconnexion</li></a>
+                            <a href="/subscribe"><li>Inscription</li></a>
+                            <a href="/connexion"><li>Connexion</li></a>
+                            <a href="/deconnexion"><li>Déconnexion</li></a>
                             <a href="cesi"><li>Cesi</li></a>
                             <a href="bde"><li>BDE</li></a>
                             <a href="associations"><li>Associations</li></a>
-                            <a href="month_events"><li>Evènements</li></a>
+                            <a href="events_month"><li>Evènements</li></a>
                             <a href="shop"><li>Boutique</li></a>
                             <a href="suggestion_box"><li>Boîte à idées</li></a>
                         </ul>

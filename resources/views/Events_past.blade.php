@@ -13,9 +13,10 @@
         <ul>
             <li><a href="events_month">Evènements du mois</a></li>
             <li><a href="events_past">Evènements passés</a></li>
-            <li ><a href= "create_event">Créer un évènement</a></li>
-            <li ><a href= "create_idea">Créer une idée</a></li>
+            <li ><a href= "create_events">Créer un évènement</a></li>
+            <li ><a href= "create_events_idea">Créer une idée</a></li>
             <li ><a href= "hidden_events">Evènements cachés</a></li>
+            <li ><a href= "events_idea">Idea Box</a></li>
         </ul>
 </div>
 @foreach($Events as $Event)
