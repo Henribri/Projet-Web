@@ -36,6 +36,7 @@
                             <a href="bde"><li>BDE</li></a>
                             <a href="associations"><li>Associations</li></a>
                             <a href="month_events"><li>Evènements</li></a>
+                            <a href="#"><li>Mettre à jour évènements</li></a>
                             <a href="suggestion_box"><li>Boîte à idées</li></a>
                             <a href="shop"><li>Boutique</li></a>
                             <a href="pannier"><li>Mon panier</li></a>

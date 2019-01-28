@@ -7,7 +7,6 @@
 #container_nav{
     width: 100%;
     margin-top: 5px;
-    background-color: aqua;
 }
 
 ul {
@@ -33,6 +32,16 @@ li{
 
 li a:hover:not(.active) {
     background-color: #ddd;
+}
+
+li a:hover{
+    box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
+    transform: scale(1.01);
+}
+
+li a:active{
+    box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
+    transform: scale(0.98);
 }
 
 /*///////////////////////////////////*/
@@ -67,6 +76,18 @@ form{
     vertical-align: top;
 }
 
+/*Form validation*/
+
+.input input:focus:invalid ,textarea:focus:invalid{
+    border-color:#d45252;
+    box-shadow: #d45252 0 0 5px; 
+ }
+ 
+ .input input:focus:valid ,textarea:focus:valid{
+     border-color:#009933;
+     box-shadow: #009933 0 0 5px; 
+  }
+ 
 /*Picture import*/
 .label-file {
     cursor: pointer;

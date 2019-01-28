@@ -45,6 +45,16 @@ li a:hover:not(.active) {
     background-color: #ddd;
 }
 
+li a:hover{
+    box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
+    transform: scale(1.01);
+}
+
+li a:active{
+    box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
+    transform: scale(0.98);
+}
+
 /*///////////////////////////////////*/
 /*									 */
 /*		      EVENTS		         */

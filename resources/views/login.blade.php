@@ -19,11 +19,13 @@
 
 <div class="form">
     <form>
-      <input class="field" type="text" name="name" placeholder="Nom">
-      <input class="field" type="text" name="first_name" placeholder="Prénom">
-      <input class="field" type="email" name="email" placeholder="Adresse mail">
-      <input class="field" type="password" name="password" placeholder="Mot de passe">
-      <input class="field" type="submit" value="Se connecter"/> 
+    <div class="input">
+        <input class="field" type="text" name="name" placeholder="Nom"required>
+        <input class="field" type="text" name="first_name" placeholder="Prénom"required>
+        <input class="field" type="email" name="email" placeholder="Adresse mail"required>
+        <input class="field" type="password" name="password" placeholder="Mot de passe"required>
+    </div>
+        <input class="field" type="submit" value="Se connecter"/> 
     </form>
 </div>
 

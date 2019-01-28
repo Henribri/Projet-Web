@@ -49,7 +49,7 @@ form .field{
     width: 100%;
     border-radius: 5px;
     font-family: 'Cantarell', sans-serif;
-
+    outline-style:none;
 }
 
 form{
@@ -59,6 +59,19 @@ form{
     background-color: #ffffff;
     text-align:center;
 }
+
+/*Form validation*/
+
+.input input:focus:invalid{
+   border-color:#d45252;
+   background-image: none;
+   box-shadow: #d45252 0 0 5px; 
+}
+
+.input input:focus:valid{
+    border-color:#009933;
+    box-shadow: #009933 0 0 5px; 
+ }
 
 /*///////////////////////////////////*/
 /*									 */
