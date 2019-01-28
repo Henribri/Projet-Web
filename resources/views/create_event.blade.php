@@ -16,19 +16,19 @@
             <li><a href="events_past">Evènements passés</a></li>
             <li ><a href= "create_events">Créer un évènement</a></li>
             <li ><a href= "create_events_idea">Créer une idée</a></li>
-            <li ><a href= "hidden_events">Evènements cachés</a></li>
+            <li ><a href= "events_private">Evènements cachés</a></li>
             <li ><a href= "events_idea">Idea Box</a></li>
         </ul>
 </div>
 
 <div class="form">
-@if($Ideas)
+@if($Idea)
     <form action='/upgrade_event' method='post'>
     {{ csrf_field() }}
-      <input class="field" type="text" name="name_event" placeholder="{{$Ideas[0]->Name_event}}" value="{{$Ideas[0]->Name_event}}">
+      <input class="field" type="text" name="name_event" placeholder="{{$Idea->Name_event}}" value="{{$Idea->Name_event}}">
       <input class="field" type="number" name="cost_event" placeholder="Prix de lévènement">
       <input class="field" type="date" name="date_event" placeholder="Date de l'évènement">
-      <textarea class="field" name="description_event" id="description_event" cols="30" rows="10"placeholder="{{$Ideas[0]->Description_event}}" value="{{$Ideas[0]->Description_event}}">{{$Ideas[0]->Description_event}}</textarea>
+      <textarea class="field" name="description_event" id="description_event" cols="30" rows="10"placeholder="{{$Idea->Description_event}}" value="{{$Idea->Description_event}}">{{$Idea->Description_event}}</textarea>
       <select class="field" id="state" name="recurent_event">
         <option value="1">Récurent</option>
         <option value="0">Ponctuel</option>
@@ -41,7 +41,7 @@
 
       <!-- Rajouter import d'image -->
 
-      <button class="field" type="submit" name='id_event' value="{{$Ideas[0]->Id_event}}">Envoyer </button>
+      <button class="field" type="submit" name='id_event' value="{{$Idea->Id_event}}">Envoyer </button>
     </form>
   @else
 

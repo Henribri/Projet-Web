@@ -8,6 +8,6 @@ class Events extends Model
 {
     //
     public $timestamps = false;
-
-    protected $fillable=['Name_event','Description_event','Date_event','Recurent_event','Cost_event','Public_event','Date_Approbation','Id_user','Id_state','Id_user_suggest','Id_image','Id_user_approve'];
+    protected $table="_event";
+    protected $fillable=['Name_event','Description_event','Date_event','Recurent_event','Cost_event','Public_event','Date_Approbation_events','Id_user_suggest','Id_state','Id_user_create','Id_image','Id_user_approve'];
 }

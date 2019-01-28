@@ -16,6 +16,7 @@
             <li ><a href= "create_events">Créer un évènement</a></li>
             <li ><a href= "create_events_idea">Créer une idée</a></li>
             <li ><a href= "hidden_events">Evènements cachés</a></li>
+            <li ><a href= "events_idea">Idea Box</a></li>
         </ul>
 </div>
 
@@ -24,6 +25,7 @@
 
 <div class ="global_container">
 <div class="container">
+                        <h3>{{$Event->Name_event}}</h3>
             <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
                      <p>{{$Event->Description_event}}</p>
                     <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>

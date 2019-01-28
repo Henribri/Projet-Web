@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-
+use App\Users;
 
 class ConnexionCtrl extends Controller
 {
@@ -51,14 +51,13 @@ class ConnexionCtrl extends Controller
         //on declare une session pour dire que le user est bien log(auth ne fonctionnant pas sur les autres pages)
 
         //inner join pour recuperer le status
-        $status_user = DB::table('users')
-            ->join('status', 'users.Id_status', '=', 'status.Id_status')
+        $status_user = Users::join('_status', '_user.Id_status', '=', '_status.Id_status')
             ->select('Status')
-            ->where('users.Id_user', $user->Id_user)
-            ->get();
+            ->where('_user.Id_user', $user->Id_user)
+            ->first();
 
 
-        session()->put('Status_user', $status_user[0]->Status);
+        session()->put('Status_user', $status_user->Status);
         //on met en session l'id de l'utilissateur
         session()->put('Id_user', $user->Id_user);
         session()->put('Email_user', $user->Email_user);

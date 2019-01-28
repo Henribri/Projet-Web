@@ -10,10 +10,11 @@ use App\Sign_in;
 use App\Events;
 
 use App\Vote;
-
+use Illuminate\Support\Facades\DB;
+use App\State;
 use Illuminate\Support\Facades\Auth;
 
-use Illuminate\Support\Facades\DB;
+
 
 class Event_user extends Controller
 {
@@ -27,11 +28,10 @@ class Event_user extends Controller
 
 
         
-        $Events = DB::table('events')
-            ->join('state', 'events.Id_state', '=', 'state.Id_state')
-            ->select('*')
+        $Events = Events::
+            join('_state', '_event.Id_state', '=', '_state.Id_state')
             ->where([
-                ['state.state', 'Prochainement'],
+                ['_state.state', 'Month'],
                 ['Public_event', 1]
             ])
             ->get();
@@ -51,11 +51,10 @@ class Event_user extends Controller
         
 
 
-            $Events = DB::table('events')
-                ->join('state', 'events.Id_state', '=', 'state.Id_state')
-                ->select('*')
+            $Events = Events::
+                join('_state', '_event.Id_state', '=', '_state.Id_state')
                 ->where([
-                    ['state.state', 'Idée'],
+                    ['_state.state', 'Idea'],
                     ['Public_event', 1]
                 ])
                 ->get();
@@ -70,11 +69,10 @@ class Event_user extends Controller
 
         //on verifie si on est connecté
 
-            $Events = DB::table('events')
-            ->join('state', 'events.Id_state', '=', 'state.Id_state')
-            ->select('*')
+            $Events = Events::
+            join('_state', '_event.Id_state', '=', '_state.Id_state')
             ->where([
-                ['state.state', 'Passé'],
+                ['_state.state', 'Past'],
                 ['Public_event', 1]
             ])
             ->get();
@@ -91,9 +89,8 @@ class Event_user extends Controller
          
             if(session()->get('Status_user')=='BDE'){
         
-                $Events = DB::table('events')
-                ->join('state', 'events.Id_state', '=', 'state.Id_state')
-                ->select('*')
+                $Events = Events::
+                join('_state', '_event.Id_state', '=', '_state.Id_state')
                 ->where('Public_event', 0)
                 ->get();
             
@@ -112,10 +109,13 @@ class Event_user extends Controller
         if(session()->get('Status_user')){
             //try catch pour tester si un utilisateur s'est déja inscrit à un évènement.
            try{ 
+
+            DB::transaction(function () {
             Sign_in::create([
                 'Id_user'=>session()->get('Id_user'),
                 'Id_event'=> request('id_event'),
             ]);
+            });
         }
         catch(\Illuminate\Database\QueryException $e){
                 
@@ -136,12 +136,15 @@ class Event_user extends Controller
 
         try{
             if(session()->get('Status_user')){
+
+            DB::transaction(function () {
             Vote::create([
 
                 'Id_user'=>session()->get('Id_user'),
                 'Id_event'=> request('id_event'),
 
             ]);
+            });
            
             return 'Vote bien pris en compte';
             }

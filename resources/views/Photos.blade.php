@@ -14,9 +14,14 @@
         <ul>
             <li><a href="events_month">Evènements du mois</a></li>
             <li><a href="events_past">Evènements passés</a></li>
-            <li ><a href= "create_event">Créer un évènement</a></li>
+            @if(session()->get('Status_user')=='BDE')
+            <li ><a href= "create_events">Créer un évènement</a></li>
+            @endif
             <li ><a href= "create_idea">Créer une idée</a></li>
-            <li ><a href= "hidden_events">Evènements cachés</a></li>
+            @if(session()->get('Status_user')=='BDE')
+            <li ><a href= "events_private">Evènements cachés</a></li>
+            @endif
+            <li ><a href= "events_idea">Idea Box</a></li>
         </ul>
 </div>
 
@@ -30,10 +35,7 @@
 <div class ="global_container">
 <div class="container">
             <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
-            <div class="import">
-                <label for="file" class="label-file">Choisir une image</label>
-                <input id="file" class="input-file" type="file">
-            </div>
+
 
             <div class="button">
 
@@ -51,22 +53,27 @@
                         <div class="button">
                         <form method='post' action='/like'>
                         {{ csrf_field() }}
-                            <button class="like"> <img src="/pictures/like.png" alt="Cloche notifié"/></button>
+                            <button class="like" name='id_photo' value='{{$Photo->Id_photo}}'> <img src="/pictures/like.png" alt="Cloche notifié"/></button>
                         </form>
+                        @if(session()->get('Status_user')=='Tuteur')
                         <form method='post' action='/notify_photo'>
                         {{ csrf_field() }}
                             <button class="notify" name='id_photo' value='{{$Photo->Id_photo}}'> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
                         </form>
+                        @endif
                         </div>
             
             @foreach($Comments as $Comment)
                         @if($Comment->Id_photo==$Photo->Id_photo)
                         <div class="button comments">
                         <p>{{$Comment->Comment_comment}}</p>
+
+                        @if(session()->get('Status_user')=='Tuteur')
                         <form action="/delete_com" method="post">
                          {{ csrf_field() }}
                             <button class="notify" name='id_comment' value='{{$Comment->Id_comment}}'> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
                         </form>
+                        @endif
                         </div>
 
 

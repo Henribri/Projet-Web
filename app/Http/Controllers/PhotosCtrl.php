@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Comments;
 use App\Likes;
+use App\Photos;
+use App\Events;
+use App\Status;
+use App\Users;
 use Illuminate\Support\Facades\DB;
 use App\Mail\Notification;
 use App\Mail\IdeeRetenue;
@@ -18,22 +22,21 @@ class PhotosCtrl extends Controller
         $Id_event=request('id_event');
 
 
-       $photos = DB::table('photos')
-            ->join('events', 'events.Id_event', '=', 'photos.Id_event')
-            ->select('*')
+       $photos = Photos::
+            join('_event', '_event.Id_event', '=', '_photo.Id_event')
             ->where([
-                ['photos.Id_event', $Id_event],
+                ['_photo.Id_event', $Id_event],
                 ['public_photo', 1]
             ])
             ->get();
              
 
-        $comments=Comments::all();
+
 
 
         return view('Photos',[
             'Photos'=>$photos,
-            'Comments'=>$comments,
+            'Comments'=>Comments::all(),
 
         ]);
 
@@ -47,6 +50,7 @@ class PhotosCtrl extends Controller
                 'comment_comment'=>['required'],
             ]);
     
+        DB::transaction(function () {
         $Comment= Comments::create([
             'Comment_comment'=>request('comment_comment'),
             'Id_user'=>session()->get('Id_user'),
@@ -54,6 +58,7 @@ class PhotosCtrl extends Controller
             'Public_comment'=>1,
     
         ]);
+        });
 
         return back();
 
@@ -69,16 +74,16 @@ class PhotosCtrl extends Controller
         
         if(session()->get('Status_user')=='Tuteur'){
 
-
-            DB::table('comments')
-            ->where( 'Id_comment',request('id_comment'))
+        DB::transaction(function () {
+           Comments::
+            where( 'Id_comment',request('id_comment'))
             ->delete();
+        });
 
-
-            $BDE = DB::table('users')
-            ->join('status', 'users.Id_status', '=', 'status.Id_status')
+            $BDE = Users::
+            join('_status', '_user.Id_status', '=', '_status.Id_status')
             ->select('Email_user')
-            ->where('status.Status', 'BDE')
+            ->where('_status.Status', 'BDE')
             ->get();
 
             //
@@ -95,14 +100,6 @@ class PhotosCtrl extends Controller
 
         }
 
-
-
-
-
-
-
-
-
             return back();
 
             //TO DO send mail notif
@@ -118,10 +115,12 @@ class PhotosCtrl extends Controller
         try{
         if(session()->get('Status_user')){
 
-            $Like= Likes::create([
+            DB::transaction(function () {
+            Likes::create([
                 'Id_user'=>session()->get('Id_user'),
-                'Id_photo'=>request('photo'),       
+                'Id_photo'=>request('id_photo'),       
             ]);
+            });
 
             return back();
 
@@ -144,29 +143,31 @@ class PhotosCtrl extends Controller
 
             request()->validate(['id_photo'=>['required']]);
 
-        DB::table('Photos')
-            ->where('Id_photo', request('id_photo'))
+            DB::transaction(function () {
+            Photos::where('Id_photo', request('id_photo'))
             ->update([
                 'Id_user_approve'=>session()->get('Id_user'),//Session utilisateur 
-                'Date_Approbation'=>date('Y/m/d'),
+                'Date_Approbation_photos'=>date('Y/m/d'),
                 'Public_photo'=>0,//rend non public
         ]);
+            });
 
-       $Photo= DB::table('Photos')
-            ->select('Id_event')
+
+       $Photo=Photos::
+            select('Id_event')
             ->where('Id_photo', request('id_photo'))
-            ->get();
+            ->first();
 
-        $Event= DB::table('Events')
-        ->select('*')
-        ->where('Id_event', $Photo[0]->Id_event)
-        ->get();
+
+        $Event= Events::
+        where('Id_event', $Photo->Id_event)
+        ->first();
     //$users=Users::all();
 
-        $BDE = DB::table('users')
-            ->join('status', 'users.Id_status', '=', 'status.Id_status')
+        $BDE = Users::
+            join('_status', '_user.Id_status', '=', '_status.Id_status')
             ->select('Email_user')
-            ->where('status.Status', 'BDE')
+            ->where('_status.Status', 'BDE')
             ->get();
 
             //
@@ -176,7 +177,7 @@ class PhotosCtrl extends Controller
             $tuteur_name=session()->get('Name_user');
             $tuteur_surname=session()->get('Surname_user');
             $type='Photo';
-            $Name_event=$Event[0]->Name_event;//a changer par request(name_event)
+            $Name_event=$Event->Name_event;//a changer par request(name_event)
     
             Mail::to($Member)->send(new Notification($tuteur_name, $tuteur_surname, $type, $Name_event));
 
