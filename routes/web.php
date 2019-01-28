@@ -50,6 +50,9 @@ Route::post('/create_events', 'Create_eventCtrl@Create_event');
 
 
 
+Route::post('/notify', 'Create_eventCtrl@Notify_event');
+
+
 Route::get('/photos', 'PhotosCtrl@View_photos');
 
 Route::post('/like', 'PhotosCtrl@Like');
@@ -64,7 +67,10 @@ Route::post('/connexion', 'ConnexionCtrl@Log_in');
 
 Route::get('/deconnexion', 'Log_outCtrl@Log_out');
 
-Route::post('/update_event', 'Create_eventCtrl@Upgrade');
+
+Route::post('/create_upgrade_event', 'Create_eventCtrl@View_create_event');
+
+Route::post('/upgrade_event', 'Create_eventCtrl@Upgrade');
 
 /*
 Auth::routes();

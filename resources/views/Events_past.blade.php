@@ -34,6 +34,11 @@
                      <button class ="comment" name="id_event" value="{{$Event->Id_event}}" type="submit">Voir les photos</button>
                      </form>
 
+                     <form action="/notify" method="post">
+                         {{ csrf_field() }}
+
+                        <button class="notify" name='id_event' value='{{$Event->Id_event}}'> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
+                    </form>
 </div>
 @endforeach
 </div>

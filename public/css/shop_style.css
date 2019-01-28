@@ -14,32 +14,7 @@ p{
 /*									 */
 /*///////////////////////////////////*/
 
-#container_nav{
-    width: 100%;
-    margin-top: 5px;
-    background-color: aqua;
-}
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #f3f3f3;
-}
-
-li a {
-    display: block;
-    color: #666;
-    padding: 14px 16px;
-    text-decoration: none;
-    text-align: center;
-    width: 100%;
-}
-
-li a:hover:not(.active) {
-    background-color: #ddd;
-}
 
 /*///////////////////////////////////*/
 /*									 */
@@ -67,56 +42,64 @@ li a:hover:not(.active) {
 /*///////////////////////////////////*/
 
 /*General button*/
+.pannier{
+    display: flex;
+	flex-direction: row;
+    justify-content: center;
+    }
+    
+.pannier a{
+    text-decoration: none;
+    color: black;
+    display:block;
+    background-color: #F2EFEF;
+    border:5px;
+    border-radius: 10px;
+    font-family: 'Cantarell';
+    cursor: pointer;
+    margin: 5px;
+    padding: 5px;
+}
+
+
+/*General button*/
 .button{
     display: flex;
 	flex-direction: row;
     justify-content: center;
     }
     
-button{
+a:hover{
+    box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
+    transform: scale(1.01);
+}
+
+a:active{
+    box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
+    transform: scale(0.98);
+}
+
+.add{
+    text-decoration: none;
+    color: black;
+    display:block;
     background-color: #F2EFEF;
     border:5px;
     border-radius: 10px;
     font-family: 'Cantarell';
     cursor: pointer;
-    margin: 3px;
+    margin: 5px;
     padding: 5px;
-    }
-
-/*Button for notify*/
-.notify img{
-    height: 3em;
-    width: 3em;
-    }
-.notify{
-    width: 20%;
-    height: 5%;
-    }
-
-/*Button Form for subscribe*/
-.form img{
-    height: 3em;
-    width: 3em;
 }
 
-.form {
-    width: 20%;
-    height: 5%;
-}
-
-button:hover{
+a:hover{
     box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
     transform: scale(1.01);
 }
 
-button:active{
+a:active{
     box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
     transform: scale(0.98);
-}
-
-button img{
-    height: 3em;
-    width: 3em;
 }
 
 /*///////////////////////////////////*/

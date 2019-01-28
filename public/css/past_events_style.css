@@ -17,7 +17,6 @@ p{
 #container_nav{
     width: 100%;
     margin-top: 5px;
-    background-color: aqua;
 }
 
 ul {
@@ -66,7 +65,9 @@ button img{
     height: auto;
     border-width:4px;
     border-style: double;
-    border-color:black;
+    border-color:rgba(18, 62, 207, 0.623);
+    margin: 5px;
+    margin-bottom :10px; 
 }
 .container h2{
     text-align: center;
@@ -83,37 +84,29 @@ button img{
 	flex-direction: row;
     justify-content: center;
     }
+    
+a:hover{
+    box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
+    transform: scale(1.01);
+}
 
-button{
+a:active{
+    box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
+    transform: scale(0.98);
+}
+
+.container a{
+    text-decoration: none;
+    color: black;
+    display:block;
     background-color: #F2EFEF;
     border:5px;
     border-radius: 10px;
     font-family: 'Cantarell';
     cursor: pointer;
-    margin: 3px;
+    margin: 5px;
     padding: 5px;
-    }
-
-/*Comments*/
-.comment{
-    width: 30%;
-    height: 5%;
 }
-
-.comment p{
-    font-style: bold;
-}
-/*Like*/
-.like img {
-    height: 2em;
-    width: 2em;
-}
-.like{
-    width: 15%;
-    height: 5%;
-    margin-bottom: 5px;
-}
-
 /*///////////////////////////////////*/
 /*									 */
 /*		      MEDIA QUERIES			 */
@@ -125,7 +118,11 @@ button{
 .global_container{
     margin:2px;
     } 
-    
+.more{
+    width: 15%;
+    height: 5%;
+    }
+
 }
 
 /*///////////////////////////////////*/
@@ -159,6 +156,9 @@ ul {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    
+    }
+.more{
+    width: 30%;
+    height: 5%;
     }
 }

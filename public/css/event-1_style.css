@@ -16,14 +16,8 @@ p{
 
 #container_nav{
     width: 100%;
-    background-color: #f3f3f3;
     margin-top: 5px;
-    border: 1px solid #e7e7e7;
-}
-#nav_bar{
-    text-align: center;
-    width: 50%;
-    transform: translateX(50%);
+    background-color: aqua;
 }
 
 ul {
@@ -34,16 +28,13 @@ ul {
     background-color: #f3f3f3;
 }
 
-li {
-    float: left;
-}
-
 li a {
     display: block;
     color: #666;
-    text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    text-align: center;
+    width: 100%;
 }
 
 li a:hover:not(.active) {
@@ -60,7 +51,13 @@ li a:hover:not(.active) {
     height: auto;
     border-width:4px;
     border-style: double;
-    border-color:black;
+    border-color:rgba(18, 62, 207, 0.623);
+    margin: 5px;
+    margin-bottom :10px
+}
+
+.container h2{
+    text-align: center;
 }
 
 /*///////////////////////////////////*/
@@ -70,49 +67,100 @@ li a:hover:not(.active) {
 /*///////////////////////////////////*/
 
 /*General button*/
+.button{
+    display: flex;
+	flex-direction: row;
+    justify-content: center;
+    }
+
 button{
     background-color: #F2EFEF;
     border:5px;
     border-radius: 10px;
     font-family: 'Cantarell';
-    padding:5px;
-    transition:0.2s;
-    margin:20px;
+    cursor: pointer;
+    margin: 10px;
+    padding: 5px;
 }
-
-/*div which contains like and comments*/
-.container_button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
+    
 /*Comments button*/
-#comment{
-    margin:20px;
+.comment_comment{
+    width: 25%;
+    height: 5%;
     cursor: pointer;
 }
 
+/*Area of comment */
+.button textarea {
+    border-radius: 5px;
+    border-color:rgba(18, 62, 207, 0.623);
+    margin:5px;
+}
+
 /*Like button*/
-#like{
-    margin-top:10px;
-    margin:20px;
+.like{
+    width: 20%;
+    height: 5%;
     cursor: pointer;
 }
 
 /*Like image*/
-#like img {
-    height: 3em;
-    width: 3em;
+.like img {
+    height: 2em;
+    width: 2em;
+}
+/*Comments of others people*/
+h3{
+    text-align: center;
 }
 
-/*Area of comment */
-#comment_text{
-    border-radius: 5px;
-    border-color: black;
-    height : 60px;
+.comments{
+    width: 90%;
+    height: 50px;
+    border-width:2px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color:rgba(18, 62, 207, 0.623);
+    display: flex;
+	flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 5px;
 }
+
+/*Button effects*/
+button:hover{
+    box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
+    transform: scale(1.01);
+}
+
+button:active{
+    box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
+    transform: scale(0.98);
+}
+
+/*Picture import*/
+.import{
+    margin: 10px;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.label-file {
+    cursor: pointer;
+    color: rgba(18, 62, 207, 0.623);
+    font-weight: bold;
+}
+
+.label-file:hover {
+    color: black;
+}
+
+.input-file {
+    display: none;
+}
+
 
 /*///////////////////////////////////*/
 /*									 */
@@ -124,7 +172,12 @@ button{
 
 .global_container{
     margin:2px;
-    }     
+    }  
+
+.like{
+    width: 10%;
+    height: 5%;
+}
 }
 
 /*///////////////////////////////////*/
@@ -136,7 +189,7 @@ button{
 @media (min-width: 1200px) {
 
 .events{
-     display: block;
+    display: block;
     width: 100%;
     height: auto;
     }
@@ -152,13 +205,21 @@ text-align: center;
     margin-top: 50px;
     padding:5px;
     }
+
 #nav_bar{
     text-align: center;
     width: 50%;
     transform: translateX(72%);
     top:10px;
+}
+    
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
-    }
 }
 
 

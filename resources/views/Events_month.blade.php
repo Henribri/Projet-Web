@@ -27,6 +27,11 @@
 <div class ="global_container">
 <div class="container">
                     <h2>{{$Event->Name_event}}</h2>
+
+                    <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
+
+                    <div class="information">
+                    
                     <div class ="price"><p>{{$Event->Cost_event}}</p></div>
                     <div class="date"><p>{{$Event->Date_event}}</p></div>
                     <div class="recurent">
@@ -37,18 +42,26 @@
                     <p>Ponctuel</p>
                     @endif
                     </div>
+                    </div>
 
-            <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
+
                      <p>{{$Event->Description_event}}</p>
+                     
+                     <div class="button">
                      <form action="" method="post">
                         {{ csrf_field() }}
                         <button class="form" name="id_event" value="{{$Event->Id_event}}"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
                     </form>
+                    <form action="/notify" method="post">
+                         {{ csrf_field() }}
 
+                        <button class="notify" name='id_event' value='{{$Event->Id_event}}'> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
+                    </form>
+                    </div>
+</div>
 
 </div>
 @endforeach
-</div>
 @endsection
 
 

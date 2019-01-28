@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('css_link')
-<link rel="stylesheet" type="text/css" href="/css/month_events_style.css">
+<link rel="stylesheet" type="text/css" href="/css/event-1_style.css">
 @endsection
 
 @section('header_content')
@@ -20,33 +20,46 @@
         </ul>
 </div>
 
-
+<div class="import">
+                <label for="file" class="label-file">Choisir une image</label>
+                <input id="file" class="input-file" type="file">
+            </div>
 @foreach($Photos as $Photo)
 
 
 <div class ="global_container">
 <div class="container">
             <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
+            <div class="import">
+                <label for="file" class="label-file">Choisir une image</label>
+                <input id="file" class="input-file" type="file">
+            </div>
 
+            <div class="button">
 
-            <form action="/like" method="post">
-            {{ csrf_field() }}
-                <button class="like" name="photo" value="{{$Photo->Id_photo}}"><img src="/pictures/like.png" alt="Like"/></button>
-            </form>
-
-            <form action="" method="post">
-            {{ csrf_field() }}
-                        <div> <input id="comment_text" type="text"  size= "30" name = "comment_comment" maxlenght="500" placeholder="Ajouter un commentaire"/>
-                        <button class ="comment" type='submit' name='id_photo' value="{{$Photo->Id_photo}}">Commenter</button>
-
-            </form>
-
+                <form method='post' action=''> 
+                            <textarea name="comment_comment" cols="30" rows="3"placeholder="Taper votre commentaire"></textarea>
+                            <button class="comment" name="id_photo" value="{{$Photo->Id_photo}}">Commenter</button>
+                        </div>
+                </form>
+                <form method='post' action='/like'>
+                        <div class="button">
+                            <button class="like"> <img src="/pictures/like.png" alt="Cloche notifié"/></button>
+                        </div>
+                </form>
 
             
             @foreach($Comments as $Comment)
                         @if($Comment->Id_photo==$Photo->Id_photo)
-                     <p>{{$Comment->Comment_comment}}</p>
+                        <div class ="comments">
 
+
+                        <p>{{$Comment->Comment_comment}}</p>
+                        </div>
+                        <form action="/notify" method="post">
+                         {{ csrf_field() }}
+                            <button class="notify" name='id_event' value='{{$Comment->Id_comment}}'> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
+                        </form>
                         @endif
             @endforeach
 </div>

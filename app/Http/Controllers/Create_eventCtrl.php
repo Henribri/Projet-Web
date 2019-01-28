@@ -27,20 +27,20 @@ class Create_eventCtrl extends Controller
     
     public function View_create_event(){
         
+
+
         if(session()->get('Status_user')=='BDE'){
 
 
-            if(request('Id_event')){
-
+            $Ideas=false;
+            if(request('id_event')){
                 $Ideas = DB::table('events')
                 ->select('*')
                 ->where([
-                    ['Id_event', request('Id_event')],
+                    ['Id_event', request('id_event')],
                 ])
                 ->get();
             }
-
-
 
 
             return view('create_event',[
@@ -49,9 +49,7 @@ class Create_eventCtrl extends Controller
         }
 
 
-        return redirect('/connexion')->withErrors([
-            'email_user' => 'Veuillez vous authentifier'
-            ]);
+        return 'Vous devez etre membre du bde';
 
     }
 
@@ -137,6 +135,8 @@ class Create_eventCtrl extends Controller
 
         if(session()->get('Status_user')=='BDE'){
 
+
+
             $Prochainement = DB::table('state')
             ->select('Id_state')
             ->where('State', 'Prochainement')
@@ -161,34 +161,41 @@ class Create_eventCtrl extends Controller
                 'Id_state'=>$Prochainement[0]->Id_state,//evenement
                 //'Id_image'=>request('id_image'),
                 ]);
+
+                return view("home");
+
          }
          return redirect('/connexion')->withErrors([
             'email_user' => 'Vous devez être membre du BDE pour faire cette action'
             ]);
     }   
 
-    public function Approve(){
+    public function Notify_event(){
         //TO DO Session verifier status = Tuteur
         if(session()->get('Status_user')=='Tuteur'){
 
-            request()->validate(['name_event'=>['required']]);
+            request()->validate(['id_event'=>['required']]);
 
         DB::table('Events')
-            ->where('Name_event', request('name_event'))
+            ->where('Id_event', request('id_event'))
             ->update([
-                'Id_user_approve'=>session()->get('id_user'),//Session utilisateur 
-                'Date_Approbation'=>request('date_Approbation'),
-                'Public_event'=>2,//rend non public
+                'Id_user_approve'=>session()->get('Id_user'),//Session utilisateur 
+                'Date_Approbation'=>date('Y/m/d'),
+                'Public_event'=>0,//rend non public
         ]);
 
+       $Event= DB::table('Events')
+            ->select('*')
+            ->where('Id_event', request('id_event'))
+            ->get();
 
 
-        $users=Users::all();
+        //$users=Users::all();
 
         $BDE = DB::table('users')
             ->join('status', 'users.Id_status', '=', 'status.Id_status')
             ->select('Email_user')
-            ->where('status.Status', 'Tuteur')
+            ->where('status.Status', 'BDE')
             ->get();
 
             //
@@ -197,8 +204,8 @@ class Create_eventCtrl extends Controller
             $Member=$BDE[$i]->Email_user;
             $tuteur_name=session()->get('Name_user');
             $tuteur_surname=session()->get('Surname_user');
-            $type='Evènement';
-            $Name_event='Evenement';//a changer par request(name_event)
+            $type='Evenement';
+            $Name_event=$Event[0]->Name_event;//a changer par request(name_event)
     
             Mail::to($Member)->send(new Notification($tuteur_name, $tuteur_surname, $type, $Name_event));
 

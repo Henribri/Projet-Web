@@ -23,12 +23,12 @@
 
 <div class="form">
 @if($Ideas)
-    <form action='/update_event' method='post'>
+    <form action='/upgrade_event' method='post'>
     {{ csrf_field() }}
-      <input class="field" type="text" name="name_event" placeholder="Nom de lévènement" value="{{$Ideas[0]->Name_event}}">
+      <input class="field" type="text" name="name_event" placeholder="{{$Ideas[0]->Name_event}}" value="{{$Ideas[0]->Name_event}}">
       <input class="field" type="number" name="cost_event" placeholder="Prix de lévènement">
       <input class="field" type="date" name="date_event" placeholder="Date de l'évènement">
-      <textarea class="field" name="description_event" id="description_event" cols="30" rows="10"placeholder="Description de l'évènements" value="{{$Ideas->Description_event}}"></textarea>
+      <textarea class="field" name="description_event" id="description_event" cols="30" rows="10"placeholder="{{$Ideas[0]->Description_event}}" value="{{$Ideas[0]->Description_event}}">{{$Ideas[0]->Description_event}}</textarea>
       <select class="field" id="state" name="recurent_event">
         <option value="1">Récurent</option>
         <option value="0">Ponctuel</option>
@@ -41,7 +41,7 @@
 
       <!-- Rajouter import d'image -->
 
-      <input class="field" type="submit" value="Envoyer"/> 
+      <button class="field" type="submit" name='id_event' value="{{$Ideas[0]->Id_event}}">Envoyer </button>
     </form>
   @else
 
