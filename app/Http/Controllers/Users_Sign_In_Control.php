@@ -42,8 +42,7 @@ class Users_Sign_In_Control extends Controller
         ]);
 
 
-        $Etudiant = DB::table('users')
-        ->join('status', 'users.Id_status', '=', 'status.Id_status')
+        $Etudiant = DB::table('status')
         ->select('status.Id_status')
         ->where('status.status', 'Etudiant')
         ->get();

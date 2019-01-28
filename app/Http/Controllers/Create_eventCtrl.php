@@ -7,6 +7,7 @@ use App\Events;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Notification;
+use App\Mail\IdeeRetenue;
 
 class Create_eventCtrl extends Controller
 {
@@ -162,7 +163,23 @@ class Create_eventCtrl extends Controller
                 //'Id_image'=>request('id_image'),
                 ]);
 
-                return view("home");
+                $Idea=DB::table('events')//on recupereles données de l'idee qui est upgrade
+                ->select('*')
+                ->where('events.Id_event', request('id_event') )
+                ->get();
+
+
+                
+                $Suggester = DB::table('users')//on retrouve la personne qui a suggest l'idee
+                ->join('events', 'users.Id_user', '=', 'events.Id_user')
+                ->select('Email_user')
+                ->where('users.Id_user', $Idea[0]->Id_user_suggest)
+                ->get();
+
+
+                Mail::to($Suggester[0]->Email_user)->send(new IdeeRetenue);
+
+                return redirect("/home");
 
          }
          return redirect('/connexion')->withErrors([
@@ -190,7 +207,7 @@ class Create_eventCtrl extends Controller
             ->get();
 
 
-        //$users=Users::all();
+
 
         $BDE = DB::table('users')
             ->join('status', 'users.Id_status', '=', 'status.Id_status')
@@ -218,6 +235,43 @@ class Create_eventCtrl extends Controller
                 'email_user' => 'Vous devez être tuteur pour faire cette action'
                 ]);
     }
+
+    public function MAJ_event(){
+
+        if(session()->get('Status_user')=='BDE'){
+
+
+
+        $Events = DB::table('events')
+        ->select('*')
+        ->where('events.Date_event','<' , date('Y/m/d'))
+        ->get();
+
+
+
+        $Passé = DB::table('state')
+        ->select('Id_state')
+        ->where('state.State', 'Passé')
+        ->get();
+
+
+
+        foreach($Events as $Event){
+        DB::table('Events')
+            ->where('Id_event', $Event->Id_event)
+            ->update([
+                'Id_state'=>$Passé[0]->Id_state,//evenement
+                //'Id_image'=>request('id_image'),
+                ]);
+        }
+
+        return back();
+    }
+
+    return redirect('/connexion')->withErrors([
+        'email_user' => 'Vous devez être tuteur pour faire cette action'
+        ]);
+}
 
 
 }

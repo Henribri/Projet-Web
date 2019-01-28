@@ -19,6 +19,12 @@
             <div class="header_bar">
                <div> <a href="home"><img src="pictures/logo_cesi.png" alt="Logo de CESI"  /></a></div>
 
+               @if(session()->get('Status_user'))
+               <div id="statut"><img src="pictures/connected.png" alt="Connected"></div>
+               
+               @else
+               <div id="statut"><img src="pictures/disconnected.png" alt="Connected"></div>
+               @endif
                     <div id="banner">
                         @yield('header_content')
             </div>

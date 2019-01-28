@@ -5,7 +5,7 @@
 @endsection
 
 @section('header_content')
-<h1>Evènements du mois</h1>
+<h1>Photos</h1>
 @endsection
 
 @section('main_content')
@@ -38,28 +38,39 @@
             <div class="button">
 
                 <form method='post' action=''> 
+                
                             <textarea name="comment_comment" cols="30" rows="3"placeholder="Taper votre commentaire"></textarea>
+                            @if($errors->has('comment_comment'))
+                                {{$errors->first('comment_comment')}}
+                            @endif
                             <button class="comment" name="id_photo" value="{{$Photo->Id_photo}}">Commenter</button>
+                            </form>
                         </div>
-                </form>
-                <form method='post' action='/like'>
-                        <div class="button">
-                            <button class="like"> <img src="/pictures/like.png" alt="Cloche notifié"/></button>
-                        </div>
-                </form>
 
+
+                        <div class="button">
+                        <form method='post' action='/like'>
+                        {{ csrf_field() }}
+                            <button class="like"> <img src="/pictures/like.png" alt="Cloche notifié"/></button>
+                        </form>
+                        <form method='post' action='/notify_photo'>
+                        {{ csrf_field() }}
+                            <button class="notify" name='id_photo' value='{{$Photo->Id_photo}}'> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
+                        </form>
+                        </div>
             
             @foreach($Comments as $Comment)
                         @if($Comment->Id_photo==$Photo->Id_photo)
-                        <div class ="comments">
-
-
+                        <div class="button comments">
                         <p>{{$Comment->Comment_comment}}</p>
-                        </div>
-                        <form action="/notify" method="post">
+                        <form action="/delete_com" method="post">
                          {{ csrf_field() }}
-                            <button class="notify" name='id_event' value='{{$Comment->Id_comment}}'> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
+                            <button class="notify" name='id_comment' value='{{$Comment->Id_comment}}'> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
                         </form>
+                        </div>
+
+
+
                         @endif
             @endforeach
 </div>
