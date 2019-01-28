@@ -2,6 +2,7 @@
 
 @section('css_link')
 <link rel="stylesheet" type="text/css" href="/css/shop_style.css">
+<link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
 @endsection
 
 @section('header_content')
@@ -10,16 +11,39 @@
 
 @section('main_content')
 
+<div id="container_nav">
+        <ul>
+            <li><a href="shop">Boutique</a></li>
+            <li><a href="create_product">Ajouter un produit</a></li>
+        </ul>
+</div>
+
 <div class ="global_container">
     <h2>Bienvenue dans la boutique, ici tu peux trouver les goodies de notre bureau des élèves !</h2>
-        <div class ="pannier"><a href="pannier">Panier</a> </div>
+
+        <div class ="pannier">
+            <a href="pannier"><img src="/pictures/panier.png" alt="Panier"></a> 
+        </div>
+        <section class="best_sale">
+            <div class="best_sale_product">
+                <h4>Sweats</h4>
+                <img src="/pictures/gourde.jpg" alt="Gourde">
+                <p>azertyuio</p>
+            </div>
+            <div class="best_sale_product">
+                <h4>Porte clées</h4>
+                <p>azertyuio</p>
+            </div>
+            <div class="best_sale_product">
+                <h4>Gourde</h4>
+                <p>azertyuio</p>
+            </div>
+        </section>
         <div class="container">
                 <h3>Les sweats de l'école</h3>
-                    <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
+                <img class= "events" src="/pictures/shop.png" alt="Sweat Cesi"/></a>
                         <div class="information">
-                            <div class="date"><p>12/5/2018</p></div>
                             <div class ="price"><p>5€</p></div>
-                            <div class="recurent"><p>Une fois par mois</p></div>
                         </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                             dolore magna aliqua.
@@ -41,11 +65,9 @@
 
         <div class="container">
                 <h3>Les sweats de l'école</h3>
-                    <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
+                <img class= "events" src="/pictures/shop.png" alt="Sweat Cesi"/></a>
                         <div class="information">
-                            <div class="date"><p>12/5/2018</p></div>
                             <div class ="price"><p>5€</p></div>
-                            <div class="recurent"><p>Une fois par mois</p></div>
                         </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                             dolore magna aliqua.
@@ -67,11 +89,9 @@
 
         <div class="container">
                 <h3>Les sweats de l'école</h3>
-                    <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
+                <img class= "events" src="/pictures/shop.png" alt="Sweat Cesi"/></a>
                         <div class="information">
-                            <div class="date"><p>12/5/2018</p></div>
                             <div class ="price"><p>5€</p></div>
-                            <div class="recurent"><p>Une fois par mois</p></div>
                         </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                             dolore magna aliqua.
@@ -93,11 +113,9 @@
 
         <div class="container">
                 <h3>Les sweats de l'école</h3>
-                    <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
+                <img class= "events" src="/pictures/shop.png" alt="Sweat Cesi"/></a>
                         <div class="information">
-                            <div class="date"><p>12/5/2018</p></div>
                             <div class ="price"><p>5€</p></div>
-                            <div class="recurent"><p>Une fois par mois</p></div>
                         </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                             dolore magna aliqua.
@@ -119,11 +137,9 @@
 
         <div class="container">
                 <h3>Les sweats de l'école</h3>
-                    <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
+                <img class= "events" src="/pictures/shop.png" alt="Sweat Cesi"/></a>
                         <div class="information">
-                            <div class="date"><p>12/5/2018</p></div>
                             <div class ="price"><p>5€</p></div>
-                            <div class="recurent"><p>Une fois par mois</p></div>
                         </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                             dolore magna aliqua.
@@ -145,11 +161,9 @@
 
         <div class="container">
                 <h3>Les sweats de l'école</h3>
-                    <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
+                <img class= "events" src="/pictures/shop.png" alt="Sweat Cesi"/></a>
                         <div class="information">
-                            <div class="date"><p>12/5/2018</p></div>
                             <div class ="price"><p>5€</p></div>
-                            <div class="recurent"><p>Une fois par mois</p></div>
                         </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                             dolore magna aliqua.
@@ -172,5 +186,6 @@
 
 
 @section('script_link')
-
+<script src="/vendor/jquery/jquery-3.3.1.min.js"></script>
+<script src="/vendor/bootstrap/bootstrap.bundle.min.js"></script>
 @endsection

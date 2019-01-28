@@ -7,6 +7,10 @@ p{
     height:100%;
     text-align: center;
 }
+h2{
+text-align: center;
+}
+
 
 /*///////////////////////////////////*/
 /*									 */
@@ -14,7 +18,46 @@ p{
 /*									 */
 /*///////////////////////////////////*/
 
+#container_nav{
+    width: 100%;
+    margin-top: 5px;
+}
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f3f3f3;
+}
+
+li a {
+    display: block;
+    color: #666;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+}
+
+li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+button:hover{
+    box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
+    transform: scale(1.01);
+}
+
+button:active{
+    box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
+    transform: scale(0.98);
+}
+
+button img{
+    height: 3em;
+    width: 3em;
+}
 
 /*///////////////////////////////////*/
 /*									 */
@@ -35,24 +78,60 @@ p{
     text-align: center;
 }
 
+.container h3{
+    text-align: center;
+}
+
+/*///////////////////////////////////*/
+/*									 */
+/*		       BEST SALE        	*/
+/*									 */
+/*///////////////////////////////////*/
+.best_sale{
+    display: flex;
+	flex-direction:row-reverse;
+    justify-content: center;
+    margin-right: 25px;
+    
+}
+
+.container h3{
+    text-align: center;
+}
+
+.best_sale h4{
+    text-align: center;
+}
+
+.best_sale_product{
+    height: auto;
+    border-width:4px;
+    border-style: double;
+    border-color:rgba(18, 62, 207, 0.623);
+    margin: 5px;
+    margin-bottom :10px; 
+    width: 30%;
+}
+
 /*///////////////////////////////////*/
 /*									 */
 /*		   BUTTONS ON EVENTS		 */
 /*									 */
 /*///////////////////////////////////*/
 
-/*General button*/
+/*Pannier button*/
 .pannier{
     display: flex;
-	flex-direction: row;
-    justify-content: center;
+	flex-direction:row-reverse;
+    justify-content: left;
+    margin-right: 25px;
     }
     
 .pannier a{
     text-decoration: none;
     color: black;
     display:block;
-    background-color: #F2EFEF;
+    background-color: transparent;
     border:5px;
     border-radius: 10px;
     font-family: 'Cantarell';
@@ -61,29 +140,23 @@ p{
     padding: 5px;
 }
 
+.pannier img {
+    height: 3em;
+    width: 3em;
+}
 
 /*General button*/
-.button{
+.button {
     display: flex;
 	flex-direction: row;
     justify-content: center;
     }
-    
-a:hover{
-    box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
-    transform: scale(1.01);
-}
-
-a:active{
-    box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
-    transform: scale(0.98);
-}
 
 .add{
     text-decoration: none;
     color: black;
     display:block;
-    background-color: #F2EFEF;
+    background-color:white;
     border:5px;
     border-radius: 10px;
     font-family: 'Cantarell';
@@ -92,12 +165,27 @@ a:active{
     padding: 5px;
 }
 
-a:hover{
+button img{
+    height: 3em;
+    width: 3em;
+}
+
+button:hover{
     box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
     transform: scale(1.01);
 }
 
-a:active{
+button:active{
+    box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
+    transform: scale(0.98);
+}
+
+.pannier a:hover{
+    box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
+    transform: scale(1.01);
+}
+
+.pannier a:active{
     box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
     transform: scale(0.98);
 }
@@ -116,29 +204,14 @@ a:active{
 
 .price p{
     border:none;
-    background-color: #F2EFEF;
+    background-color: black;
+    font-weight: bold;
+    color:white;
     border-radius:3px;
     height:30%;
     padding-bottom: 7px;
     margin:10px;
-}
-
-.date p{
-    border:none;
-    border-radius:3px;
-    background-color: #f3f3f3;
-    height: 30%;
-    padding-bottom: 7px;
-    margin:10px;
-}
-
-.recurent p{
-    border:none;
-    border-radius:3px;
-    background-color: #f3f3f3;
-    height: 30%;
-    padding-bottom: 7px;
-    margin:10px;
+    width: 100%;
 }
 
 /*///////////////////////////////////*/

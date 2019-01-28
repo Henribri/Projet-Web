@@ -30,28 +30,9 @@
 
 
 <div class="Legal_Notice">
-    <h2>Mentions légales</h2>
-   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet id ad quos et. 
-    Aut fugiat excepturi quos. LEIn id nesciunt quo, reiciendis enim, ratione laboriosam facere dolor ad, molestiae illum?</p>
-
-        <h3>Conditions d'utilisation</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet id ad quos et. 
-    Aut fugiat excepturi quos. LEIn id nesciunt quo, reiciendis enim, ratione laboriosam facere dolor ad, molestiae illum?</p>
-
-        <h3>Cookies</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet id ad quos et. 
-    Aut fugiat excepturi quos. LEIn id nesciunt quo, reiciendis enim, ratione laboriosam facere dolor ad, molestiae illum?</p>
-
-        <h3> Limitation contractuelles sur les données</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet id ad quos et. 
-    Aut fugiat excepturi quos. LEIn id nesciunt quo, reiciendis enim, ratione laboriosam facere dolor ad, molestiae illum?</p>
-
-        <h3> Déclaration à la CNIL</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet id ad quos et. 
-    Aut fugiat excepturi quos. LEIn id nesciunt quo, reiciendis enim, ratione laboriosam facere dolor ad, molestiae illum?</p>
-
-        <div id="accept"> <input class = "checkbox" type ="checkbox" name ="accept" value ="accept">
-            <label for="accept">J'accepte les conditions d'utilsation</label>
+            <a href="legal_notice">Mentions légales</a>
+           <div id="accept"> <input class = "checkbox" type ="checkbox" name ="accept" value ="accept">
+                <label for="accept">J'accepte les conditions d'utilsation</label>
         </div>
 </div>
 

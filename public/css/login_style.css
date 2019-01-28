@@ -70,15 +70,24 @@ form{
     width: 50%;
     height: auto;
     transform: translateX(50%);
-    border:5px double black;
-    background-color: #f3f3f3;
     text-align: center;
 }
+
 .checkbox{
     margin: 0;
 }
 #accept{
     margin:5px;
+}
+
+.Legal_Notice a {
+    cursor: pointer;
+    color: rgba(18, 62, 207, 0.623);
+    font-weight: bold;
+}
+
+.Legal_Notice a :hover {
+    color: black;
 }
 
 /*///////////////////////////////////*/

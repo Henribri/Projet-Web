@@ -28,7 +28,7 @@
                     mollit anim id est laborum.</p>
                         <div class ="button">
                             <button class ="vote"> <img src="/pictures/vote.png" alt="Photo Cesi"/></button>
-                            <button class ="suscribe"> <img src="/pictures/checkmark.png" alt="Photo Cesi"/></button>
+                            <button class ="reuse"> <img src="/pictures/reuse.png" alt="Photo Cesi"/></button>
                         </div>
     </div>
     <div class="container">
@@ -49,7 +49,8 @@
                     mollit anim id est laborum.</p>
                         <div class ="button">
                             <button class ="vote"> <img src="/pictures/vote.png" alt="Photo Cesi"/></button>
-                            <button class ="suscribe"> <img src="/pictures/checkmark.png" alt="Photo Cesi"/></button>
+                            <button class ="reuse"> <img src="/pictures/reuse.png" alt="Photo Cesi"/></button>
+
                         </div>
     </div>
     <div class="container">
@@ -70,7 +71,8 @@
                     mollit anim id est laborum.</p>
                         <div class ="button">
                             <button class ="vote"> <img src="/pictures/vote.png" alt="Photo Cesi"/></button>
-                            <button class ="suscribe"> <img src="/pictures/checkmark.png" alt="Photo Cesi"/></button>
+                            <button class ="reuse"> <img src="/pictures/reuse.png" alt="Photo Cesi"/></button>
+
                         </div>
     </div>
     <div class="container">
@@ -91,7 +93,8 @@
                     mollit anim id est laborum.</p>
                         <div class ="button">
                             <button class ="vote"> <img src="/pictures/vote.png" alt="Photo Cesi"/></button>
-                            <button class ="suscribe"> <img src="/pictures/checkmark.png" alt="Photo Cesi"/></button>
+                            <button class ="reuse"> <img src="/pictures/reuse.png" alt="Photo Cesi"/></button>
+
                         </div>
     </div>
     <div class="container">
@@ -112,7 +115,8 @@
                     mollit anim id est laborum.</p>
                         <div class ="button">
                             <button class ="vote"> <img src="/pictures/vote.png" alt="Photo Cesi"/></button>
-                            <button class ="suscribe"> <img src="/pictures/checkmark.png" alt="Photo Cesi"/></button>
+                            <button class ="reuse"> <img src="/pictures/reuse.png" alt="Photo Cesi"/></button>
+
                         </div>
     </div>
     <div class="container">
@@ -133,18 +137,11 @@
                     mollit anim id est laborum.</p>
                         <div class ="button">
                             <button class ="vote"> <img src="/pictures/vote.png" alt="Photo Cesi"/></button>
-                            <button class ="suscribe"> <img src="/pictures/checkmark.png" alt="Photo Cesi"/></button>
+                            <button class ="reuse"> <img src="/pictures/reuse.png" alt="Photo Cesi"/></button>
+
                         </div>
     </div>
-       <!-- <form method="post">
-            <input type ="email" name = "email_user" maxlength="255" placeholder = "Email">
-            <input type ="text" name = "name_user" maxlength="25" placeholder = "Nom">
-            <input type ="text" name = "surname_user" maxlength="25" placeholder = "Prénom">
-            <input type ="text" name = "localisation_user" maxlength="25" placeholder = "Campus">
-            <input type ="password" name = "password_user" maxlength="100" placeholder = "Mot de passe">
-            <input type = "submit" value="M'inscrire">
-        </form>
-    </div>-->
+
     </div>
 
 @endsection

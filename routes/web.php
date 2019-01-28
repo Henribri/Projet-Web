@@ -70,4 +70,12 @@ Route::get('/subscribe', function () {
     return view('subscribe');
 });
 
+Route::get('/pannier', function () {
+    return view('pannier');
+});
+
+Route::get('/legal_notice', function () {
+    return view('legal_notice');
+});
+
 

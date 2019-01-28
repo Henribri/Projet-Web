@@ -1,0 +1,15 @@
+.Legal_Notice{
+    margin: 10px;
+    width: 50%;
+    height: auto;
+    transform: translateX(50%);
+    border:5px double black;
+    background-color: #f3f3f3;
+    text-align: center;
+}
+.checkbox{
+    margin: 0;
+}
+#accept{
+    margin:5px;
+}
