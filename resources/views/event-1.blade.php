@@ -47,10 +47,14 @@
                             <button class="comment">Commenter</button>
                         </div>
                         <div class="button">
-                            <button class="like"> <img src="/pictures/like.png" alt="Cloche notifié"/></button>
+                            <button class="like"> <img src="/pictures/like.png" alt="Like"/></button>
+                            <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
                         </div>
                         <h3>Les commentaires</h3>
-                        <div class ="comments"></div>
+                        <div class="button comments"><p>Henri il est trop beau !!!</p><button class="notify_2"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button></div>
+                        <div class="button comments"><p>C'est pas du responsive !!!</p><button class="notify_2"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button></div>
+                        <div class="button comments"><p>DK fait le rapport !!!</p><button class="notify_2"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button></div>
+
 
           
 </div>

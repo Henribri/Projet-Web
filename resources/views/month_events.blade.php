@@ -23,7 +23,7 @@
 <div class ="global_container">
     <div class="container">
             <h2>Titre de lévènement</h2>
-                <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
+                <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/>
                     <div class="information">
                         <div class="date"><p>12/5/2018</p></div>
                         <div class ="price"><p>5€</p></div>
@@ -45,12 +45,13 @@
                         <div class="button">
                             <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
                             <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
+
                         </div>
     </div>
 
     <div class="container">
                 <h2>Titre de lévènement</h2>
-                <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
+                <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/>
                     <div class="information">
                             <div class="date"><p>12/5/2018</p></div>
                             <div class ="price"><p>5€</p></div>
@@ -77,7 +78,7 @@
 
     <div class="container">
                 <h2>Titre de lévènement</h2>
-                <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
+                <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/>
                     <div class="information">
                             <div class="date"><p>12/5/2018</p></div>
                             <div class ="price"><p>5€</p></div>
@@ -104,7 +105,7 @@
 
     <div class="container">
                 <h2>Titre de lévènement</h2>
-                <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
+                <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/>
                     <div class="information">
                             <div class="date"><p>12/5/2018</p></div>
                             <div class ="price"><p>5€</p></div>
@@ -131,7 +132,7 @@
 
     <div class="container">
                 <h2>Titre de lévènement</h2>
-                <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
+                <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/>
                     <div class="information">
                             <div class="date"><p>12/5/2018</p></div>
                             <div class ="price"><p>5€</p></div>
@@ -158,7 +159,7 @@
 
     <div class="container">
                 <h2>Titre de lévènement</h2>
-                <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
+                <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/>
                     <div class="information">
                             <div class="date"><p>12/5/2018</p></div>
                             <div class ="price"><p>5€</p></div>

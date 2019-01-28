@@ -56,6 +56,21 @@ header h1{
 	text-align: center;
 	color:#111;
 }
+
+/*Statut image*/
+#statut img{
+    width: auto;
+    height: 40px;
+}
+
+#statut{
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    margin-right:70px;
+    margin-top: 15px;
+}
+
 /*///////////////////////////////////*/
 /*									 */
 /*			  HAMBURGER			     */
@@ -241,5 +256,8 @@ header{
     /*Title button*/
 header h1{
 	font-size: 1.6em;}
-
+#statut{
+    margin-right:7%;
+    margin-top: 15px;
+    }
 }

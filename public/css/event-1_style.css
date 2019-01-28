@@ -37,6 +37,10 @@ li a {
     width: 100%;
 }
 
+li{
+    margin:2px;
+}
+
 li a:hover:not(.active) {
     background-color: #ddd;
 }
@@ -74,13 +78,14 @@ li a:hover:not(.active) {
     }
 
 button{
-    background-color: #F2EFEF;
+    background-color: white;
     border:5px;
     border-radius: 10px;
     font-family: 'Cantarell';
     cursor: pointer;
     margin: 10px;
     padding: 5px;
+    text-align: center;
 }
     
 /*Comments button*/
@@ -99,7 +104,7 @@ button{
 
 /*Like button*/
 .like{
-    width: 20%;
+    width: 10%;
     height: 5%;
     cursor: pointer;
 }
@@ -109,6 +114,34 @@ button{
     height: 2em;
     width: 2em;
 }
+
+/*Notify button on comment */
+button .notify_2{
+    width: 10%;
+    height: 5%;
+    cursor: pointer;
+    text-align: right;
+}
+
+/*Notify image on comment*/
+.notify_2 img {
+    height: 2em;
+    width: 2em;
+}
+
+/*Notify button*/
+.notify{
+    width: 10%;
+    height: 5%;
+    cursor: pointer;
+}
+
+/*Notify image*/
+.notify img {
+    height: 2em;
+    width: 2em;
+}
+
 /*Comments of others people*/
 h3{
     text-align: center;
@@ -116,7 +149,7 @@ h3{
 
 .comments{
     width: 90%;
-    height: 50px;
+    height: auto;
     border-width:2px;
     border-style: solid;
     border-radius: 10px;
@@ -126,6 +159,10 @@ h3{
     justify-content: center;
     margin: auto;
     margin-bottom: 5px;
+}
+
+.comments p{
+    text-align: center;
 }
 
 /*Button effects*/

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="FR">
+<html lang="fr">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +18,7 @@
         <header>
             <div class="header_bar">
                <div> <a href="home"><img src="pictures/logo_cesi.png" alt="Logo de CESI"  /></a></div>
-
+                    <div id="statut"><img src="pictures/disconnected.png" alt="Connected"></div>
                     <div id="banner">
                         @yield('header_content')
             </div>

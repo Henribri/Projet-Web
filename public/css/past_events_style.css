@@ -36,6 +36,10 @@ li a {
     width: 100%;
 }
 
+li{
+    margin:2px;
+}
+
 li a:hover:not(.active) {
     background-color: #ddd;
 }

@@ -11,8 +11,6 @@
 @section('main_content')
     <div class ="container">
         <h2>Mes articles</h2>
-        <p>Prix total:</p>
-        <p>Quantité:</p>
     </div>
 @endsection
 

@@ -24,6 +24,7 @@
         <div class ="pannier">
             <a href="pannier"><img src="/pictures/panier.png" alt="Panier"></a> 
         </div>
+        
         <section class="best_sale">
             <div class="best_sale_product">
                 <h4>Sweats</h4>
@@ -32,10 +33,12 @@
             </div>
             <div class="best_sale_product">
                 <h4>Porte clées</h4>
+                <img src="/pictures/gourde.jpg" alt="Gourde">
                 <p>azertyuio</p>
             </div>
             <div class="best_sale_product">
                 <h4>Gourde</h4>
+                <img src="/pictures/gourde.jpg" alt="Gourde">
                 <p>azertyuio</p>
             </div>
         </section>
