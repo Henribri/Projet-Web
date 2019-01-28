@@ -21,8 +21,6 @@
             {{$errors->first('password_user')}}
         @endif
         
-       
-
         <input type='submit' name='validation' placeholder='OK'>
     </form>
 </body>

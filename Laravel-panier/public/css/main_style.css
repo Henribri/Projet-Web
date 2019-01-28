@@ -1,0 +1,244 @@
+/*///////////////////////////////////*/
+/*									 */
+/*			    HEADER				 */
+/*									 */
+/*///////////////////////////////////*/
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Cantarell';
+    text-justify: auto;
+}
+/*toutes les im*/
+img{
+    width: 100%;
+    height: auto;
+}
+
+/*make the header rounded and apply a shadow*/
+header {
+    height: 70px;
+    width: 100%;
+	border-radius: 500px/10px;
+	box-shadow: 0 5px 5px rgba(18, 62, 207, 0.623);
+}
+
+/*make the header again a rectangle bar of white color*/
+.header_bar{
+	height: inherit;
+    width: inherit;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	background-color: #FFFFFF;
+}
+
+.header_bar div{
+    position: absolute;
+    right: 7px; 
+}
+
+header img{
+	width: auto;
+    height: 70px;
+}
+
+header #banner{
+    position: absolute;
+    width: 50%;
+    margin: 0px;
+    padding: 0px;
+    left: 50%;
+    transform: translateX(-50%);  
+}
+
+/*Title of pages */
+header h1{
+	font-size: 1.2em;
+	text-align: center;
+	color:#111;
+}
+/*///////////////////////////////////*/
+/*									 */
+/*			  HAMBURGER			     */
+/*									 */
+/*///////////////////////////////////*/
+a{
+    text-decoration: none;
+    transition: color 0.3s ease;
+    color: rgba(18, 62, 207, 0.623);
+}
+
+a:hover{
+  color: black;
+}
+
+#menuToggle{
+  display: block;
+  width: 75%;
+  position: fixed;
+  top: 25px;
+  left: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: rgba(18, 62, 207, 0.623);
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+}
+
+#menuToggle span:first-child{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2){
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background:  rgba(18, 62, 207, 0.623);
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3){
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2){
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: white;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);  
+}
+
+#menu li{
+  padding: 10px 0;
+  font-size: 22px;
+  font-family: 'Cantarell';
+
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul{
+  transform: none;
+}
+
+/*///////////////////////////////////*/
+/*									 */
+/*			    FOOTER				 */
+/*									 */
+/*///////////////////////////////////*/
+
+footer {
+	display:block;
+	font-size: 80%;
+	text-align: center;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	height: 2em;
+	font-size: 0.75em;
+	color:black;
+	margin-bottom: 0;
+	font-weight: bold;
+}
+
+/*///////////////////////////////////*/
+/*									 */
+/*		      MEDIA QUERIES			 */
+/*			    Tablet				 */
+/*///////////////////////////////////*/
+
+
+@media (min-width: 640px) {
+
+#footer{
+	font-size: 0.75em;
+    }
+
+header{
+    height:70px;
+    }
+
+    /*Title button*/
+header h1{
+    font-size: 1.4em;
+}
+}
+
+/*///////////////////////////////////*/
+/*									 */
+/*		      MEDIA QUERIES			 */
+/*			    Computer			 */
+/*///////////////////////////////////*/
+
+@media (min-width: 1200px) {
+
+#footer{
+	font-size: 1em;
+    }
+
+header{
+    height: 70px;
+    }
+
+    /*Title button*/
+header h1{
+	font-size: 1.6em;}
+
+}

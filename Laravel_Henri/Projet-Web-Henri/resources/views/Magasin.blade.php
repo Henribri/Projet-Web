@@ -7,6 +7,13 @@
     <title>Magasin</title>
 </head>
 <body>
-    
+<ul>
+        @foreach($product as $products)
+            <li>
+            {{ $products->Name_product }} : {{ $products->Description_product }} : {{ $products->Price_product }}
+            <input type='button' value='acheter'>
+            </li>
+        @endforeach
+    </ul>
 </body>
 </html>

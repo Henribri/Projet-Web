@@ -1,0 +1,37 @@
+
+.global_container img{
+    height: auto;
+    margin-top: 7px;
+}
+p{
+    height:100%;
+    text-align: center;
+}
+
+@media (min-width: 640px) {
+
+    .global_container{
+        margin:2px;
+        }
+}
+
+@media (min-width: 1200px) {
+.img{
+     display: block;
+    width: 100%;
+    height: auto;
+        }
+
+.global_container{
+text-align: center;
+    }
+
+.global_container .container{
+    display: inline-block;
+    width: 25%;
+    margin: 50px;
+    margin-top: 50px;
+    padding:5px;
+            }
+}
+

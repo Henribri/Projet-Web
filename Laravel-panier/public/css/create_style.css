@@ -1,0 +1,94 @@
+/*///////////////////////////////////*/
+/*									 */
+/*		      NAVIGATION BAR		 */
+/*									 */
+/*///////////////////////////////////*/
+
+#container_nav{
+    width: 100%;
+    margin-top: 5px;
+    background-color: aqua;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f3f3f3;
+}
+
+li a {
+    display: block;
+    color: #666;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+}
+
+li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+/*///////////////////////////////////*/
+/*									 */
+/*		        FORM	             */
+/*									 */
+/*///////////////////////////////////*/
+.form{
+    margin: auto;
+    width: 100%;
+    display: block;
+}
+
+form .field{
+    margin: 5px;
+    padding: 0px;
+    width: 100%;
+    border-radius: 5px;
+    font-family: 'Cantarell', sans-serif;
+}
+
+form{
+    margin: 30px auto ;
+    width: 75%;
+    height: 100%;
+    background-color: #ffffff;
+    text-align:center;
+}
+
+#description{
+    width: 100%;
+    vertical-align: top;
+}
+
+/*///////////////////////////////////*/
+/*									 */
+/*		      MEDIA QUERIES			 */
+/*			    Tablet				 */
+/*///////////////////////////////////*/
+
+@media (min-width: 640px) {
+
+
+}
+
+/*///////////////////////////////////*/
+/*									 */
+/*		      MEDIA QUERIES			 */
+/*			    Computer			 */
+/*///////////////////////////////////*/
+
+@media (min-width: 1200px) {
+
+ul {
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+    flex-wrap: wrap;
+
+    }
+
+}
+

@@ -19,14 +19,14 @@ class Event_user extends Controller
     public function View_event(){
 
     //on verifie si on est connecté
-    if(session()->get('Status_user')){
+    if(session()->get('Statue_user')){
 
         
 
         
         $Events=Events::all();
 
-        return view('Event',[
+        return view('events_month',[
             'Events'=>$Events,
         ]);
     }
@@ -43,7 +43,7 @@ class Event_user extends Controller
 
         
 
-        if(session()->get('Status_user')){
+        if(session()->get('Statue_user')){
             //try catch pour tester si un utilisateur s'est déja inscrit à un évènement.
            try{ 
             Sign_in::create([

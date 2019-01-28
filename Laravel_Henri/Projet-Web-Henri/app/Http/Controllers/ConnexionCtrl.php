@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Users;
+use App\Statue;
 
 
 class ConnexionCtrl extends Controller
@@ -37,25 +39,25 @@ class ConnexionCtrl extends Controller
     if(auth()->check()){
 
         //on prend la personne log in
-        $user=auth::user();
+        $users=auth::user();
 
         //on declare une session pour dire que le user est bien log(auth ne fonctionnant pas sur les autres pages)
 
         //inner join pour recuperer le status
-        $status_user = DB::table('users')
-            ->join('status', 'users.Id_status', '=', 'status.Id_status')
-            ->select('Status')
-            ->where('users.Id_user', $user->Id_user)
+        $statue_user = DB::table('_user')
+            ->join('_statue', '_user.Id_statue', '=', '_statue.Id_statue')
+            ->select('Statue')
+            ->where('_user.Id_user', $users->Id_user)
             ->get();
 
 
-        session()->put('Status_user', $status_user[0]->Status);
+        session()->put('Statue_user', $statue_user[0]->Statue);
         //on met en session l'id de l'utilissateur
-        session()->put('Id_user', $user->Id_user);
-        session()->put('Email_user', $user->Email_user);
-        session()->put('Name_user', $user->Name_user);
-        session()->put('Surname_user', $user->Surname_user);
-        return redirect('/event');
+        session()->put('Id_user', $users->Id_user);
+        session()->put('Email_user', $users->Email_user);
+        session()->put('Name_user', $users->Name_user);
+        session()->put('Surname_user', $users->Surname_user);
+        return redirect('/magasin');
         
     }
 

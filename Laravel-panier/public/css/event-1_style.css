@@ -1,0 +1,165 @@
+.global_container .events{
+    height: auto;
+    margin-top: 7px;
+}
+
+p{
+    height:100%;
+    text-align: center;
+}
+
+/*///////////////////////////////////*/
+/*									 */
+/*		      NAVIGATION BAR		 */
+/*									 */
+/*///////////////////////////////////*/
+
+#container_nav{
+    width: 100%;
+    background-color: #f3f3f3;
+    margin-top: 5px;
+    border: 1px solid #e7e7e7;
+}
+#nav_bar{
+    text-align: center;
+    width: 50%;
+    transform: translateX(50%);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f3f3f3;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+/*///////////////////////////////////*/
+/*									 */
+/*		      EVENTS		         */
+/*									 */
+/*///////////////////////////////////*/
+
+.global_container .container{
+    height: auto;
+    border-width:4px;
+    border-style: double;
+    border-color:black;
+}
+
+/*///////////////////////////////////*/
+/*									 */
+/*		   BUTTONS ON EVENTS		 */
+/*									 */
+/*///////////////////////////////////*/
+
+/*General button*/
+button{
+    background-color: #F2EFEF;
+    border:5px;
+    border-radius: 10px;
+    font-family: 'Cantarell';
+    padding:5px;
+    transition:0.2s;
+    margin:20px;
+}
+
+/*div which contains like and comments*/
+.container_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/*Comments button*/
+#comment{
+    margin:20px;
+    cursor: pointer;
+}
+
+/*Like button*/
+#like{
+    margin-top:10px;
+    margin:20px;
+    cursor: pointer;
+}
+
+/*Like image*/
+#like img {
+    height: 3em;
+    width: 3em;
+}
+
+/*Area of comment */
+#comment_text{
+    border-radius: 5px;
+    border-color: black;
+    height : 60px;
+}
+
+/*///////////////////////////////////*/
+/*									 */
+/*		      MEDIA QUERIES			 */
+/*			    Tablet				 */
+/*///////////////////////////////////*/
+
+@media (min-width: 640px) {
+
+.global_container{
+    margin:2px;
+    }     
+}
+
+/*///////////////////////////////////*/
+/*									 */
+/*		      MEDIA QUERIES			 */
+/*			    Computer			 */
+/*///////////////////////////////////*/
+
+@media (min-width: 1200px) {
+
+.events{
+     display: block;
+    width: 100%;
+    height: auto;
+    }
+
+.global_container{
+text-align: center;
+    }
+
+.global_container .container{
+    display: inline-block;
+    width: 25%;
+    margin: 50px;
+    margin-top: 50px;
+    padding:5px;
+    }
+#nav_bar{
+    text-align: center;
+    width: 50%;
+    transform: translateX(72%);
+    top:10px;
+
+    }
+}
+
+
+

@@ -18,9 +18,9 @@ Route::get('/', function () {
 Route::view('/home','home');
 
 //on a nos route qui font appel au controller qui gérera l'inscription 
-Route::get('/inscription','Users_Sign_In_Control@Sign_in');
+Route::get('/inscription','User_Sign_In_Controller@Sign_in_page');
 
-Route::post('/inscription', 'Users_Sign_In_Control@Sign_in');
+Route::post('/inscription', 'User_Sign_In_Controller@Sign_in');
 
 
 Route::get('/event', 'Event_user@View_event');
@@ -34,6 +34,8 @@ Route::post('/connexion', 'ConnexionCtrl@Log_in');
 Route::get('/deconnexion', 'Log_outCtrl@Log_out');
 
 Route::get('/updateevent', 'Create_eventCtrl@Upgrade');
+
+route::get('/magasin' , 'list_product_controller@display_product');
 
 /*
 Auth::routes();

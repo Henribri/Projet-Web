@@ -13,8 +13,10 @@ class Users extends Model implements Authenticatable{
     //pb de bdd sans ca (on enleve les Create at etc...)
     public $timestamps = false;
 
+    protected $table = '_user';
+
     //les colonnes qu'on va remplir avec laravel
-    protected $fillable=['Name_user','Surname_user','Localisation_user','Email_user','Password_user','Id_Status'];
+    protected $fillable=['Name_user','Surname_user','Localisation_user','Email_user','Password_user','Id_Statue'];
 
 
     /**
@@ -26,7 +28,6 @@ class Users extends Model implements Authenticatable{
     {
         return $this->Password_user;
     }
-
 
 
 
