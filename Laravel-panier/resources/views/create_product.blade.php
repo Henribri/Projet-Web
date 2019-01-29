@@ -27,9 +27,15 @@
         {{$errors->first('price_product')}}
     @endif
 
-   <!-- <select name="Choose category" value="{{old('Id_category')}}">
-            <option></option>
-    </select> -->
+    <select name="id_category">
+            <option value="1">Vêtements</option>
+            <option value="2">Goodies</option>
+            <option value="3">Fournitures</option>
+        
+        </select>
+       <p> @if($errors->has('localisation_user'))
+            {{$errors->first('localisation_user')}}
+        @endif</p>
 
     <p><input type='submit' name='validation' placeholder='Valider'></p>
 </body>

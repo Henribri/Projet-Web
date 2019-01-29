@@ -15,7 +15,7 @@ class list_product_controller extends Controller
     {
         $products = \App\_product::all();
     
-        return view('shop', [
+        return view('add_product', [
             'products' => $products
         ]);
     }
@@ -52,7 +52,7 @@ class list_product_controller extends Controller
     
                 //ORM
                 $select= _select::create([
-                    'Id_product'=>"2",
+                    'Id_product'=>request('id_product'),
                     'Id_order'=>$order->Id_order,
                     'Quantity'=>request('quantity')]);
                     return redirect('/shop2');
@@ -89,6 +89,31 @@ class list_product_controller extends Controller
             }
         }
 
+        return redirect('/connexion')->withErrors([
+            'email_user' => 'Veuillez vous authentifier'
+            ]);
+    }
+
+    public function list_pannier()
+    {
+        if(session()->get('Status_user'))
+        {
+            $user = session::get('Id_user');
+
+            $orders = DB::table('_select')
+            ->join('_order', '_select.Id_order', '=', '_order.Id_order')
+            ->join('_product','_select.Id_product','=','_product.Id_product')
+            ->select('_product.Name_product','_select.Quantity','_product.Price_product')
+            ->where([
+                ['_order.Id_user', $user],
+                ['_order.Validate', '0'],
+            ])
+            ->get();
+
+            return view('pannier', [
+                'orders' => $orders
+            ]);
+        }
         return redirect('/connexion')->withErrors([
             'email_user' => 'Veuillez vous authentifier'
             ]);
