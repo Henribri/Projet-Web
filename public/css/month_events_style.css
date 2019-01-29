@@ -20,7 +20,7 @@ ul {
 }
 
 /*Text on point navigation bar*/
-li a {
+.nav_bar li a {
     display: block;
     color: #666;
     padding: 14px 16px;
@@ -30,23 +30,23 @@ li a {
 }
 
 /*Point of navigation bar*/
-li{
+.nav_bar li{
     margin:2px;
 }
 
 /*Animation on navigation bar*/
-li a:hover:not(.active) {
+.nav_bar li a:hover:not(.active) {
     background-color: #ddd;
 }
 
 /*Animation on navigation bar*/
-li a:hover{
+.nav_bar li a:hover{
     box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
     transform: scale(1.01);
 }
 
 /*Animation on navigation bar*/
-li a:active{
+.nav_bar li a:active{
     box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
     transform: scale(0.98);
 }

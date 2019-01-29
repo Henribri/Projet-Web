@@ -28,6 +28,8 @@
       </select>
       <textarea class="field" name="description" id="description" cols="30" rows="10"placeholder="Description du produit"required></textarea>
       </div> 
+      <label for="file" class="label-file">Choisir une image</label>
+      <input id="file" class="input-file" type="file">
       <input class="field" type="submit" value="Ajouter"/>
     </form> 
 </div>

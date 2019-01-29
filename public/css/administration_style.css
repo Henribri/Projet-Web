@@ -25,3 +25,13 @@ form{
 .administration p{
     text-align: center;
 }
+
+.input input:focus:invalid{
+    border-color:#d45252;
+    box-shadow: #d45252 0 0 5px; 
+ }
+ 
+ .input input:focus:valid{
+     border-color:#009933;
+     box-shadow: #009933 0 0 5px; 
+  }
