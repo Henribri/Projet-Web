@@ -82,7 +82,9 @@ form{
 /*Field of description settings*/
 #description{
     width: 100%;
+    height: 100px;
     vertical-align: top;
+
 }
 
 /*Color of form invalidation if a field is not completed*/

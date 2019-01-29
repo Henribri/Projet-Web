@@ -26,7 +26,7 @@
       <input class="field" type="text" name="event_name" placeholder="Nom de lévènement" required>
       <input class="field" id="type"type="text" name="public_event" placeholder="Type de l'évènement"required>
       <input class="field" type="text" name="event_date" placeholder="Date de l'évènement"required>
-      <input class="field"id="number" type="text" name="recurence" placeholder="Nombre de récurence" rows="5" cols="40" required>
+      <input class="field"id="number" type="text" name="recurence" placeholder="Nombre de récurence" required>
       <textarea class="field" name="description" id="description" cols="30" rows="10"placeholder="Description de l'évènements"required></textarea>
       <select class="field" id="state" name="state">
         <option value="public">Publique</option>

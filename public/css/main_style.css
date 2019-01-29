@@ -195,7 +195,6 @@ a:hover{
 #menuToggle input:checked ~ ul{
   transform: none;
 }
-
 /*///////////////////////////////////*/
 /*									 */
 /*			    FOOTER				 */

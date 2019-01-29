@@ -120,6 +120,18 @@ button{
     height: 5%;
 }
 
+/*Pdf button size*/
+.pdf{
+    width: 20%;
+    height: 5%;
+}
+
+/*Pdf button image size*/
+.pdf img{
+    height: 3em;
+    width: 3em;
+}
+
 /*Animation button on the page */
 button:hover{
     box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
@@ -206,10 +218,6 @@ p{
 } 
 
 /*Image size  button for notify*/
-.notify img{
-    height: 3em;
-    width: 3em;
-}
 
 /* Button for notify size */
 .notify{
@@ -217,15 +225,14 @@ p{
     height: 5%;
 }
 
-/*Image size button Form for subscribe*/
-.form img{
-    height: 3em;
-    width: 3em;
-
-}
-
 /* Button for notify size */
 .form {
+    width: 10%;
+    height: 5%;
+}
+
+/*Pdf button size*/
+.pdf{
     width: 10%;
     height: 5%;
 }
@@ -282,5 +289,12 @@ ul {
     width: 15%;
     height: 5%;
 }
+
+/*Pdf button size*/
+.pdf{
+    width: 15%;
+    height: 5%;
+}
+
 
 }

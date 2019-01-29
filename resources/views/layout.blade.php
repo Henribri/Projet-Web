@@ -17,33 +17,37 @@
     <body>
         <header>
             <div class="header_bar">
-               <div> <a href="home"><img src="pictures/logo_cesi.png" alt="Logo de CESI"  /></a></div>
-                    <div id="statut"><img src="pictures/disconnected.png" alt="Connected"></div>
+                <div> 
+                   <a href="home"><img src="pictures/logo_cesi.png" alt="Logo de CESI"  /></a>
+                </div>
+                <div id="statut">
+                    <img src="pictures/disconnected.png" alt="Connected">
+                </div>
                     <div id="banner">
                         @yield('header_content')
             </div>
-                <nav role="navigation">
-                    <div id="menuToggle">
-                        <input type="checkbox" />
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <ul id="menu">
-                            <a href="subscribe"><li>Inscription</li></a>
-                            <a href="login"><li>Connexion</li></a>
-                            <a href=""><li>Déconnexion</li></a>
-                            <a href="cesi"><li>Cesi</li></a>
-                            <a href="bde"><li>BDE</li></a>
-                            <a href="associations"><li>Associations</li></a>
-                            <a href="month_events"><li>Evènements</li></a>
-                            <a href="#"><li>Mettre à jour évènements</li></a>
-                            <a href="suggestion_box"><li>Boîte à idées</li></a>
-                            <a href="shop"><li>Boutique</li></a>
-                            <a href="pannier"><li>Mon panier</li></a>
-                            <a href="legal_notice"><li>Mentions légales</li></a>
-                        </ul>
-                    </div>
-                </nav>
+                <nav>
+                        <div id="menuToggle">
+                            <input type="checkbox" />
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <ul id="menu">
+                                <li><a href="subscribe">Inscription</a></li>
+                                <li><a href="login">Connexion</a></li>
+                                <li><a href="#">Déconnexion</a></li>
+                                <li><a href="cesi">Cesi</a></li>
+                                <li><a href="bde">BDE</a></li>
+                                <li><a href="associations">Associations</a></li>
+                                <li><a href="month_events">Evènements</a></li>
+                                <li><a href="#">Mettre à jour évènements</a></li>
+                                <li><a href="suggestion_box">Boîte à idées</a></li>
+                                <li><a href="shop">Boutique</a></li>
+                                <li><a href="pannier">Mon panier</a></li>
+                                <li><a href="legal_notice">Mentions légales</a></li>
+                            </ul>
+                        </div>
+                    </nav> 
             </div>
         </header>
 
@@ -55,7 +59,6 @@
             <p> © BDE CESI Arras | Tous droits réservés </p>
         </footer> 
         @yield('script_link')
-        <script src ="js\subscribe.js"></script>
     </body>
 
 </html>
