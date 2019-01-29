@@ -77,6 +77,10 @@ Route::post('/shop2','list_product_controller@Add_product');
 Route::get('/create_product','create_product_controller@Create_product_page');
 
 Route::post('/create_product','create_product_controller@Create_product');
+
+Route::get('/list_product','list_product_controller@Supp_product_page');
+
+Route::post('/list_product','list_product_controller@Supp_product');
 /*
 Auth::routes();
 

@@ -82,7 +82,7 @@ class list_product_controller extends Controller
         
                 //ORM
                 $select= _select::create([
-                    'Id_product'=>"2",
+                    'Id_product'=>request('id_product'),
                     'Id_order'=>$order->Id_order,
                     'Quantity'=>request('quantity')]);
                     return redirect('/shop2');
@@ -117,6 +117,38 @@ class list_product_controller extends Controller
         return redirect('/connexion')->withErrors([
             'email_user' => 'Veuillez vous authentifier'
             ]);
+    }
+
+    public function Supp_product_page()
+    {
+        $products = \App\_product::all();
+    
+        return view('list_product', [
+            'products' => $products
+        ]);
+    }
+
+    public function Supp_product()
+    {
+        if(session()->get('Status_user')=='BDE')
+        {
+            $id_product = request("id_product");
+
+/*            $products = DB::table('_product')
+            ->select('Id_product')
+            ->where([
+                ['_product.Id_product', $id_product],
+            ])
+            ->first();
+*/
+            $product = \App\_product::where('Id_product',$id_product)->delete();
+
+            return "Votre article à bien été supprimé";
+        }
+        else
+        {
+        return "Vous n'appartez pas au BDE";
+        }
     }
 }
 

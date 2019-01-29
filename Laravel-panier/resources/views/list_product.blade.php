@@ -15,12 +15,6 @@
             <form method="post" action="">
                  {{ csrf_field() }}  
 
-                <input class="field" type="entier" name="quantity" placeholder="quantity">
-                @if($errors->has('quantity'))
-                    {{$errors->first('quantity')}}
-                @endif
-                <input class="field" id ="blocked" type="hidden" name="id_product" value="{{$product->Id_product}}"/>
-                <input class="field" id ="blocked" type="submit" value="+"/>
                 <input class="field" id ="blocked" type="hidden" name="id_product" value="{{$product->Id_product}}"/>
                 <input class="field" id ="blocked" type="submit" value="supprimer"/>  
             </form>
