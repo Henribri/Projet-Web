@@ -77,13 +77,13 @@ header h1{
 /*			  HAMBURGER			     */
 /*									 */
 /*///////////////////////////////////*/
-a{
+#menu a{
     text-decoration: none;
     transition: color 0.3s ease;
     color: rgba(18, 62, 207, 0.623);
 }
 
-a:hover{
+#menu a:hover{
   color: black;
 }
 
@@ -263,5 +263,7 @@ header h1{
     margin-right:7%;
     margin-top: 15px;
 }
-
+a{
+    margin: 5px;
+}
 }

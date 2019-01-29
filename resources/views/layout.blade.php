@@ -43,8 +43,8 @@
                                 <li><a href="#">Mettre à jour évènements</a></li>
                                 <li><a href="suggestion_box">Boîte à idées</a></li>
                                 <li><a href="shop">Boutique</a></li>
-                                <li><a href="pannier">Mon panier</a></li>
                                 <li><a href="legal_notice">Mentions légales</a></li>
+                                <li><a href="administration">Administration</a></li>
                             </ul>
                         </div>
                     </nav> 

@@ -11,7 +11,7 @@
 }
 
 /*Container of each point of navigation bar*/
-ul {
+.nav_bar {
     list-style-type: none;
     margin: 0;
     padding: 0;
