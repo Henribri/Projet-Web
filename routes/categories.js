@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var Category = require('../models/Categories');
+var Category = require('../models/category');
 
 router.get('/:id?', function(req, res, next) {  
     if (req.params.id) {  

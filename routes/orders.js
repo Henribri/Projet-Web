@@ -2,6 +2,18 @@ var express = require('express');
 var router = express.Router();
 var Order = require('../models/Orders');
 
+router.get('/user/:id?', function(req, res, next) {  
+    if (req.params.id) {  
+        Order.getOrdersByUser(req.params.id, function(err, rows) {  
+            if (err) {  
+                res.json(err);  
+            } else {  
+                res.json(rows);  
+            }  
+        });   
+    }  
+});  
+
 router.get('/:id?', function(req, res, next) {  
     if (req.params.id) {  
         Order.getOrdersById(req.params.id, function(err, rows) {  
