@@ -1,0 +1,238 @@
+.global_container .events{
+    height: auto;
+    margin-top: 7px;
+}
+
+p{
+    height:100%;
+    text-align: center;
+}
+
+/*///////////////////////////////////*/
+/*									 */
+/*		      NAVIGATION BAR		 */
+/*									 */
+/*///////////////////////////////////*/
+
+
+
+/*///////////////////////////////////*/
+/*									 */
+/*		      EVENTS		         */
+/*									 */
+/*///////////////////////////////////*/
+
+.global_container .container{
+    height: auto;
+    border-width:4px;
+    border-style: double;
+    border-color:rgba(18, 62, 207, 0.623);
+    margin: 5px;
+    margin-bottom :10px; 
+}
+
+.container h2{
+    text-align: center;
+}
+
+/*///////////////////////////////////*/
+/*									 */
+/*		   BUTTONS ON EVENTS		 */
+/*									 */
+/*///////////////////////////////////*/
+
+/*General button*/
+.pannier{
+    display: flex;
+	flex-direction: row;
+    justify-content: center;
+    }
+    
+.pannier a{
+    text-decoration: none;
+    color: black;
+    display:block;
+    background-color: #F2EFEF;
+    border:5px;
+    border-radius: 10px;
+    font-family: 'Cantarell';
+    cursor: pointer;
+    margin: 5px;
+    padding: 5px;
+}
+
+
+/*General button*/
+.button{
+    display: flex;
+	flex-direction: row;
+    justify-content: center;
+    }
+    
+a:hover{
+    box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
+    transform: scale(1.01);
+}
+
+a:active{
+    box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
+    transform: scale(0.98);
+}
+
+.add{
+    text-decoration: none;
+    color: black;
+    display:block;
+    background-color: #F2EFEF;
+    border:5px;
+    border-radius: 10px;
+    font-family: 'Cantarell';
+    cursor: pointer;
+    margin: 5px;
+    padding: 5px;
+}
+
+a:hover{
+    box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
+    transform: scale(1.01);
+}
+
+a:active{
+    box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
+    transform: scale(0.98);
+}
+
+/*///////////////////////////////////*/
+/*									 */
+/*		 INFORMATIONS OF EVENTS	     */
+/*									 */
+/*///////////////////////////////////*/
+
+.information{
+    display:flex;
+    justify-content: center;
+    margin-top:15px;
+}
+
+.price p{
+    border:none;
+    background-color: #F2EFEF;
+    border-radius:3px;
+    height:30%;
+    padding-bottom: 7px;
+    margin:10px;
+}
+
+.date p{
+    border:none;
+    border-radius:3px;
+    background-color: #f3f3f3;
+    height: 30%;
+    padding-bottom: 7px;
+    margin:10px;
+}
+
+.recurent p{
+    border:none;
+    border-radius:3px;
+    background-color: #f3f3f3;
+    height: 30%;
+    padding-bottom: 7px;
+    margin:10px;
+}
+
+/*///////////////////////////////////*/
+/*									 */
+/*		        POP-UP		         */
+/*			    			         */
+/*///////////////////////////////////*/
+
+
+
+/*///////////////////////////////////*/
+/*									 */
+/*		      MEDIA QUERIES			 */
+/*			    Tablet				 */
+/*///////////////////////////////////*/
+
+@media (min-width: 640px) {
+
+.global_container{
+    margin:2px;
+    } 
+
+/*Button for notify*/
+.notify img{
+    height: 3em;
+    width: 3em;
+    }
+
+.notify{
+    width: 10%;
+    height: 5%;
+    }
+
+/*Button Form for subscribe*/
+.form img{
+    height: 3em;
+    width: 3em;
+
+    }
+
+.form {
+    width: 10%;
+    height: 5%;
+}
+}
+
+/*///////////////////////////////////*/
+/*									 */
+/*		      MEDIA QUERIES			 */
+/*			    Computer			 */
+/*///////////////////////////////////*/
+
+@media (min-width: 1200px) {
+
+.events{
+    display: block;
+    width: 100%;
+    height: auto;
+    }
+
+.global_container{
+    text-align: center;
+    }
+
+.global_container .container{
+    display: inline-block;
+    width: 25%;
+    margin: 50px;
+    margin-top: 50px;
+    padding:5px;
+    }
+
+#nav_bar{
+    text-align: center;
+    width: 50%;
+    transform: translateX(72%);
+    top:10px;
+
+    }
+
+ul {
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+    flex-wrap: wrap;
+    }
+
+.notify{
+    width: 15%;
+    height: 5%;
+    }
+
+.form {
+    width: 15%;
+    height: 5%;
+}
+}

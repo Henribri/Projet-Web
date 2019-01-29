@@ -1,0 +1,105 @@
+.global_container .events{
+    height: auto;
+    margin-top: 7px;
+}
+
+p{
+    height:100%;
+    text-align: center;
+}
+
+/*///////////////////////////////////*/
+/*									 */
+/*		        IDEAS		         */
+/*									 */
+/*///////////////////////////////////*/
+
+.global_container .container{
+    height: auto;
+    border-width:4px;
+    border-style: double;
+    border-color:rgba(18, 62, 207, 0.623);
+    margin-top: 10px;
+}
+
+.container h2{
+    text-align: center;
+}
+
+/*///////////////////////////////////*/
+/*									 */
+/*	  BUTTONS ON SUGGESTION_BOX		 */
+/*									 */
+/*///////////////////////////////////*/
+
+.button{
+    display: flex;
+	flex-direction: row;
+    justify-content: center;
+    }
+
+button{
+    background-color: white;
+    border:5px;
+    border-radius: 10px;
+    font-family: 'Cantarell';
+    cursor: pointer;
+    margin: 3px;
+    padding: 5px;
+    margin-bottom: 10px;
+    }
+
+button:hover{
+    box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
+    transform: scale(1.01);
+}
+
+button:active{
+    box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
+    transform: scale(0.98);
+}
+
+button img{
+    height: 3em;
+    width: 3em;
+}
+
+/*///////////////////////////////////*/
+/*									 */
+/*		      MEDIA QUERIES			 */
+/*			    Tablet				 */
+/*///////////////////////////////////*/
+
+@media (min-width: 640px) {
+
+    .global_container{
+        margin:2px;
+        }        
+}
+
+/*///////////////////////////////////*/
+/*									 */
+/*		      MEDIA QUERIES			 */
+/*			    Computer			 */
+/*///////////////////////////////////*/
+
+@media (min-width: 1200px) {
+.events{
+     display: block;
+    width: 100%;
+    height: auto;
+        }
+
+.global_container{
+text-align: center;
+    }
+
+.global_container .container{
+    display: inline-block;
+    width: 25%;
+    margin: 50px;
+    margin-top: 50px;
+    padding:5px;
+            }
+}
+
