@@ -81,3 +81,7 @@ Route::get('/legal_notice', function () {
 Route::get('/add_product', function () {
     return view('add_product');
 });
+
+Route::get('/administration', function () {
+    return view('administration');
+});

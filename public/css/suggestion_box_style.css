@@ -66,6 +66,24 @@ button img{
 
 /*///////////////////////////////////*/
 /*									 */
+/*		      INFORMATIONS			 */
+/*			            			 */
+/*///////////////////////////////////*/
+.information{
+    text-align: center;
+    margin-left: 100px;
+    margin-right:100px;
+    padding: 0;
+    font-style:white;
+    background-color:red;
+}
+
+.information p{
+    color:white;
+
+}
+/*///////////////////////////////////*/
+/*									 */
 /*		      MEDIA QUERIES			 */
 /*			    Tablet				 */
 /*///////////////////////////////////*/
