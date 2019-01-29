@@ -40,9 +40,9 @@ class Users_Sign_In_Control extends Controller
         ]);
 
 
-        $Etudiant = DB::table('_statue')
-        ->select('Id_statue')
-        ->where('_statue.Statue', 'Etudiant')
+        $Etudiant = DB::table('_status')
+        ->select('Id_status')
+        ->where('_status.Status', 'Etudiant')
         ->get();
 
         //ORM
@@ -52,7 +52,7 @@ class Users_Sign_In_Control extends Controller
         'Localisation_user'=>request('localisation_user'),
         'Email_user'=>request('email_user'),
         'Password_user'=>bcrypt(request('password_user')),
-        'Id_statue'=>$Etudiant[0]->Id_statue,
+        'Id_statue'=>$Etudiant[0]->Id_status,
 
     ]);
 

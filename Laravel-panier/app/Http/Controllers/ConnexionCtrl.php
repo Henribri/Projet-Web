@@ -52,13 +52,13 @@ class ConnexionCtrl extends Controller
 
         //inner join pour recuperer le status
         $status_user = DB::table('_user')
-            ->join('_statue', '_user.Id_statue', '=', '_statue.Id_statue')
-            ->select('Statue')
+            ->join('_status', '_user.Id_status', '=', '_status.Id_status')
+            ->select('Status')
             ->where('_user.Id_user', $user->Id_user)
             ->get();
 
 
-        session()->put('Status_user', $status_user[0]->Statue);
+        session()->put('Status_user', $status_user[0]->Status);
         //on met en session l'id de l'utilissateur
         session()->put('Id_user', $user->Id_user);
         session()->put('Email_user', $user->Email_user);

@@ -72,6 +72,8 @@ Route::post('/shop','list_product_controller@Add_product');
 
 Route::get('/shop2','list_product_controller@display_product_bis');
 
+Route::post('/shop2','list_product_controller@Add_product');
+
 Route::get('/create_product','create_product_controller@Create_product_page');
 
 Route::post('/create_product','create_product_controller@Create_product');
@@ -80,3 +82,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 */
+
+Route::get('test','test_controller@test_view');

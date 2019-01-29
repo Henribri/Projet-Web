@@ -20,7 +20,7 @@
                     {{$errors->first('quantity')}}
                 @endif
         
-                <input class="field" id ="blocked" type="submit" value="S'inscrire"/> 
+                <input class="field" id ="blocked" type="submit" value="+"/> 
             </form>
             </li>
         @endforeach
