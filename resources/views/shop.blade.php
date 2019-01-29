@@ -23,11 +23,24 @@
         <div class="research">
             <div class="category_bar">
                 <label for="category">Catégorie</label>
-                <select class="field" id="category" name="state">
-                <option value="public">Vêtements</option>
-                <option value="private">Goodies</option>
-                <option value="private">Matériel informatique</option>
-      </select>  
+                <select id="category" name="state">
+                    <option value="public">Vêtements</option>
+                    <option value="private">Goodies</option>
+                    <option value="private">Matériel informatique</option>
+                </select>  
+            </div>
+            <div class="research_name">
+             <form action="/shop" id="searchthis" method="get">
+                <input id="search" name="q" type="text" placeholder="Rechercher" />
+                <input id="search-btn" type="submit" value="Rechercher" />
+            </form>
+            </div>
+            <div class="price_order">
+                <label for="price">Prix</label>
+                <select  id="price-select" name="state">
+                    <option value="public">Croissant</option>
+                    <option value="private">Décroissant</option>
+                </select>  
             </div>
         </div>
 

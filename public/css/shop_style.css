@@ -139,9 +139,75 @@ h2{
 /*			    			         */
 /*///////////////////////////////////*/
 
+/*
+
+/*Research Bar of the shop page*/
+.research{
+    border-width: 4px;
+    border-style: double;
+    border-color:rgba(18, 62, 207, 0.623);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+/*Category bar */
 .category_bar select {
     border-radius: 10px;
     border-color: rgba(18, 62, 207, 0.623);
+}
+
+.category_bar {
+    margin-top: 10px;
+}
+
+/*Price select */
+.price_order select {
+    border-radius: 10px;
+    border-color: rgba(18, 62, 207, 0.623);
+}
+.price_order{
+    margin-bottom: 5px;
+}
+/*Research bar*/
+.research_name form{
+    text-align: center;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top:10px; 
+    padding: 10px 10px 10px 10px;     
+    border-radius: 5px;
+    height: 100%;
+}
+
+/*Div research name*/
+.research_name{
+    width:33%;
+    margin:10px;
+}
+
+#searchthis #search {
+    background-color: #ffffff;  
+    border-style: solid;   
+    border-width: 1px;   
+    border-color: #dddddd; 
+    font-family: 'Cantarell';
+    box-sizing: border-box;  
+    border-radius: 5px;
+    text-align: center;
+    width: 70%;
+}
+
+#search-btn{
+    padding: 2px 2px 2px 2px;  
+    width: 100%;     
+    font-family: 'Cantarell';
+    font-size: 13px;   
+    letter-spacing: 1px;
+    border-radius: 5px;
+    margin-top:5px;
 }
 
 

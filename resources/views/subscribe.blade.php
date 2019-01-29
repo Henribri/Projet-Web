@@ -35,8 +35,7 @@
 <div class="Legal_Notice">
             <a href="legal_notice">Mentions légales</a>
            <div id="accept"> 
-               <p><input class = "checkbox" type ="checkbox" name ="accept" value ="accept" required>I accept conditions</p>
-               <label for="accept">J'accepte les conditions d'utilsation</label>
+              <p><input class = "checkbox" type ="checkbox" name ="accept" value ="accept" required>J'accepte les conditions d'utilsation</p>
         </div>
 </div>
 
