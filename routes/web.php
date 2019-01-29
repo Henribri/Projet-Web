@@ -58,6 +58,9 @@ Route::post('/upgrade_event', 'Create_eventCtrl@Upgrade');
 Route::post('/notify', 'Create_eventCtrl@Notify_event');
 
 
+
+Route::post('/delete_past', 'Create_eventCtrl@Delete_past');
+
 Route::get('/photos', 'PhotosCtrl@View_photos');
 
 Route::post('/like', 'PhotosCtrl@Like');

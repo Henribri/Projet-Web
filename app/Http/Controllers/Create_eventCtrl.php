@@ -9,6 +9,9 @@ use App\Image;
 use App\Events;
 use App\State;
 use App\Status;
+use App\Comments;
+use App\Photos;
+use App\Likes;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Notification;
 use App\Mail\IdeeRetenue;
@@ -167,7 +170,7 @@ class Create_eventCtrl extends Controller
 
     
     public function Upgrade(request $request){
-        //TO DO Session a verifier status=BDE
+
 
 
         if(session()->get('Status_user')=='BDE'){
@@ -326,7 +329,7 @@ class Create_eventCtrl extends Controller
             where('Id_event', $Event->Id_event)
             ->update([
                 'Id_state'=>$Past->Id_state,//evenement
-                //'Id_image'=>request('id_image'),
+
                 ]);
             });
         }
@@ -338,6 +341,57 @@ class Create_eventCtrl extends Controller
         'email_user' => 'Vous devez être tuteur pour faire cette action'
         ]);
 }
+
+
+public function Delete_past(){
+    if(session()->get('Status_user')=='BDE'){
+    
+
+
+
+        //supression des comments
+        DB::transaction(function ()  {
+            Comments::
+            join('_photo', '_photo.Id_photo', '=', '_comment.Id_photo')
+            ->join('_event', '_photo.Id_event', '=', '_event.Id_event')
+                ->where('_event.Id_event', request('id_event'))
+                ->delete('_comment.*');
+                });
+
+        //Supression des likes
+        DB::transaction(function ()  {
+            Likes::
+            join('_photo', '_photo.Id_photo', '=', '_like.Id_photo')
+            ->join('_event', '_photo.Id_event', '=', '_event.Id_event')
+                ->where('_event.Id_event', request('id_event'))
+                ->delete('_like.*');
+                });
+
+        //suppression des photos
+        DB::transaction(function () {
+            Photos::
+            join('_event', '_photo.Id_event', '=', '_event.Id_event')
+                ->where('_photo.Id_event', request('id_event'))
+                ->delete('_photo.*');
+                });
+
+            //suprression de l event
+            DB::transaction(function () {
+                Events::
+                    where('Id_event', request('id_event'))
+                    ->delete('_event.*');
+                    });
+
+
+            return back();
+    }
+    
+    return redirect('/connexion')->withErrors([
+        'email_user' => 'Vous devez être tuteur pour faire cette action'
+        ]);
+}
+
+
 
 
 }

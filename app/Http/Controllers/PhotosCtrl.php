@@ -97,7 +97,7 @@ class PhotosCtrl extends Controller
             ]);
     
         DB::transaction(function () {
-        $Comment= Comments::create([
+            Comments::create([
             'Comment_comment'=>request('comment_comment'),
             'Id_user'=>session()->get('Id_user'),
             'Id_photo'=>request('id_photo'),
@@ -190,7 +190,7 @@ class PhotosCtrl extends Controller
             request()->validate(['id_photo'=>['required']]);
 
             DB::transaction(function () {
-            Photos::where('Id_photo', request('id_photo'))
+            $Photo=Photos::where('Id_photo', request('id_photo'))
             ->update([
                 'Id_user_approve'=>session()->get('Id_user'),//Session utilisateur 
                 'Date_Approbation_photos'=>date('Y/m/d'),
@@ -199,11 +199,10 @@ class PhotosCtrl extends Controller
             });
 
 
-       $Photo=Photos::
+            $Photo=Photos::
             select('Id_event')
             ->where('Id_photo', request('id_photo'))
             ->first();
-
 
         $Event= Events::
         where('Id_event', $Photo->Id_event)

@@ -23,12 +23,25 @@
             <li ><a href= "events_idea">Idea Box</a></li>
         </ul>
 </div>
-@foreach($Events as $Event)
+
 
 
 <div class ="global_container">
+@foreach($Events as $Event)
+
 <div class="container">
+
+            @if(session()->get('Status_user')=='BDE')
+            <div class="delete">
+            <form action="/delete_past" method="post">
+            {{ csrf_field() }}  
+                <button class="delete_button" name="id_event" value="{{$Event->Id_event}}"> <img src="/pictures/delete.png" alt="Supprimer l'événement"/></button>
+            </form>
+            </div>
             <p>{{$Event->Name_event}}</p>
+
+
+            @endif
             <img class= "events" src="{{$Event->Image}}" alt="Photo Cesi"/></a>
 
             
