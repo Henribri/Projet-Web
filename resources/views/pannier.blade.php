@@ -10,7 +10,25 @@
 
 @section('main_content')
     <div class ="container">
-        <h2>Mes articles</h2>
+        <div class="container_bill">
+            <div class="informations">
+            <h2>Nom:</h2>
+            <p>Pour DK</p>
+            </div>
+
+            <div class="informations">
+            <h2>Quantité:</h2>
+            <p>Pour DK</p>
+            </div>
+
+            <div class="informations">
+            <h2>Prix:</h2>
+            <p>Pour DK</p>
+            </div>
+            </div>
+            <div class="total_price">
+            <h2>Prix total:</h2>
+            </div>
     </div>
 @endsection
 
