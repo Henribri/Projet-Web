@@ -103,7 +103,7 @@ class list_product_controller extends Controller
             $orders = DB::table('_select')
             ->join('_order', '_select.Id_order', '=', '_order.Id_order')
             ->join('_product','_select.Id_product','=','_product.Id_product')
-            ->select('_product.Name_product','_select.Quantity','_product.Price_product')
+            ->select('_product.Name_product','_select.Quantity','_product.Price_product','_product.Id_product')
             ->where([
                 ['_order.Id_user', $user],
                 ['_order.Validate', '0'],
@@ -134,13 +134,6 @@ class list_product_controller extends Controller
         {
             $id_product = request("id_product");
 
-/*            $products = DB::table('_product')
-            ->select('Id_product')
-            ->where([
-                ['_product.Id_product', $id_product],
-            ])
-            ->first();
-*/
             $product = \App\_product::where('Id_product',$id_product)->delete();
 
             return "Votre article à bien été supprimé";
@@ -149,6 +142,27 @@ class list_product_controller extends Controller
         {
         return "Vous n'appartez pas au BDE";
         }
+    }
+
+    public function Supp_product_pannier()
+    {
+        if(session()->get('Status_user'))
+        {
+            $user = session::get('Id_user');
+
+            $id_product = request("id_product");
+
+            $select = \App\_select::join('_order', '_select.Id_order', '=', '_order.Id_order')
+                ->where([
+                ['_order.Id_user', $user],
+                ['_select.Id_product',$id_product],])
+                ->delete();
+
+            return "Votre article à bien été supprimé";
+        }
+        return redirect('/connexion')->withErrors([
+            'email_user' => 'Veuillez vous authentifier'
+            ]);
     }
 }
 

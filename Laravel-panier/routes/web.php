@@ -91,6 +91,8 @@ Route::get('test','test_controller@test_view');
 
 Route::get('/pannier','list_product_controller@list_pannier');
 
+Route::post('/pannier','list_product_controller@Supp_product_pannier');
+
 Route::get('/add_product','create_product_controller@Create_product_page');
 
 Route::post('/add_product','create_product_controller@Create_product');

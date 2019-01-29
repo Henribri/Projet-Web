@@ -26,6 +26,13 @@
                 <h2>Prix:</h2>
                 <p>{{ $order->Price_product }}</p>
             </div>
+
+            <form method="post" action="">
+                 {{ csrf_field() }}  
+
+                <input class="field" id ="blocked" type="hidden" name="id_product" value="{{$order->Id_product}}"/>
+                <input class="field" id ="blocked" type="submit" value="supprimer"/>  
+            </form>
         @endforeach
     </div>
 
