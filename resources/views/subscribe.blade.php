@@ -27,15 +27,16 @@
             <input class="field" type="password" name="password" placeholder="Mot de passe" required>
             <input class="field" type="password" name="password" placeholder="Confirmation de mot de passe" required>
         </div>
-      <input class="field" id ="blocked" type="submit" value="S'inscrire"/> 
+      <input class="field" id ="blocked" type="submit" value="S'inscrire"required/> 
     </form>
 </div>
 
 
 <div class="Legal_Notice">
             <a href="legal_notice">Mentions légales</a>
-           <div id="accept"> <input class = "checkbox" type ="checkbox" name ="accept" value ="accept">
-                <label for="accept">J'accepte les conditions d'utilsation</label>
+           <div id="accept"> 
+               <p><input class = "checkbox" type ="checkbox" name ="accept" value ="accept" required>I accept conditions</p>
+               <label for="accept">J'accepte les conditions d'utilsation</label>
         </div>
 </div>
 
@@ -43,5 +44,6 @@
 
 
 @section('script_link')
+
 
 @endsection

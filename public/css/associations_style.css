@@ -1,12 +1,19 @@
-
+/*Image of associations in shop*/
 .global_container img{
     height: auto;
     margin-top: 7px;
 }
+/*All text in the associations page*/
 p{
     height:100%;
     text-align: center;
 }
+
+/*///////////////////////////////////*/
+/*									 */
+/*		      MEDIA QUERIES			 */
+/*			    Tablet				 */
+/*///////////////////////////////////*/
 
 @media (min-width: 640px) {
 
@@ -14,6 +21,12 @@ p{
         margin:2px;
         }
 }
+
+/*///////////////////////////////////*/
+/*									 */
+/*		      MEDIA QUERIES			 */
+/*			    Computer			 */
+/*///////////////////////////////////*/
 
 @media (min-width: 1200px) {
 .img{

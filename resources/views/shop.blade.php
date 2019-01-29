@@ -14,17 +14,25 @@
 <div id="container_nav">
         <ul>
             <li><a href="shop">Boutique</a></li>
-            <li><a href="create_product">Ajouter un produit</a></li>
+            <li><a href="add_product">Ajouter un produit</a></li>
         </ul>
 </div>
 
 <div class ="global_container">
     <h2>Bienvenue dans la boutique, ici tu peux trouver les goodies de notre bureau des élèves !</h2>
+    <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand">Faites votre recherche</a>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
+        </form>
+    </nav>
 
         <div class ="pannier">
             <a href="pannier"><img src="/pictures/panier.png" alt="Panier"></a> 
         </div>
         
+        <h3>Les meilleurs ventes</h3>
         <section class="best_sale">
             <div class="best_sale_product">
                 <h4>Sweats</h4>
@@ -33,18 +41,18 @@
             </div>
             <div class="best_sale_product">
                 <h4>Porte clées</h4>
-                <img src="/pictures/gourde.jpg" alt="Gourde">
+                <img src="/pictures/shop.png" alt="Gourde">
                 <p>azertyuio</p>
             </div>
             <div class="best_sale_product">
                 <h4>Gourde</h4>
-                <img src="/pictures/gourde.jpg" alt="Gourde">
+                <img src="/pictures/keychain.png" alt="Gourde">
                 <p>azertyuio</p>
             </div>
         </section>
         <div class="container">
                 <h3>Les sweats de l'école</h3>
-                <img class= "events" src="/pictures/shop.png" alt="Sweat Cesi"/></a>
+                <img class= "img_product" src="/pictures/shop.png" alt="Sweat Cesi"/></a>
                         <div class="information">
                             <div class ="price"><p>5€</p></div>
                         </div>
@@ -68,7 +76,7 @@
 
         <div class="container">
                 <h3>Les sweats de l'école</h3>
-                <img class= "events" src="/pictures/shop.png" alt="Sweat Cesi"/></a>
+                <img class= "img_product" src="/pictures/shop.png" alt="Sweat Cesi"/></a>
                         <div class="information">
                             <div class ="price"><p>5€</p></div>
                         </div>
@@ -92,7 +100,7 @@
 
         <div class="container">
                 <h3>Les sweats de l'école</h3>
-                <img class= "events" src="/pictures/shop.png" alt="Sweat Cesi"/></a>
+                <img class= "img_product" src="/pictures/shop.png" alt="Sweat Cesi"/></a>
                         <div class="information">
                             <div class ="price"><p>5€</p></div>
                         </div>
@@ -116,7 +124,7 @@
 
         <div class="container">
                 <h3>Les sweats de l'école</h3>
-                <img class= "events" src="/pictures/shop.png" alt="Sweat Cesi"/></a>
+                <img class= "img_product" src="/pictures/shop.png" alt="Sweat Cesi"/></a>
                         <div class="information">
                             <div class ="price"><p>5€</p></div>
                         </div>
@@ -140,7 +148,7 @@
 
         <div class="container">
                 <h3>Les sweats de l'école</h3>
-                <img class= "events" src="/pictures/shop.png" alt="Sweat Cesi"/></a>
+                <img class= "img_product" src="/pictures/shop.png" alt="Sweat Cesi"/></a>
                         <div class="information">
                             <div class ="price"><p>5€</p></div>
                         </div>
@@ -164,7 +172,7 @@
 
         <div class="container">
                 <h3>Les sweats de l'école</h3>
-                <img class= "events" src="/pictures/shop.png" alt="Sweat Cesi"/></a>
+                <img class= "img_product" src="/pictures/shop.png" alt="Sweat Cesi"/></a>
                         <div class="information">
                             <div class ="price"><p>5€</p></div>
                         </div>

@@ -1,16 +1,8 @@
-.global_container .events{
-    height: auto;
-    margin-top: 7px;
+/*Size of button on the page */
+button img{
+    height: 3em;
+    width: 3em;
 }
-
-p{
-    height:100%;
-    text-align: center;
-}
-h2{
-    text-align: center;
-}
-
 
 /*///////////////////////////////////*/
 /*									 */
@@ -18,11 +10,13 @@ h2{
 /*									 */
 /*///////////////////////////////////*/
 
+/*container of navigation bar*/
 #container_nav{
     width: 100%;
     margin-top: 5px;
 }
 
+/*Container of each point of navigation bar*/
 ul {
     list-style-type: none;
     margin: 0;
@@ -31,6 +25,7 @@ ul {
     background-color: #f3f3f3;
 }
 
+/*Text on point navigation bar*/
 li a {
     display: block;
     color: #666;
@@ -40,86 +35,102 @@ li a {
     width: 100%;
 }
 
+/*Point of navigation bar*/
 li{
     margin:2px;
 }
 
+/*Animation on navigation bar*/
 li a:hover:not(.active) {
     background-color: #ddd;
 }
 
-button:hover{
+/*Animation on navigation bar*/
+li a:hover{
     box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
     transform: scale(1.01);
 }
 
-button:active{
+/*Animation on navigation bar*/
+li a:active{
     box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
     transform: scale(0.98);
 }
 
-button img{
-    height: 3em;
-    width: 3em;
-}
-
 /*///////////////////////////////////*/
 /*									 */
-/*		      EVENTS		         */
+/*		        SALE        	     */
 /*									 */
 /*///////////////////////////////////*/
 
+/*Container of each product on shop*/
 .global_container .container{
     height: auto;
     border-width:4px;
     border-style: double;
     border-color:rgba(18, 62, 207, 0.623);
     margin: 5px;
-    margin-bottom :10px; 
+    margin-bottom :10px;
 }
 
-.container h2{
+/*Image on product in shop*/
+.global_container .img_product{
+    height: auto;
+    margin-top: 7px;
+}
+
+/*All text in shop settings*/
+p{
+    height:100%;
     text-align: center;
 }
 
+/*Welcome page of shop*/
+h2{
+    text-align: center;
+    height: 20%;
+}
+
+/*Best sale title*/
 .container h3{
     text-align: center;
 }
 
-/*///////////////////////////////////*/
-/*									 */
-/*		       BEST SALE        	*/
-/*									 */
-/*///////////////////////////////////*/
+/*Container of all of best sale product*/
 .best_sale{
     display: flex;
 	flex-direction:row-reverse;
     justify-content: center;
     margin-right: 25px;
-    
-}
-
-.container h3{
+    border:solid;
+    border-style: double;
+    border-width: 4px;
+    margin: 9px;  
     text-align: center;
+    height:25%;
 }
 
+/*Name of each best sale product*/
 .best_sale h4{
     text-align: center;
 }
 
+/*Div of each best sale product*/
 .best_sale_product{
-    height: auto;
+    height: 90%;
     border-width:4px;
     border-style: double;
     border-color:rgba(18, 62, 207, 0.623);
     margin: 5px;
     margin-bottom :10px; 
-    width: 30%;
+    width:33%; 
+    text-align: center;
 }
 
+/*Image of best product*/
 .best_sale_product img{
-
-
+    height: 5em;
+    width: 5em;
 } 
 
 /*///////////////////////////////////*/
@@ -128,17 +139,17 @@ button img{
 /*									 */
 /*///////////////////////////////////*/
 
-/*Pannier button*/
+/* Position of pannier link (button) */
 .pannier{
     display: flex;
 	flex-direction:row-reverse;
     justify-content: left;
     margin-right: 25px;
     }
-    
+
+/* Settings of pannier link (button) */
 .pannier a{
     text-decoration: none;
-    color: black;
     display:block;
     background-color: transparent;
     border:5px;
@@ -149,18 +160,33 @@ button img{
     padding: 5px;
 }
 
+/* Image size of pannier link (button) */
 .pannier img {
     height: 3em;
     width: 3em;
 }
+
+/* Animation of pannier link (button) */
+.pannier a:hover{
+    box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
+    transform: scale(1.01);
+}
+
+/* Animation of pannier link (button) */
+.pannier a:active{
+    box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
+    transform: scale(0.98);
+}
+
 
 /*General button*/
 .button {
     display: flex;
 	flex-direction: row;
     justify-content: center;
-    }
+}
 
+/*Button for add a product to the pannier*/
 .add{
     text-decoration: none;
     color: black;
@@ -174,27 +200,20 @@ button img{
     padding: 5px;
 }
 
+/*Image of button for add a product to the pannier*/
 button img{
     height: 3em;
     width: 3em;
 }
 
+/* Animation of button for add a product to the pannier */
 button:hover{
     box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
     transform: scale(1.01);
 }
 
+/* Animation of button for add a product to the pannier */
 button:active{
-    box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
-    transform: scale(0.98);
-}
-
-.pannier a:hover{
-    box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
-    transform: scale(1.01);
-}
-
-.pannier a:active{
     box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
     transform: scale(0.98);
 }
@@ -205,12 +224,14 @@ button:active{
 /*									 */
 /*///////////////////////////////////*/
 
+/* Informations of the product (price, quantity)*/
 .information{
     display:flex;
     justify-content: center;
     margin-top:15px;
 }
 
+/*Price information */
 .price p{
     border:none;
     background-color: black;

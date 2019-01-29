@@ -4,11 +4,12 @@
 /*									 */
 /*///////////////////////////////////*/
 
+/*container of navigation bar*/
 #container_nav{
     width: 100%;
     margin-top: 5px;
 }
-
+/*Container of each point of navigation bar*/
 ul {
     list-style-type: none;
     margin: 0;
@@ -17,6 +18,7 @@ ul {
     background-color: #f3f3f3;
 }
 
+/*Text on point navigation bar*/
 li a {
     display: block;
     color: #666;
@@ -25,20 +27,23 @@ li a {
     text-align: center;
     width: 100%;
 }
-
+/*Point of navigation bar*/
 li{
     margin:2px;
 }
 
+/*Animation on navigation bar*/
 li a:hover:not(.active) {
     background-color: #ddd;
 }
 
+/*Animation on navigation bar*/
 li a:hover{
     box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
     transform: scale(1.01);
 }
 
+/*Animation on navigation bar*/
 li a:active{
     box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
     transform: scale(0.98);
@@ -49,12 +54,14 @@ li a:active{
 /*		        FORM	             */
 /*									 */
 /*///////////////////////////////////*/
+/*Settings of form */
 .form{
     margin: auto;
     width: 100%;
     display: block;
 }
 
+/*Field of form*/
 form .field{
     margin: 5px;
     padding: 0px;
@@ -63,6 +70,7 @@ form .field{
     font-family: 'Cantarell', sans-serif;
 }
 
+/*Container of form*/
 form{
     margin: 30px auto ;
     width: 75%;
@@ -71,18 +79,19 @@ form{
     text-align:center;
 }
 
+/*Field of description settings*/
 #description{
     width: 100%;
     vertical-align: top;
 }
 
-/*Form validation*/
-
+/*Color of form invalidation if a field is not completed*/
 .input input:focus:invalid ,textarea:focus:invalid{
     border-color:#d45252;
     box-shadow: #d45252 0 0 5px; 
  }
- 
+
+ /*Color of form validation if a field is not completed*/
  .input input:focus:valid ,textarea:focus:valid{
      border-color:#009933;
      box-shadow: #009933 0 0 5px; 
@@ -94,11 +103,11 @@ form{
     color: rgba(18, 62, 207, 0.623);
     font-weight: bold;
 }
-
+/*Picture import animation*/
 .label-file:hover {
     color: black;
 }
-
+/*Hide the default button of input*/
 .input-file {
     display: none;
 }

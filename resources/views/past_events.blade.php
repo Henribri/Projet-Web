@@ -22,7 +22,10 @@
 <div class ="global_container">
     <div class="container">
         <h2>Titre de lévènement</h2>
-            <img class= "events" src="pictures/shop.jpg" alt="Photo Cesi"/>
+        <div class="delete">
+            <button class="delete_button"> <img src="/pictures/delete.png" alt="Supprimer l'événement"/></button>
+        </div>
+            <img class= "events" src="pictures/shop.png" alt="Photo Cesi"/>
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -37,13 +40,16 @@
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                     mollit anim id est laborum.</p>
                     <div class="button">
-                        <a href="event-1">En savoir plus</a> 
+                        <button class ="event-1">En savoir plus</button>
                     </div>
     </div>
 
 <div class="container">
     <h2>Titre de lévènement</h2>
-            <img class= "events" src="pictures/shop.jpg" alt="Photo Cesi"/>
+    <div class="delete">
+        <button class="delete_button"> <img src="/pictures/delete.png" alt="Supprimer l'événement"/></button>
+    </div>
+    <img class= "events" src="pictures/shop.png" alt="Photo Cesi"/>
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -58,12 +64,15 @@
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                     mollit anim id est laborum.</p>
                     <div class="button">
-                        <a href="event-1">En savoir plus</a> 
+                    <button class ="event-1">En savoir plus</button>
                     </div>
 </div>
 <div class="container">
     <h2>Titre de lévènement</h2>
-            <img class= "events" src="pictures/shop.jpg" alt="Photo Cesi"/>
+    <div class="delete">
+        <button class="delete_button"> <img src="/pictures/delete.png" alt="Supprimer l'événement"/></button>
+    </div>
+    <img class= "events" src="pictures/shop.png" alt="Photo Cesi"/>
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -78,12 +87,15 @@
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                     mollit anim id est laborum.</p>
                     <div class="button">
-                        <a href="event-1">En savoir plus</a> 
+                    <button class ="event-1">En savoir plus</button>
                     </div>
 </div>
 <div class="container">
     <h2>Titre de lévènement</h2>
-            <img class= "events" src="pictures/shop.jpg" alt="Photo Cesi"/>
+    <div class="delete">
+        <button class="delete_button"> <img src="/pictures/delete.png" alt="Supprimer l'événement"/></button>
+    </div>
+    <img class= "events" src="pictures/shop.png" alt="Photo Cesi"/>
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -98,12 +110,15 @@
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                     mollit anim id est laborum.</p>
                     <div class="button">
-                        <a href="event-1">En savoir plus</a> 
+                        <button class ="event-1">En savoir plus</button>
                     </div>
 </div>
 <div class="container">
     <h2>Titre de lévènement</h2>
-            <img class= "events" src="pictures/shop.jpg" alt="Photo Cesi"/>
+    <div class="delete">
+        <button class="delete_button"> <img src="/pictures/delete.png" alt="Supprimer l'événement"/></button>
+    </div>
+    <img class= "events" src="pictures/shop.png" alt="Photo Cesi"/>
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -118,12 +133,15 @@
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                     mollit anim id est laborum.</p>
                     <div class="button">
-                        <a href="event-1">En savoir plus</a> 
+                        <button class ="event-1">En savoir plus</button>
                     </div>
 </div>
 <div class="container">
     <h2>Titre de lévènement</h2>
-            <img class= "events" src="pictures/shop.jpg" alt="Photo Cesi"/>
+    <div class="delete">
+        <button class="delete_button"> <img src="/pictures/delete.png" alt="Supprimer l'événement"/></button>
+    </div>
+            <img class= "events" src="pictures/shop.png" alt="Photo Cesi"/>
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -138,7 +156,7 @@
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                     mollit anim id est laborum.</p>
                     <div class="button">
-                        <a href="event-1">En savoir plus</a> 
+                         <button class ="event-1">En savoir plus</button>
                     </div>
     </div>
 </div>

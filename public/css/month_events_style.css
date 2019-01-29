@@ -1,24 +1,16 @@
-.global_container .events{
-    height: auto;
-    margin-top: 7px;
-}
-
-p{
-    height:100%;
-    text-align: center;
-}
-
 /*///////////////////////////////////*/
 /*									 */
 /*		      NAVIGATION BAR		 */
 /*									 */
 /*///////////////////////////////////*/
 
+/*container of navigation bar*/
 #container_nav{
     width: 100%;
     margin-top: 5px;
 }
 
+/*Container of each point of navigation bar*/
 ul {
     list-style-type: none;
     margin: 0;
@@ -27,6 +19,7 @@ ul {
     background-color: #f3f3f3;
 }
 
+/*Text on point navigation bar*/
 li a {
     display: block;
     color: #666;
@@ -36,19 +29,23 @@ li a {
     width: 100%;
 }
 
+/*Point of navigation bar*/
 li{
     margin:2px;
 }
 
+/*Animation on navigation bar*/
 li a:hover:not(.active) {
     background-color: #ddd;
 }
 
+/*Animation on navigation bar*/
 li a:hover{
     box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
     transform: scale(1.01);
 }
 
+/*Animation on navigation bar*/
 li a:active{
     box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
     transform: scale(0.98);
@@ -60,6 +57,7 @@ li a:active{
 /*									 */
 /*///////////////////////////////////*/
 
+/*Container of each event*/
 .global_container .container{
     height: auto;
     border-width:4px;
@@ -69,7 +67,8 @@ li a:active{
     margin-bottom :10px; 
 }
 
-.container h2{
+/*Event title*/
+h2{
     text-align: center;
 }
 
@@ -79,15 +78,16 @@ li a:active{
 /*									 */
 /*///////////////////////////////////*/
 
-/*General button*/
+/*Container buttons position */
 .button{
     display: flex;
 	flex-direction: row;
     justify-content: center;
     }
-    
+
+/*Button settings*/
 button{
-    background-color: #F2EFEF;
+    background-color: white;
     border:5px;
     border-radius: 10px;
     font-family: 'Cantarell';
@@ -96,40 +96,39 @@ button{
     padding: 5px;
     }
 
-/*Button for notify*/
+/*Notification button image size*/
 .notify img{
     height: 3em;
     width: 3em;
-    }
+}
+
+/*Notification button size*/
 .notify{
     width: 20%;
     height: 5%;
     }
 
-/*Button Form for subscribe*/
+/*Form button image size*/
 .form img{
     height: 3em;
     width: 3em;
 }
 
+/*Form button size*/
 .form {
     width: 20%;
     height: 5%;
 }
 
+/*Animation button on the page */
 button:hover{
     box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
     transform: scale(1.01);
 }
-
+/*Animation button on the page */
 button:active{
     box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
     transform: scale(0.98);
-}
-
-button img{
-    height: 3em;
-    width: 3em;
 }
 
 /*///////////////////////////////////*/
@@ -138,12 +137,20 @@ button img{
 /*									 */
 /*///////////////////////////////////*/
 
+/*Image on product in event page*/
+.global_container .events{
+    height: auto;
+    margin-top: 7px;
+}
+
+/*Container of events informations */
 .information{
     display:flex;
     justify-content: center;
     margin-top:15px;
 }
 
+/*Price information settings*/
 .price p{
     border:none;
     background-color: #F2EFEF;
@@ -153,6 +160,7 @@ button img{
     margin:10px;
 }
 
+/*Date information settings*/
 .date p{
     border:none;
     border-radius:3px;
@@ -162,6 +170,7 @@ button img{
     margin:10px;
 }
 
+/*Reccurence information settings*/
 .recurent p{
     border:none;
     border-radius:3px;
@@ -171,6 +180,11 @@ button img{
     margin:10px;
 }
 
+/*All text in events*/
+p{
+    height:100%;
+    text-align: center;
+}
 /*///////////////////////////////////*/
 /*									 */
 /*		        POP-UP		         */
@@ -189,26 +203,28 @@ button img{
 
 .global_container{
     margin:2px;
-    } 
+} 
 
-/*Button for notify*/
+/*Image size  button for notify*/
 .notify img{
     height: 3em;
     width: 3em;
-    }
+}
 
+/* Button for notify size */
 .notify{
     width: 10%;
     height: 5%;
-    }
+}
 
-/*Button Form for subscribe*/
+/*Image size button Form for subscribe*/
 .form img{
     height: 3em;
     width: 3em;
 
-    }
+}
 
+/* Button for notify size */
 .form {
     width: 10%;
     height: 5%;
@@ -227,11 +243,11 @@ button img{
     display: block;
     width: 100%;
     height: auto;
-    }
+}
 
 .global_container{
     text-align: center;
-    }
+}
 
 .global_container .container{
     display: inline-block;
@@ -239,30 +255,32 @@ button img{
     margin: 50px;
     margin-top: 50px;
     padding:5px;
-    }
+}
 
 #nav_bar{
     text-align: center;
     width: 50%;
     transform: translateX(72%);
     top:10px;
-
-    }
+}
 
 ul {
     display: flex;
 	flex-direction: row;
 	justify-content: center;
     flex-wrap: wrap;
-    }
+}
 
+/* Button for notify size */
 .notify{
     width: 15%;
     height: 5%;
-    }
+}
 
+/* Button for notify size */
 .form {
     width: 15%;
     height: 5%;
 }
+
 }

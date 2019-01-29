@@ -78,4 +78,6 @@ Route::get('/legal_notice', function () {
     return view('legal_notice');
 });
 
-
+Route::get('/add_product', function () {
+    return view('add_product');
+});
