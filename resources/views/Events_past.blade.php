@@ -29,7 +29,7 @@
 <div class ="global_container">
 <div class="container">
             <p>{{$Event->Name_event}}</p>
-            <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
+            <img class= "events" src="{{$Event->Image}}" alt="Photo Cesi"/></a>
 
             
                      <p>{{$Event->Description_event}}</p>

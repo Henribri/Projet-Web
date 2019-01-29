@@ -23,7 +23,7 @@
 
 <div class="form">
 @if($Idea)
-    <form action='/upgrade_event' method='post'>
+    <form action='/upgrade_event' method='post' enctype="multipart/form-data">
     {{ csrf_field() }}
       <input class="field" type="text" name="name_event" placeholder="{{$Idea->Name_event}}" value="{{$Idea->Name_event}}">
       <input class="field" type="number" name="cost_event" placeholder="Prix de lévènement">
@@ -39,13 +39,17 @@
         <option value="0">Privée</option>
       </select>
 
+
+      <input class="field" type="file" name="image_event" value="">
+
+
       <!-- Rajouter import d'image -->
 
       <button class="field" type="submit" name='id_event' value="{{$Idea->Id_event}}">Envoyer </button>
     </form>
   @else
 
-  <form action='' method='post'>
+  <form action='' method='post'  enctype="multipart/form-data">
     {{ csrf_field() }}
       <input class="field" type="text" name="name_event" placeholder="Nom de lévènement">
       <input class="field" type="number" name="cost_event" placeholder="Prix de lévènement">
@@ -60,6 +64,9 @@
         <option value="1">Publique</option>
         <option value="0">Privée</option>
       </select>
+
+      <input class="field" type="file" name="image_event" value="">
+
 
       <!-- Rajouter import d'image -->
 

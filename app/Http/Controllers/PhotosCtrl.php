@@ -9,6 +9,7 @@ use App\Photos;
 use App\Events;
 use App\Status;
 use App\Users;
+use App\Image;
 use Illuminate\Support\Facades\DB;
 use App\Mail\Notification;
 use App\Mail\IdeeRetenue;
@@ -16,6 +17,53 @@ use Illuminate\Support\Facades\Mail;
 class PhotosCtrl extends Controller
 {
     //
+    function Create_photos(request $request){
+
+        if(session()->get('Status_user')){
+            request()->validate(['photo'=>['required'], 'id_event'=>['required']]);
+
+        //On enregistre notre image
+        $extension=$request->photo->extension();
+        
+        //on verifie que ce soit la bonne extension
+        if($extension!='png'&&$extension!='jpg'&&$extension!='jpeg'){
+
+            return "mauvais format d'image";
+        }
+        //creer image
+
+        //on enregistre l'image
+        $imagetraitement=$request->file('photo');
+        $input['imagename']= time().'.'.$extension;
+        $path=public_path('Images');
+        $imagetraitement->move($path, $input['imagename']);
+
+
+        //on recupere le chemin relatif
+        $pathimage='/Images'.'/'.$input['imagename'];
+
+        $Image= Image::create([
+            'Image'=>$pathimage
+        ]);
+
+
+
+        DB::transaction(function () use( $Image) {
+        Photos::create([
+            'Id_image'=>$Image->Id_image,
+            'Id_user'=>session()->get('Id_user'),
+            'Id_event'=>request('id_event'),
+            'Public_photo'=>1
+        ]);
+        });
+
+        return back();
+        }
+
+    }
+
+
+
     function View_photos(){
 
         
@@ -24,19 +72,17 @@ class PhotosCtrl extends Controller
 
        $photos = Photos::
             join('_event', '_event.Id_event', '=', '_photo.Id_event')
+            ->join('_image', '_photo.Id_image','=', '_image.Id_image')
             ->where([
                 ['_photo.Id_event', $Id_event],
                 ['public_photo', 1]
             ])
             ->get();
-             
-
-
-
 
         return view('Photos',[
             'Photos'=>$photos,
             'Comments'=>Comments::all(),
+            'Id_event'=>$Id_event
 
         ]);
 

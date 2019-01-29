@@ -15,7 +15,7 @@ class Users extends Model implements Authenticatable{
     protected $table="_user";
     //les colonnes qu'on va remplir avec laravel
     protected $fillable=['Name_user','Surname_user','Localisation_user','Email_user','Password_user','Id_status'];
-
+    protected $primaryKey='Id_user';
 
     /**
      * Get the password for the user.

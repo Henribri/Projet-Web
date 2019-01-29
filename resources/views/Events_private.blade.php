@@ -26,7 +26,7 @@
 <div class ="global_container">
 <div class="container">
                         <h3>{{$Event->Name_event}}</h3>
-            <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
+            <img class= "events" src="{{$Event->Image}}" alt="Photo Cesi"/></a>
                      <p>{{$Event->Description_event}}</p>
                     <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
                     <button class ="comment">Commenter</button>

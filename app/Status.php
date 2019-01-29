@@ -8,4 +8,5 @@ class Status extends Model
 {
     //
     protected $table="_status";
+    
 }

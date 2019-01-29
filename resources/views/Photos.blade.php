@@ -25,16 +25,21 @@
         </ul>
 </div>
 
+
 <div class="import">
-                <label for="file" class="label-file">Choisir une image</label>
-                <input id="file" class="input-file" type="file">
-            </div>
+<label for="file" class="label-file">Choisir une image</label>
+            <form action="/post_photo" method='post' enctype="multipart/form-data">
+            {{ csrf_field() }}
+                <input id="file" class="input-file" type="file" name="photo">
+                <button id="file2"type="submit" name="id_event" value="{{$Id_event}}">Poster</button>
+            </form>
+</div>
 @foreach($Photos as $Photo)
 
 
 <div class ="global_container">
 <div class="container">
-            <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
+            <img class= "events" src="{{$Photo->Image}}" alt="Photo Cesi"/>
 
 
             <div class="button">

@@ -48,6 +48,11 @@ Route::get('/create_events', 'Create_eventCtrl@View_create_event');
 
 Route::post('/create_events', 'Create_eventCtrl@Create_event');
 
+Route::post('/create_upgrade_event', 'Create_eventCtrl@View_create_event');
+
+Route::post('/upgrade_event', 'Create_eventCtrl@Upgrade');
+
+
 
 
 Route::post('/notify', 'Create_eventCtrl@Notify_event');
@@ -68,9 +73,8 @@ Route::post('/connexion', 'ConnexionCtrl@Log_in');
 Route::get('/deconnexion', 'Log_outCtrl@Log_out');
 
 
-Route::post('/create_upgrade_event', 'Create_eventCtrl@View_create_event');
 
-Route::post('/upgrade_event', 'Create_eventCtrl@Upgrade');
+
 
 
 
@@ -79,6 +83,8 @@ Route::post('/notify_photo', 'PhotosCtrl@Notify_photo');
 Route::post('/delete_com', 'PhotosCtrl@Delete_comments');
 
 Route::get('/maj_events', 'Create_eventCtrl@MAJ_event');
+
+Route::post('/post_photo', 'PhotosCtrl@Create_photos');
 
 /*
 Auth::routes();

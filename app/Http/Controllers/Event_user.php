@@ -30,11 +30,15 @@ class Event_user extends Controller
         
         $Events = Events::
             join('_state', '_event.Id_state', '=', '_state.Id_state')
+            ->join('_image', '_image.Id_image','=', '_event.Id_image')
             ->where([
                 ['_state.state', 'Month'],
                 ['Public_event', 1]
             ])
             ->get();
+
+
+
         
 
 
@@ -50,9 +54,9 @@ class Event_user extends Controller
     public function View_events_idea(){
         
 
-
             $Events = Events::
                 join('_state', '_event.Id_state', '=', '_state.Id_state')
+
                 ->where([
                     ['_state.state', 'Idea'],
                     ['Public_event', 1]
@@ -71,6 +75,7 @@ class Event_user extends Controller
 
             $Events = Events::
             join('_state', '_event.Id_state', '=', '_state.Id_state')
+            ->join('_image', '_image.Id_image','=', '_event.Id_image')
             ->where([
                 ['_state.state', 'Past'],
                 ['Public_event', 1]
@@ -91,6 +96,7 @@ class Event_user extends Controller
         
                 $Events = Events::
                 join('_state', '_event.Id_state', '=', '_state.Id_state')
+                ->join('_image', '_image.Id_image','=', '_event.Id_image')
                 ->where('Public_event', 0)
                 ->get();
             

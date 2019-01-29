@@ -32,7 +32,7 @@
 <div class="container">
                     <h2>{{$Event->Name_event}}</h2>
 
-                    <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/></a>
+
 
                     <div class="information">
                     
