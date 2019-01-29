@@ -24,9 +24,9 @@ h2{
 }
  .container_bill{
     display: flex;
-	flex-direction:column;
     justify-content: center;
     width: 50%;
+    height: 500px;
 }
 
 .informations{
@@ -38,6 +38,7 @@ h2{
 
 .total_price{
     text-align: center;
-    margin:auto;
+    position:absolute;
+    bottom: 0;
 }
 

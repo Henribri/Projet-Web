@@ -12,22 +12,23 @@
     <div class ="container">
         <div class="container_bill">
             <div class="informations">
-            <h2>Nom:</h2>
-            <p>Pour DK</p>
+                <h2>Nom:</h2>
+                <p>Pour DK</p>
             </div>
 
             <div class="informations">
-            <h2>Quantité:</h2>
-            <p>Pour DK</p>
+                <h2>Quantité:</h2>
+                <p>Pour DK</p>
             </div>
 
             <div class="informations">
-            <h2>Prix:</h2>
-            <p>Pour DK</p>
+                <h2>Prix:</h2>
+                <p>Pour DK</p>
             </div>
-            </div>
+    </div>
+
             <div class="total_price">
-            <h2>Prix total:</h2>
+                <h2>Prix total:</h2>
             </div>
     </div>
 @endsection
