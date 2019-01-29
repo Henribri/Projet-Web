@@ -135,6 +135,18 @@ h2{
 
 /*///////////////////////////////////*/
 /*									 */
+/*		     RESEARCH BAR		     */
+/*			    			         */
+/*///////////////////////////////////*/
+
+.category_bar select {
+    border-radius: 10px;
+    border-color: rgba(18, 62, 207, 0.623);
+}
+
+
+/*///////////////////////////////////*/
+/*									 */
 /*		   BUTTONS ON EVENTS		 */
 /*									 */
 /*///////////////////////////////////*/
@@ -216,6 +228,10 @@ button:hover{
 button:active{
     box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
     transform: scale(0.98);
+}
+
+.quantity{
+    text-align: center;
 }
 
 /*///////////////////////////////////*/

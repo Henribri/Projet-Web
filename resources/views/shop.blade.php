@@ -20,13 +20,16 @@
 
 <div class ="global_container">
     <h2>Bienvenue dans la boutique, ici tu peux trouver les goodies de notre bureau des élèves !</h2>
-    <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand">Faites votre recherche</a>
-        <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
-        </form>
-    </nav>
+        <div class="research">
+            <div class="category_bar">
+                <label for="category">Catégorie</label>
+                <select class="field" id="category" name="state">
+                <option value="public">Vêtements</option>
+                <option value="private">Goodies</option>
+                <option value="private">Matériel informatique</option>
+      </select>  
+            </div>
+        </div>
 
         <div class ="pannier">
             <a href="pannier"><img src="/pictures/panier.png" alt="Panier"></a> 
@@ -69,8 +72,12 @@
                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                             mollit anim id est laborum.</p>
+                            <div class="quantity">
+                                <label for="quantity">Quantité</label>
+                                <input type="number" id="quantity" name="tentacles"min="1" max="50">
+                            </div>
                             <div class="button">
-                                <button class="add"> <img src="/pictures/plus.png" alt="Ajouter au panier"/></button>
+                                <button class="add">Ajouter au panier</button>
                             </div>
         </div>
 
@@ -93,8 +100,12 @@
                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                             mollit anim id est laborum.</p>
+                            <div class="quantity">
+                                <label for="quantity">Quantité</label>
+                                <input type="number" id="quantity" name="tentacles"min="1" max="50">
+                            </div>
                             <div class="button">
-                                <button class="add"> <img src="/pictures/plus.png" alt="Ajouter au panier"/></button>
+                                <button class="add">Ajouter au panier</button>
                             </div>
         </div>
 
@@ -117,8 +128,12 @@
                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                             mollit anim id est laborum.</p>
+                            <div class="quantity">
+                                <label for="quantity">Quantité</label>
+                                <input type="number" id="quantity" name="tentacles"min="1" max="50">
+                            </div>
                             <div class="button">
-                                <button class="add"> <img src="/pictures/plus.png" alt="Ajouter au panier"/></button>
+                                <button class="add">Ajouter au panier</button>
                             </div>
         </div>
 
@@ -141,8 +156,12 @@
                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                             mollit anim id est laborum.</p>
+                            <div class="quantity">
+                                <label for="quantity">Quantité</label>
+                                <input type="number" id="quantity" name="tentacles"min="1" max="50">
+                            </div>
                             <div class="button">
-                                <button class="add"> <img src="/pictures/plus.png" alt="Ajouter au panier"/></button>
+                                <button class="add">Ajouter au panier</button>
                             </div>
         </div>
 
@@ -165,8 +184,12 @@
                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                             mollit anim id est laborum.</p>
+                            <div class="quantity">
+                                <label for="quantity">Quantité</label>
+                                <input type="number" id="quantity" name="tentacles"min="1" max="50">
+                            </div>
                             <div class="button">
-                                <button class="add"> <img src="/pictures/plus.png" alt="Ajouter au panier"/></button>
+                                <button class="add">Ajouter au panier</button>
                             </div>
         </div>
 
@@ -189,12 +212,15 @@
                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                             mollit anim id est laborum.</p>
+                            <div class="quantity">
+                                <label for="quantity">Quantité</label>
+                                <input type="number" id="quantity" name="tentacles"min="1" max="50">
+                            </div>
                             <div class="button">
-                                <button class="add"> <img src="/pictures/plus.png" alt="Ajouter au panier"/></button>
+                                <button class="add">Ajouter au panier</button>
                             </div>
         </div>
 @endsection
-
 
 @section('script_link')
 <script src="/vendor/jquery/jquery-3.3.1.min.js"></script>
