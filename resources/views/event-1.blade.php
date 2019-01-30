@@ -49,6 +49,7 @@
                         <div class="button">
                             <button class="like"> <img src="/pictures/like.png" alt="Like"/></button>
                             <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
+                            <button class="download"> <img src="/pictures/download.png" alt="Télécharger les images"/></button>
                         </div>
                         <h3>Les commentaires</h3>
                         <div class="button comments"><p>Henri il est trop beau !!!</p><button class="notify_2"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button></div>

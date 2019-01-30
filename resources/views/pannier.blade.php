@@ -31,6 +31,10 @@
                 <h2>Prix total:</h2>
             </div>
     </div>
+
+    <div class="button">
+        <button class ="validate">Valider la commande</button>
+    </div>
 @endsection
 
 
