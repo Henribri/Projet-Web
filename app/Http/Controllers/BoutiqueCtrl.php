@@ -13,6 +13,24 @@ class BoutiqueCtrl extends Controller
 {
     //--DISPLAY VIEW CREATE PRODUCT
 
+
+    public function View_shop(){
+
+
+
+       $categories=Category::all();
+        return view('shop',[
+            'categories'=>$categories,
+        ]);
+    }
+
+
+
+
+
+
+
+
     public function View_create_product(){
 
         if(session()->get('Status_user')=='BDE'){

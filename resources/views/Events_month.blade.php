@@ -69,7 +69,7 @@
                     @endif
 
                     @if(session()->get('Status_user')=='BDE')
-                    <form action="/pdf" method="post">
+                    <form action="/pdf_event" method="post">
                     {{ csrf_field() }}
                     <button class ="pdf" name="id_event" value="{{$Event->Id_event}}"><img src="/pictures/pdf.png" alt="Télécharger pdf"/></button>
                     </form>

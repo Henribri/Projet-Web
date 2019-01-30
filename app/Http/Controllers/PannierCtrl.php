@@ -43,10 +43,10 @@ class PannierCtrl extends Controller
         if(session()->get('Status_user'))
         {
             //--FIND ID OF THE PRODUCT CHOOSE
-            $Id_product = Produit::
+            /*$Id_product = Produit::
             select('_product.Id_product')
             ->where('_product.Name_product', request('name_product'))
-            ->first();
+            ->first();*/
 
 
             //--TRY TO FIND AN EXISTING ORDER OF THE USER
@@ -69,7 +69,7 @@ class PannierCtrl extends Controller
     
                 DB::transaction(function () use($Id_product) {
                 Select::create([
-                    'Id_product'=>$Id_product->Id_product,
+                    'Id_product'=>request('id_product'),
                     'Id_order'=>$order->Id_order,
                     'Quantity'=>request('quantity')]);
                     return redirect('/pannier');
@@ -104,9 +104,9 @@ class PannierCtrl extends Controller
 
                 //--CREATE A NEW SELECT WITH ORDER PRODUCT AND QUANTITY
 
-                DB::transaction(function () use($Id_product, $order) {
+                DB::transaction(function () use($order) {
                 Select::create([
-                    'Id_product'=>$Id_product->Id_product,
+                    'Id_product'=>request('id_product'),
                     'Id_order'=>$order->Id_order,
                     'Quantity'=>request('quantity')]);
                     return redirect('/pannier');

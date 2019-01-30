@@ -174,6 +174,7 @@ class PhotosCtrl extends Controller
 
             $nbLike=count($Likes);
 
+
             //--POST LIKE
             DB::transaction(function () {
             Likes::create([
@@ -182,9 +183,11 @@ class PhotosCtrl extends Controller
             ]);
             });
 
+
+
             //--DISPLAY ERRORS OR INFOS
             return back()->withErrors([
-                'info' => 'Votre like a bien été pris en compte. '. $nbLike .' Likes'
+                'info' => 'Votre like a bien été pris en compte. '. $nbLike .' autres Likes'
                 ]);
 
 

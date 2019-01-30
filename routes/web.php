@@ -100,6 +100,7 @@ Route::get('/change_status', 'ConnexionCtrl@View_change_status');
 
 Route::get('/legal_notice', 'ConnexionCtrl@View_legal_notice');
 
+
 //
 
 
@@ -111,7 +112,18 @@ Route::get('/pannier', 'PannierCtrl@View_pannier');
 Route::get('/create_product', 'BoutiqueCtrl@View_create_product');
 
 Route::post('/create_product', 'BoutiqueCtrl@Create_product');
+
+Route::get('/shop', 'BoutiqueCtrl@View_shop');
+
+Route::post('/add_product', 'PannierCtrl@Add_product');
 //
+
+
+//--PDF--//
+Route::post('/pdf_event', 'PDFController@pdf');
+
+
+
 
 /*
 Auth::routes();

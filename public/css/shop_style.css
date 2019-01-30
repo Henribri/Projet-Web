@@ -1,12 +1,9 @@
-.global_container .events{
-    height: auto;
-    margin-top: 7px;
+/*Size of button on the page */
+button img{
+    height: 3em;
+    width: 3em;
 }
 
-p{
-    height:100%;
-    text-align: center;
-}
 
 /*///////////////////////////////////*/
 /*									 */
@@ -14,26 +11,216 @@ p{
 /*									 */
 /*///////////////////////////////////*/
 
+/*container of navigation bar*/
+#container_nav{
+    width: 100%;
+    margin-top: 5px;
+}
 
+/*Container of each point of navigation bar*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f3f3f3;
+}
+
+/*Text on point navigation bar*/
+li a {
+    display: block;
+    color: #666;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+}
+
+/*Point of navigation bar*/
+li{
+    margin:2px;
+}
+
+/*Animation on navigation bar*/
+li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+/*Animation on navigation bar*/
+li a:hover{
+    box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
+    transform: scale(1.01);
+}
+
+/*Animation on navigation bar*/
+li a:active{
+    box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
+    transform: scale(0.98);
+}
 
 /*///////////////////////////////////*/
 /*									 */
-/*		      EVENTS		         */
+/*		        SALE        	     */
 /*									 */
 /*///////////////////////////////////*/
 
-.global_container .container{
+/*Container of each product on shop*/
+#global_container #products .container{
     height: auto;
     border-width:4px;
     border-style: double;
     border-color:rgba(18, 62, 207, 0.623);
     margin: 5px;
-    margin-bottom :10px; 
+    margin-bottom :10px;
 }
 
-.container h2{
+/*Image on product in shop*/
+#global_container #products .img_product{
+    height: auto;
+    margin-top: 7px;
+}
+
+/*All text in shop settings*/
+p{
+    height:100%;
     text-align: center;
 }
+
+/*Welcome page of shop*/
+h2{
+    text-align: center;
+    height: 20%;
+}
+
+/*Best sale title*/
+#products .container h3{
+    text-align: center;
+}
+
+/*Container of all of best sale product*/
+.best_sale{
+    display: flex;
+	flex-direction:row-reverse;
+    justify-content: center;
+    margin-right: 25px;
+    border:solid;
+    border-style: double;
+    border-width: 4px;
+    margin: 9px;  
+    text-align: center;
+    height:25%;
+}
+
+/*Name of each best sale product*/
+.best_sale h4{
+    text-align: center;
+}
+
+/*Div of each best sale product*/
+.best_sale_product{
+    height: 90%;
+    border-width:4px;
+    border-style: double;
+    border-color:rgba(18, 62, 207, 0.623);
+    margin: 5px;
+    margin-bottom :10px; 
+    width:33%; 
+    text-align: center;
+}
+
+/*Image of best product*/
+.best_sale_product img{
+    height: 5em;
+    width: 5em;
+} 
+
+/*///////////////////////////////////*/
+/*									 */
+/*		     RESEARCH BAR		     */
+/*			    			         */
+/*///////////////////////////////////*/
+
+/*
+
+/*Research Bar of the shop page*/
+.research{
+    border-width: 4px;
+    border-style: double;
+    border-color:rgba(18, 62, 207, 0.623);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.research button{
+    border-radius:12px 0 12px 0;
+    background: #f5f5f5;
+    border:none;
+    color:#555;
+    font:bold 12px Verdana;
+    padding:6px 0 6px 0;
+    box-shadow:1px 1px 3px #999;
+}
+
+/*Category bar */
+.category_bar select {
+    border-radius: 10px;
+    border-color: rgba(18, 62, 207, 0.623);
+}
+
+.category_bar {
+    margin-top: 10px;
+}
+
+/*Price select */
+.price_order input {
+    border-radius: 10px;
+    border-color: rgba(18, 62, 207, 0.623);
+}
+.price_order{
+    margin-bottom: 5px;
+}
+/*Research bar*/
+.research_name input{
+    margin-left: auto;
+    margin-right:auto;
+    margin-top:10px; 
+    padding: 10px 10px 10px 10px;     
+    border-radius: 5px;
+    height: 100%;
+}
+
+/*Div research name*/
+.research_name{
+    text-align: center;
+    width:33%;
+    margin:10px;
+}
+
+#searchthis #search {
+    background-color: #ffffff;  
+    border-style: solid;   
+    border-width: 1px;   
+    border-color: #dddddd; 
+    font-family: 'Cantarell';
+    box-sizing: border-box;  
+    border-radius: 5px;
+    text-align: center;
+    width: 70%;
+}
+
+#search-btn{
+    padding: 2px 2px 2px 2px;  
+    width: 100%;     
+    font-family: 'Cantarell';
+    font-size: 13px;   
+    letter-spacing: 1px;
+    border-radius: 5px;
+    margin-top:5px;
+}
+
 
 /*///////////////////////////////////*/
 /*									 */
@@ -41,18 +228,19 @@ p{
 /*									 */
 /*///////////////////////////////////*/
 
-/*General button*/
+/* Position of pannier link (button) */
 .pannier{
     display: flex;
-	flex-direction: row;
-    justify-content: center;
+	flex-direction:row-reverse;
+    justify-content: left;
+    margin-right: 25px;
     }
-    
+
+/* Settings of pannier link (button) */
 .pannier a{
     text-decoration: none;
-    color: black;
     display:block;
-    background-color: #F2EFEF;
+    background-color: transparent;
     border:5px;
     border-radius: 10px;
     font-family: 'Cantarell';
@@ -60,30 +248,38 @@ p{
     margin: 5px;
     padding: 5px;
 }
+/* Image size of pannier link (button) */
+.pannier img {
+    height: 3em;
+    width: 3em;
+}
 
-
-/*General button*/
-.button{
-    display: flex;
-	flex-direction: row;
-    justify-content: center;
-    }
-    
-a:hover{
+/* Animation of pannier link (button) */
+.pannier a:hover{
     box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
     transform: scale(1.01);
 }
 
-a:active{
+/* Animation of pannier link (button) */
+.pannier a:active{
     box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
     transform: scale(0.98);
 }
 
+
+/*General button*/
+.button {
+    display: flex;
+	flex-direction: row;
+    justify-content: center;
+}
+
+/*Button for add a product to the pannier*/
 .add{
     text-decoration: none;
     color: black;
     display:block;
-    background-color: #F2EFEF;
+    background-color:white;
     border:5px;
     border-radius: 10px;
     font-family: 'Cantarell';
@@ -92,14 +288,26 @@ a:active{
     padding: 5px;
 }
 
-a:hover{
+/*Image of button for add a product to the pannier*/
+button img{
+    height: 3em;
+    width: 3em;
+}
+
+/* Animation of button for add a product to the pannier */
+button:hover{
     box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
     transform: scale(1.01);
 }
 
-a:active{
+/* Animation of button for add a product to the pannier */
+button:active{
     box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
     transform: scale(0.98);
+}
+
+.quantity{
+    text-align: center;
 }
 
 /*///////////////////////////////////*/
@@ -108,37 +316,24 @@ a:active{
 /*									 */
 /*///////////////////////////////////*/
 
+/* Informations of the product (price, quantity)*/
 .information{
     display:flex;
     justify-content: center;
     margin-top:15px;
 }
 
+/*Price information */
 .price p{
     border:none;
-    background-color: #F2EFEF;
+    background-color: black;
+    font-weight: bold;
+    color:white;
     border-radius:3px;
     height:30%;
     padding-bottom: 7px;
     margin:10px;
-}
-
-.date p{
-    border:none;
-    border-radius:3px;
-    background-color: #f3f3f3;
-    height: 30%;
-    padding-bottom: 7px;
-    margin:10px;
-}
-
-.recurent p{
-    border:none;
-    border-radius:3px;
-    background-color: #f3f3f3;
-    height: 30%;
-    padding-bottom: 7px;
-    margin:10px;
+    width: 100%;
 }
 
 /*///////////////////////////////////*/
@@ -157,7 +352,7 @@ a:active{
 
 @media (min-width: 640px) {
 
-.global_container{
+#global_container{
     margin:2px;
     } 
 
@@ -199,11 +394,11 @@ a:active{
     height: auto;
     }
 
-.global_container{
+#global_container{
     text-align: center;
     }
 
-.global_container .container{
+#global_container #products .container{
     display: inline-block;
     width: 25%;
     margin: 50px;

@@ -117,7 +117,7 @@ class Event_user extends Controller
             if(session()->get('Status_user')){
           
 
-                //--COUNT PEOPLE SIGN IN
+            //--COUNT PEOPLE SIGN IN
             $Inscrits=Sign_in::where('Id_event', request('id_event'))
             ->get();
 
@@ -132,6 +132,7 @@ class Event_user extends Controller
                 'Id_event'=> request('id_event'),
             ]);
             });
+
         }
         catch(\Illuminate\Database\QueryException $e){
                 
@@ -142,7 +143,7 @@ class Event_user extends Controller
             }
 
             return back()->withErrors([
-                'info' => 'Vous êtes bien inscrit. '. $nbInscrits .' Inscrits'
+                'info' => 'Vous êtes bien inscrit. '. $nbInscrits .' autres Inscrits'
                 ]);//renvoyer erreur dans la div info
 
         }
@@ -176,6 +177,8 @@ class Event_user extends Controller
 
                     ]);
                     });
+
+
                 }catch(\Illuminate\Database\QueryException $e){
                     
                     //--DISPLAY ERRORS OR INFOS
@@ -185,7 +188,7 @@ class Event_user extends Controller
 
         }
             return back()->withErrors([
-                'info' => 'Vote bien pris en compte. '. $nbVotes .' Votes'
+                'info' => 'Vote bien pris en compte. '. $nbVotes .' autres Votes'
                 ]);
             }
         
