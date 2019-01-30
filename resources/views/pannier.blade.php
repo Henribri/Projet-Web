@@ -39,6 +39,13 @@
                 <p>{{$Total_price}}</p>
             </div>
     </div>
+
+    <div class="button">
+        <form action="/validate_order" method="post">
+        {{ csrf_field() }}  
+        <button class ="validate" name="orders" value="{{$Orders}}">Valider la commande</button>
+        </form>
+    </div>
 @endsection
 
 

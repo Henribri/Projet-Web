@@ -7,6 +7,8 @@ use App\Order;
 use App\Select;
 use App\Users;
 use App\Mail\Product;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\DB;
 class PannierCtrl extends Controller
 {
     //
@@ -114,26 +116,6 @@ class PannierCtrl extends Controller
                 });
             }
 
-            //--SEND MAIL TO BDE
-
-            $BDE = Users::
-            join('_status', '_user.Id_status', '=', '_status.Id_status')
-            ->select('Email_user')
-            ->where('_status.Status', 'BDE')
-            ->get();
-
-            //
-        for($i=0; $i<count($BDE); $i++){
-            
-            $Member=$BDE[$i]->Email_user;
-            $user_name=session()->get('Name_user');
-            $user_surname=session()->get('Surname_user');
-            
-                
-            Mail::to($Member)->send(new Product($user_name, $user_surname));
-
-
-        }
 
         return redirect('/connexion')->withErrors([
             'email_user' => 'Veuillez vous authentifier'
@@ -141,6 +123,11 @@ class PannierCtrl extends Controller
     }
 
 }
+
+
+
+
+
 
 //--FUNCTION TO DELETE A PRODUCT OF THE CART
 public function Delete_product_pannier()
@@ -165,5 +152,58 @@ public function Delete_product_pannier()
         ]);
 }
 
+
+
+
+        public function Validate_order(){
+
+
+
+
+
+           $orders= Order::
+            join('_select', '_order.Id_order', '=', '_select.Id_order')
+            ->join('_product', '_select.Id_product','=', '_product.Id_product')
+            ->where([['_order.Id_user', session()->get('Id_user')],['_order.Validate', 0]])
+            ->select('*')
+            ->get();
+
+
+
+
+            DB::transaction(function (){
+                Order::
+                join('_select', '_order.Id_order', '=', '_select.Id_order')
+                ->join('_product', '_select.Id_product','=', '_product.Id_product')
+                ->where([['_order.Id_user', session()->get('Id_user')],['_order.Validate', 0]])
+                ->update(['_order.Validate'=>1]);
+                });
+
+
+            //--SEND MAIL TO BDE
+
+            $BDE = Users::
+            join('_status', '_user.Id_status', '=', '_status.Id_status')
+            ->select('Email_user')
+            ->where('_status.Status', 'BDE')
+            ->get();
+
+            //
+        for($i=0; $i<count($BDE); $i++){
+            
+            $Member=$BDE[$i]->Email_user;
+            $user_name=session()->get('Name_user');
+            $user_surname=session()->get('Surname_user');
+
+            
+
+            Mail::to($Member)->send(new Product($user_name, $user_surname, $orders));
+
+        }
+        return back();
+
+
+
+    }
 
 }

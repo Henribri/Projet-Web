@@ -14,7 +14,7 @@ h2{
 	transition: all 0.65s ease;
 	width: 15em;
 	height: 15em;
-	filter: opacity(25%);
+	filter: opacity(70%);
 	border-radius: 25px;
     overflow: hidden;
     margin:auto;
@@ -30,8 +30,8 @@ main img:hover {
 	-o-transform:scale(1.25); /* Opera */
 	transform:scale(1.25);
 	filter: opacity(100%);
-	width: 17em;
-	height: 17em;
+	width: 15em;
+	height: 15em;
 }
 
 @media (min-width: 640px) {

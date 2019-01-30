@@ -11,7 +11,7 @@
 }
 
 /*Container of each point of navigation bar*/
-ul {
+.nav_bar {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -20,7 +20,7 @@ ul {
 }
 
 /*Text on point navigation bar*/
-li a {
+.nav_bar li a {
     display: block;
     color: #666;
     padding: 14px 16px;
@@ -30,23 +30,23 @@ li a {
 }
 
 /*Point of navigation bar*/
-li{
+.nav_bar li{
     margin:2px;
 }
 
 /*Animation on navigation bar*/
-li a:hover:not(.active) {
+.nav_bar li a:hover:not(.active) {
     background-color: #ddd;
 }
 
 /*Animation on navigation bar*/
-li a:hover{
+.nav_bar li a:hover{
     box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
     transform: scale(1.01);
 }
 
 /*Animation on navigation bar*/
-li a:active{
+.nav_bar li a:active{
     box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
     transform: scale(0.98);
 }
@@ -145,6 +145,24 @@ button:active{
 
 /*///////////////////////////////////*/
 /*									 */
+/*		      INFORMATIONS			 */
+/*			            			 */
+/*///////////////////////////////////*/
+.information{
+    text-align: center;
+    margin-left: 100px;
+    margin-right:100px;
+    padding: 0;
+    font-style:white;
+    background-color:red;
+}
+
+.information p{
+    color:white;
+}
+
+/*///////////////////////////////////*/
+/*									 */
 /*		 INFORMATIONS OF EVENTS	     */
 /*									 */
 /*///////////////////////////////////*/
@@ -156,7 +174,7 @@ button:active{
 }
 
 /*Container of events informations */
-.information{
+.informations{
     display:flex;
     justify-content: center;
     margin-top:15px;
@@ -165,7 +183,10 @@ button:active{
 /*Price information settings*/
 .price p{
     border:none;
-    background-color: #F2EFEF;
+    background-color: black;
+    font-weight: bold;
+    color:white;
+    border-radius:3px;
     border-radius:3px;
     height:30%;
     padding-bottom: 7px;
@@ -175,8 +196,11 @@ button:active{
 /*Date information settings*/
 .date p{
     border:none;
+    background-color: black;
+    font-weight: bold;
+    color:white;
     border-radius:3px;
-    background-color: #f3f3f3;
+    border-radius:3px;
     height: 30%;
     padding-bottom: 7px;
     margin:10px;
@@ -185,8 +209,10 @@ button:active{
 /*Reccurence information settings*/
 .recurent p{
     border:none;
+    background-color: black;
+    font-weight: bold;
+    color:white;
     border-radius:3px;
-    background-color: #f3f3f3;
     height: 30%;
     padding-bottom: 7px;
     margin:10px;
@@ -271,7 +297,7 @@ p{
     top:10px;
 }
 
-ul {
+.nav_bar  {
     display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -295,24 +321,4 @@ ul {
     width: 15%;
     height: 5%;
 }
-
-
-}
-
-/*///////////////////////////////////*/
-/*				     */
-/*		INFORMATIONS         */
-/*			             */
-/*///////////////////////////////////*/
-.info{
-    text-align: center;
-    margin-left: 100px;
-    margin-right:100px;
-    padding: 0;
-    font-style:white;
-    background-color:red;
-}
-
-.info p{
-    color:white;
 }

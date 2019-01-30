@@ -47,10 +47,20 @@
             
                      <p>{{$Event->Description_event}}</p>
                      <div class="button">
-                     <form action="/photos" method="get">
+                     <form action="/view_photos" method="get">
                      {{ csrf_field() }}   
                      <button class ="event-1" name="id_event" value="{{$Event->Id_event}}" type="submit">Voir les photos</button>
                      </form>
+                     
+                     @if(session()->get('Status_user')=='Tuteur')
+                     <div class="button">
+                     <form action="/Download" method='post'>
+                     {{ csrf_field() }}  
+
+                        <button class="download" name='id_event' value="{{$Event->Id_event}}"> <img src="/pictures/download.png" alt="Télécharger les images"/></button>
+                    </form>
+                    </div>
+                    @endif
 
                      @if(session()->get('Status_user')=='Tuteur')
                      <form action="/notify" method="post">

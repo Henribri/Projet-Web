@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use App\Sign_in;
 
 use App\Events;
-
+use App\Photos;
 use App\Vote;
 use Illuminate\Support\Facades\DB;
 use App\State;
@@ -201,5 +201,55 @@ class Event_user extends Controller
     }
 
 
-}
+
+        //--DOWNLOAD EVENTS PHOTOS
+    public function Download_photos_events(){
+
+        //--CONNEXION CHECK
+        if(session()->get('Status_user')=='BDE'){
+
+            $photos = Photos::
+                join('_image', '_image.Id_image','=','_photo.Id_image')
+                ->where('Id_event', request('id_event'))
+                ->get();
+
+
+
+                    $imgs_path = array();
+
+
+                    foreach ($photos as $photo){
+
+                        $path = '.' .$photo->Image;
+
+                    array_push($imgs_path, $path);
+
+                    }
+
+
+
+                    //$files = glob('uploads/*');
+
+                    $zip = \Zipper::make('images_event.zip')->add($imgs_path)->close();
+
+
+
+                    $headers = [
+
+                    'Content-Type' => 
+                    'application/zip',
+
+                    ];
+
+
+
+                    return \Response::download('images_event.zip',
+                    'filename.zip', $headers)->deleteFileAfterSend(true);
+
+
+
+                        }
+
+
+    }}
 

@@ -41,6 +41,8 @@ Route::get('/events_idea', 'Event_user@View_events_idea');
 Route::post('/events_idea', 'Event_user@Vote_event');
 
 Route::post('/event', 'Event_user@Sign_in_event');
+
+Route::post('/Download', 'Event_user@Download_photos_events');
 //
 
 
@@ -70,11 +72,11 @@ Route::get('/maj_events', 'Create_eventCtrl@MAJ_event');
 //--PHOTOS--//
 
 
-Route::get('/photos', 'PhotosCtrl@View_photos');
+Route::get('/view_photos', 'PhotosCtrl@View_photos');
 
 Route::post('/like', 'PhotosCtrl@Like');
 
-Route::post('/photos', 'PhotosCtrl@Create_comments');
+Route::post('/create_comment', 'PhotosCtrl@Create_comments');
 
 Route::post('/post_photo', 'PhotosCtrl@Create_photos');
 
@@ -116,6 +118,8 @@ Route::post('/create_product', 'BoutiqueCtrl@Create_product');
 Route::get('/shop', 'BoutiqueCtrl@View_shop');
 
 Route::post('/add_product', 'PannierCtrl@Add_product');
+
+Route::post('/validate_order', 'PannierCtrl@Validate_order');
 //
 
 

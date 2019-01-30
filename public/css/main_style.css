@@ -9,7 +9,8 @@ body{
     font-family: 'Cantarell';
     text-justify: auto;
 }
-/*toutes les im*/
+
+/*All of pictures*/
 img{
     width: 100%;
     height: auto;
@@ -20,7 +21,7 @@ header {
     height: 70px;
     width: 100%;
 	border-radius: 500px/10px;
-	box-shadow: 0 5px 5px rgba(18, 62, 207, 0.623);
+    box-shadow: 0 5px 5px rgba(18, 62, 207, 0.623);
 }
 
 /*make the header again a rectangle bar of white color*/
@@ -76,13 +77,13 @@ header h1{
 /*			  HAMBURGER			     */
 /*									 */
 /*///////////////////////////////////*/
-a{
+#menu a{
     text-decoration: none;
     transition: color 0.3s ease;
     color: rgba(18, 62, 207, 0.623);
 }
 
-a:hover{
+#menu a:hover{
   color: black;
 }
 
@@ -177,10 +178,9 @@ a:hover{
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-
 }
 
-#menu li{
+.hb_part{
   padding: 10px 0;
   font-size: 22px;
   font-family: 'Cantarell';
@@ -193,7 +193,6 @@ a:hover{
 #menuToggle input:checked ~ ul{
   transform: none;
 }
-
 /*///////////////////////////////////*/
 /*									 */
 /*			    FOOTER				 */
@@ -253,11 +252,16 @@ header{
     height: 70px;
     }
 
-    /*Title button*/
+/*Title button*/
 header h1{
-	font-size: 1.6em;}
+    font-size: 1.6em;
+}
+    
 #statut{
     margin-right:7%;
     margin-top: 15px;
-    }
+}
+a{
+    margin: 5px;
+}
 }

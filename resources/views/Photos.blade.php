@@ -43,8 +43,8 @@
 
             <div class="button">
 
-                <form method='post' action=''> 
-                
+                <form method='post' action='/create_comment'> 
+                {{ csrf_field() }}
                             <textarea name="comment_comment" cols="30" rows="3"placeholder="Taper votre commentaire"></textarea>
                             @if($errors->has('comment_comment'))
                                 {{$errors->first('comment_comment')}}
@@ -91,14 +91,15 @@
                         @endif
                         </div>
 
-
-
                         @endif
             @endforeach
+
 </div>
 
 </div>
+
 @endforeach
+
 @endsection
 
 

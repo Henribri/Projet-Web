@@ -18,13 +18,14 @@ class Product extends Mailable
      */
     public $user_name;
     public $user_surname;
+    public $orders;
 
-
-    public function __construct($user_name, $user_surname)
+    public function __construct($user_name, $user_surname, $orders)
     {
         //
         $this->user_name=$user_name;
         $this->user_surname=$user_surname;
+        $this->orders=$orders;
     }
 
     /**

@@ -1,12 +1,28 @@
-
+/*Image of associations in shop*/
 .global_container img{
     height: auto;
     margin-top: 7px;
 }
+/*All text in the associations page*/
 p{
     height:100%;
     text-align: center;
 }
+
+/*Container of each associations*/
+.global_container .container{
+    height: auto;
+    border-width:4px;
+    border-style: double;
+    border-color:rgba(18, 62, 207, 0.623);
+    margin: 5px;
+    margin-bottom :10px;
+}
+/*///////////////////////////////////*/
+/*									 */
+/*		      MEDIA QUERIES			 */
+/*			    Tablet				 */
+/*///////////////////////////////////*/
 
 @media (min-width: 640px) {
 
@@ -14,6 +30,12 @@ p{
         margin:2px;
         }
 }
+
+/*///////////////////////////////////*/
+/*									 */
+/*		      MEDIA QUERIES			 */
+/*			    Computer			 */
+/*///////////////////////////////////*/
 
 @media (min-width: 1200px) {
 .img{

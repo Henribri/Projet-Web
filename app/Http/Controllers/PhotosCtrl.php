@@ -77,6 +77,7 @@ class PhotosCtrl extends Controller
             ])
             ->get();
 
+
         return view('Photos',[
             'Photos'=>$photos,
             'Comments'=>Comments::all(),

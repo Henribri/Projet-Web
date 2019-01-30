@@ -4,12 +4,14 @@
 /*									 */
 /*///////////////////////////////////*/
 
+/*container of navigation bar*/
 #container_nav{
     width: 100%;
     margin-top: 5px;
 }
 
-ul {
+/*Container of each point of navigation bar*/
+.nav_bar {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -17,8 +19,8 @@ ul {
     background-color: #f3f3f3;
 }
 
-
-li a {
+/*Text on point navigation bar*/
+.nav_bar li a {
     display: block;
     color: #666;
     padding: 14px 16px;
@@ -27,8 +29,26 @@ li a {
     width: 100%;
 }
 
-li a:hover:not(.active) {
+/*Point of navigation bar*/
+.nav_bar li{
+    margin:2px;
+}
+
+/*Animation on navigation bar*/
+.nav_bar li a:hover:not(.active) {
     background-color: #ddd;
+}
+
+/*Animation on navigation bar*/
+.nav_bar li a:hover{
+    box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
+    transform: scale(1.01);
+}
+
+/*Animation on navigation bar*/
+.nav_bar li a:active{
+    box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
+    transform: scale(0.98);
 }
 
 /*///////////////////////////////////*/
@@ -49,7 +69,7 @@ form .field{
     width: 100%;
     border-radius: 5px;
     font-family: 'Cantarell', sans-serif;
-
+    outline-style:none;
 }
 
 form{
@@ -59,6 +79,19 @@ form{
     background-color: #ffffff;
     text-align:center;
 }
+
+/*Form validation*/
+
+.input input:focus:invalid{
+   border-color:#d45252;
+   background-image: none;
+   box-shadow: #d45252 0 0 5px; 
+}
+
+.input input:focus:valid{
+    border-color:#009933;
+    box-shadow: #009933 0 0 5px; 
+ }
 
 /*///////////////////////////////////*/
 /*									 */
@@ -70,15 +103,24 @@ form{
     width: 50%;
     height: auto;
     transform: translateX(50%);
-    border:5px double black;
-    background-color: #f3f3f3;
     text-align: center;
 }
+
 .checkbox{
     margin: 0;
 }
 #accept{
     margin:5px;
+}
+
+.Legal_Notice a {
+    cursor: pointer;
+    color: rgba(18, 62, 207, 0.623);
+    font-weight: bold;
+}
+
+.Legal_Notice a :hover {
+    color: black;
 }
 
 /*///////////////////////////////////*/
@@ -100,10 +142,11 @@ form{
 
 @media (min-width: 1200px) {
 
-ul {
+.nav_bar  {
     display: flex;
 	flex-direction: row;
 	justify-content: center;
     flex-wrap: wrap;
-    }
+}
+
 }
