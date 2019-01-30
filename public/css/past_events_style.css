@@ -85,28 +85,17 @@ p{
 /*									 */
 /*///////////////////////////////////*/
 
-/*General button*/
-.button{
-    display: flex;
-	flex-direction: row;
-    justify-content: center;
-    }
+/*Download button*/
+
+button {
+    text-align: center;
+}
     
-.button a:hover {
-    box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
-    transform: scale(1.01);
-}
-
-.button a:active {
-    box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
-    transform: scale(0.98);
-}
-
-.button .event-1{
+.button .download {
     text-decoration: none;
     color: black;
     display:block;
-    background-color: #F2EFEF;
+    background-color: white;
     border:5px;
     border-radius: 10px;
     font-family: 'Cantarell';
@@ -115,6 +104,40 @@ p{
     padding: 5px;
 }
 
+.download img{
+    width: 2em;
+    height: 2em;
+}
+
+/*Redirection page*/
+.redirection {
+    text-align: center;
+    align-items: center;
+    width: 40%;
+    }
+    
+.redirection a:hover {
+    box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
+    transform: scale(1.01);
+}
+
+.redirection a:active {
+    box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
+    transform: scale(0.98);
+}
+
+.redirection a{
+    text-decoration: none;
+    color: black;
+    display:block;
+    background-color: white;
+    border:5px;
+    border-radius: 10px;
+    font-family: 'Cantarell';
+    cursor: pointer;
+    margin: 5px;
+    padding: 5px;
+}
 
 /*Button delete*/
 .delete{
@@ -128,7 +151,6 @@ p{
     height: 2em;
 }
 
-
 .delete_button{
     display:block;
     background-color:white;
@@ -137,8 +159,8 @@ p{
     cursor: pointer;
     margin: 5px;
     padding: 5px;
-
 }
+
 
 button:hover {
     box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
@@ -149,6 +171,7 @@ button:active {
     box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
     transform: scale(0.98);
 }
+
 
 /*///////////////////////////////////*/
 /*									 */

@@ -40,8 +40,11 @@
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                     mollit anim id est laborum.</p>
+                    <div class="redirection">
+                        <a href="event-1">En savoir plus</a>
+                    </div>
                     <div class="button">
-                        <button class ="event-1">En savoir plus</button>
+                        <button class="download"> <img src="/pictures/download.png" alt="Télécharger les images"/></button>
                     </div>
     </div>
 
@@ -64,8 +67,11 @@
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                     mollit anim id est laborum.</p>
+                    <div class="redirection">
+                        <a href="event-1">En savoir plus</a>
+                    </div>
                     <div class="button">
-                    <button class ="event-1">En savoir plus</button>
+                        <button class="download"> <img src="/pictures/download.png" alt="Télécharger les images"/></button>
                     </div>
 </div>
 <div class="container">
@@ -87,8 +93,11 @@
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                     mollit anim id est laborum.</p>
+                    <div class="redirection">
+                        <a href="event-1">En savoir plus</a>
+                    </div>
                     <div class="button">
-                    <button class ="event-1">En savoir plus</button>
+                        <button class="download"> <img src="/pictures/download.png" alt="Télécharger les images"/></button>
                     </div>
 </div>
 <div class="container">
@@ -110,8 +119,11 @@
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                     mollit anim id est laborum.</p>
+                    <div class="redirection">
+                        <a href="event-1">En savoir plus</a>
+                    </div>
                     <div class="button">
-                        <button class ="event-1">En savoir plus</button>
+                        <button class="download"> <img src="/pictures/download.png" alt="Télécharger les images"/></button>
                     </div>
 </div>
 <div class="container">
@@ -133,8 +145,11 @@
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                     mollit anim id est laborum.</p>
+                    <div class="redirection">
+                        <a href="event-1">En savoir plus</a>
+                    </div>
                     <div class="button">
-                        <button class ="event-1">En savoir plus</button>
+                        <button class="download"> <img src="/pictures/download.png" alt="Télécharger les images"/></button>
                     </div>
 </div>
 <div class="container">
@@ -156,8 +171,11 @@
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                     mollit anim id est laborum.</p>
+                    <div class="redirection">
+                        <a href="event-1">En savoir plus</a>
+                    </div>
                     <div class="button">
-                         <button class ="event-1">En savoir plus</button>
+                        <button class="download"> <img src="/pictures/download.png" alt="Télécharger les images"/></button>
                     </div>
     </div>
 </div>
