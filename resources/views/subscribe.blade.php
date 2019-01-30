@@ -27,7 +27,7 @@
             <input class="field" type="password" name="password" placeholder="Mot de passe" required>
             <input class="field" type="password" name="password" placeholder="Confirmation de mot de passe" required>
         </div>
-      <input class="field" id ="blocked" type="submit" value="S'inscrire"required/> 
+      <input class="field" id ="blocked" type="button" value="S'inscrire" onclick="submit();" required/> 
     </form>
 </div>
 
@@ -35,7 +35,7 @@
 <div class="Legal_Notice">
             <a href="legal_notice">Mentions légales</a>
            <div id="accept"> 
-              <p><input class = "checkbox" type ="checkbox" name ="accept" value ="accept" required>J'accepte les conditions d'utilsation</p>
+              <p><input id="checkbox" class = "checkbox" type ="checkbox" name ="accept" onclick="submit();" value ="accept"  required/>J'accepte les conditions d'utilsation</p>
         </div>
 </div>
 
@@ -43,6 +43,6 @@
 
 
 @section('script_link')
-
+<script src="js/legal_notice.js"></script>
 
 @endsection
