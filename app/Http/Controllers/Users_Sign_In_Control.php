@@ -12,6 +12,7 @@ class Users_Sign_In_Control extends Controller
 
     //--VIEW SIGN IN
     public function Sign_in_page(){
+        
         if(!session()->get('Status_user')){
 
          return view('subscribe');

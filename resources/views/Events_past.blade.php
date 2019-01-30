@@ -20,7 +20,7 @@
             @if(session()->get('Status_user')=='BDE')
             <li ><a href= "events_private">Evènements cachés</a></li>
             @endif
-            <li ><a href= "events_idea">Idea Box</a></li>
+
         </ul>
 </div>
 
@@ -49,7 +49,7 @@
                      <div class="button">
                      <form action="/photos" method="get">
                      {{ csrf_field() }}   
-                     <button class ="comment" name="id_event" value="{{$Event->Id_event}}" type="submit">Voir les photos</button>
+                     <button class ="event-1" name="id_event" value="{{$Event->Id_event}}" type="submit">Voir les photos</button>
                      </form>
 
                      @if(session()->get('Status_user')=='Tuteur')

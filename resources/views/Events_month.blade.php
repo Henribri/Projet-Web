@@ -21,7 +21,7 @@
             @if(session()->get('Status_user')=='BDE')
             <li ><a href= "events_private">Evènements cachés</a></li>
             @endif
-            <li ><a href= "events_idea">Idea Box</a></li>
+
         </ul>
 </div>
 
@@ -64,8 +64,7 @@
                     @if(session()->get('Status_user')=='Tuteur')
                     <form action="/notify" method="post">
                          {{ csrf_field() }}
-
-                        <button class="notify" name='id_event' value='{{$Event->Id_event}}'> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
+                        <button class="notify" name='id_event' value='{{$Event->Id_event}}'><img src="/pictures/bell.png" alt="Cloche notifié"/></button>
                     </form>
                     @endif
 

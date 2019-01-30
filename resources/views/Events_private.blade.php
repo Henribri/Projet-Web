@@ -16,7 +16,7 @@
             <li ><a href= "create_events">Créer un évènement</a></li>
             <li ><a href= "create_events_idea">Créer une idée</a></li>
             <li ><a href= "hidden_events">Evènements cachés</a></li>
-            <li ><a href= "events_idea">Idea Box</a></li>
+
         </ul>
 </div>
 

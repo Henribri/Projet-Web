@@ -21,7 +21,6 @@
             @if(session()->get('Status_user')=='BDE')
             <li ><a href= "events_private">Evènements cachés</a></li>
             @endif
-            <li ><a href= "events_idea">Idea Box</a></li>
         </ul>
 </div>
 

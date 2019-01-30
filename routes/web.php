@@ -17,14 +17,17 @@ Route::get('/', function () {
 
 Route::view('/home','home');
 
-//on a nos route qui font appel au controller qui gérera l'inscription 
+
+
+//--SIGN IN--//
 Route::get('/subscribe','Users_Sign_In_Control@Sign_in_page');
 
 Route::post('/subscribe', 'Users_Sign_In_Control@Sign_in');
+//
 
 
 
-
+//--EVENTS--//
 Route::get('/events_month', 'Event_user@View_events_month');
 
 Route::post('/events_month', 'Event_user@Sign_in_event');
@@ -37,13 +40,16 @@ Route::get('/events_idea', 'Event_user@View_events_idea');
 
 Route::post('/events_idea', 'Event_user@Vote_event');
 
-//creer idees
+Route::post('/event', 'Event_user@Sign_in_event');
+//
+
+
+
+//--CREATE EVENTS
 Route::get('/create_events_idea', 'Create_eventCtrl@View_create_idea');
 
 Route::post('/create_events_idea', 'Create_eventCtrl@Suggest');
 
-
-//creer event
 Route::get('/create_events', 'Create_eventCtrl@View_create_event');
 
 Route::post('/create_events', 'Create_eventCtrl@Create_event');
@@ -52,14 +58,17 @@ Route::post('/create_upgrade_event', 'Create_eventCtrl@View_create_event');
 
 Route::post('/upgrade_event', 'Create_eventCtrl@Upgrade');
 
-
-
+Route::post('/delete_past', 'Create_eventCtrl@Delete_past');
 
 Route::post('/notify', 'Create_eventCtrl@Notify_event');
 
+Route::get('/maj_events', 'Create_eventCtrl@MAJ_event');
+//
 
 
-Route::post('/delete_past', 'Create_eventCtrl@Delete_past');
+
+//--PHOTOS--//
+
 
 Route::get('/photos', 'PhotosCtrl@View_photos');
 
@@ -67,7 +76,17 @@ Route::post('/like', 'PhotosCtrl@Like');
 
 Route::post('/photos', 'PhotosCtrl@Create_comments');
 
-Route::post('/event', 'Event_user@Sign_in_event');
+Route::post('/post_photo', 'PhotosCtrl@Create_photos');
+
+Route::post('/notify_photo', 'PhotosCtrl@Notify_photo');
+
+Route::post('/delete_com', 'PhotosCtrl@Delete_comments');
+
+//
+
+
+
+//--CONNEXION--//
 
 Route::get('/connexion','ConnexionCtrl@Formulaire');
 
@@ -75,32 +94,24 @@ Route::post('/connexion', 'ConnexionCtrl@Log_in');
 
 Route::get('/deconnexion', 'Log_outCtrl@Log_out');
 
-
 Route::post('/change_status', 'ConnexionCtrl@Change_status');
 
 Route::get('/change_status', 'ConnexionCtrl@View_change_status');
 
+Route::get('/legal_notice', 'ConnexionCtrl@View_legal_notice');
+
+//
 
 
 
-Route::post('/pdf', 'Event_user@Tab_sign');// a revoir
-
-Route::post('/notify_photo', 'PhotosCtrl@Notify_photo');
-
-Route::post('/delete_com', 'PhotosCtrl@Delete_comments');
-
-Route::get('/maj_events', 'Create_eventCtrl@MAJ_event');
-
-Route::post('/post_photo', 'PhotosCtrl@Create_photos');
-
-//Boutique
+//--Boutique--//
 
 Route::get('/pannier', 'PannierCtrl@View_pannier');
 
 Route::get('/create_product', 'BoutiqueCtrl@View_create_product');
 
 Route::post('/create_product', 'BoutiqueCtrl@Create_product');
-
+//
 
 /*
 Auth::routes();

@@ -132,7 +132,11 @@ class ConnexionCtrl extends Controller
 
         }
         
+        //--VIEW LEGAL NOTICE
+        public function View_legal_notice(){
 
+            return view('legal_notice');
+        }
 
 
 }
