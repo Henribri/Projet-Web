@@ -16,38 +16,36 @@ use App\Mail\IdeeRetenue;
 use Illuminate\Support\Facades\Mail;
 class PhotosCtrl extends Controller
 {
-    //
+    //--FUNCTION TO CREATE A PHOTO
     function Create_photos(request $request){
 
+        //--CHECK CONNEXION
         if(session()->get('Status_user')){
             request()->validate(['photo'=>['required'], 'id_event'=>['required']]);
 
-        //On enregistre notre image
+
+            //--CREATE IMAGE
         $extension=$request->photo->extension();
-        
-        //on verifie que ce soit la bonne extension
+
         if($extension!='png'&&$extension!='jpg'&&$extension!='jpeg'){
 
             return "mauvais format d'image";
         }
-        //creer image
 
-        //on enregistre l'image
         $imagetraitement=$request->file('photo');
         $input['imagename']= time().'.'.$extension;
         $path=public_path('Images');
         $imagetraitement->move($path, $input['imagename']);
 
-
-        //on recupere le chemin relatif
         $pathimage='/Images'.'/'.$input['imagename'];
+
 
         $Image= Image::create([
             'Image'=>$pathimage
         ]);
+ 
 
-
-
+            //--CREATE THE PHOTO
         DB::transaction(function () use( $Image) {
         Photos::create([
             'Id_image'=>$Image->Id_image,
@@ -63,12 +61,12 @@ class PhotosCtrl extends Controller
     }
 
 
-
+    //--VIEW OF PHOTOS
     function View_photos(){
 
-        
-        $Id_event=request('id_event');
 
+        //--SELECT PHOTO OF THE EVENT
+       $Id_event=request('id_event');
 
        $photos = Photos::
             join('_event', '_event.Id_event', '=', '_photo.Id_event')
@@ -88,14 +86,17 @@ class PhotosCtrl extends Controller
 
     }
 
+    //--FUNCTION TO ADD COMMENTS TO A PHOTO
     function Create_comments(){
 
+        //--CHECK CONNEXION
         if(session()->get('Status_user')){
 
             request()->validate([
                 'comment_comment'=>['required'],
             ]);
     
+            //--CREATE COMMENT
         DB::transaction(function () {
             Comments::create([
             'Comment_comment'=>request('comment_comment'),
@@ -116,16 +117,21 @@ class PhotosCtrl extends Controller
 
     }
 
+    //--FUNCTION TO DELETE COMMENT AND NOTIFY BDE
     function Delete_comments(){
         
+        //--CHECK CONNEXION
         if(session()->get('Status_user')=='Tuteur'){
 
+            //--DELETE THE COMMENT
         DB::transaction(function () {
            Comments::
             where( 'Id_comment',request('id_comment'))
             ->delete();
         });
 
+
+        //--SEND MAIL TO BDE
             $BDE = Users::
             join('_status', '_user.Id_status', '=', '_status.Id_status')
             ->select('Email_user')
@@ -155,12 +161,20 @@ class PhotosCtrl extends Controller
 
     }
 
-
+    //--FUNCTION TO LIKE PHOTO
     function Like(){
 
         try{
+            //--CHECK CONNEXION
         if(session()->get('Status_user')){
 
+            //--COUNT LIKE
+            $Likes=Likes::where('Id_photo', request('id_photo'))
+            ->get();
+
+            $nbLike=count($Likes);
+
+            //--POST LIKE
             DB::transaction(function () {
             Likes::create([
                 'Id_user'=>session()->get('Id_user'),
@@ -168,12 +182,17 @@ class PhotosCtrl extends Controller
             ]);
             });
 
-            return back();
+            //--DISPLAY ERRORS OR INFOS
+            return back()->withErrors([
+                'info' => 'Votre like a bien été pris en compte. '. $nbLike .' Likes'
+                ]);
 
 
         }}catch(\Illuminate\Database\QueryException $e){
                 
-              return "vous avez deja like la photo";//renvoyer erreur dans la div info
+            return back()->withErrors([
+                'info' => 'Vous avez déjà liké la photo. '. $nbLike .' Likes'
+                ]);
             }
         return redirect('/connexion')->withErrors([
             'email_user' => 'Veuillez vous authentifier'

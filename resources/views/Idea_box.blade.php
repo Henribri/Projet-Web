@@ -42,6 +42,8 @@
                         <button class="form" name="id_event" value="{{$Event->Id_event}}"> <img src="/pictures/vote.png" alt="Photo Cesi"/></button>
                     </form>
 
+
+
                     @if(session()->get('Status_user')=='Tuteur')
                     <form action="/notify" method="post">
                          {{ csrf_field() }}
@@ -56,6 +58,13 @@
                     </form>
                     @endif
                     </div>
+
+                    
+                    @if($errors->has('info'))
+                    <div class="info" name="info">
+                        <p>{{$errors->first('info')}}</p>
+                    </div>
+                    @endif
 
 
 

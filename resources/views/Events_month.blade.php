@@ -32,7 +32,7 @@
 <div class="container">
                     <h2>{{$Event->Name_event}}</h2>
 
-
+                    <img class= "events" src="{{$Event->Image}}" alt="Photo Cesi"/></a>
 
                     <div class="information">
                     
@@ -58,6 +58,9 @@
                     </form>
 
 
+
+
+
                     @if(session()->get('Status_user')=='Tuteur')
                     <form action="/notify" method="post">
                          {{ csrf_field() }}
@@ -65,7 +68,20 @@
                         <button class="notify" name='id_event' value='{{$Event->Id_event}}'> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
                     </form>
                     @endif
+
+                    @if(session()->get('Status_user')=='BDE')
+                    <form action="/pdf" method="post">
+                    {{ csrf_field() }}
+                    <button class ="pdf" name="id_event" value="{{$Event->Id_event}}"><img src="/pictures/pdf.png" alt="Télécharger pdf"/></button>
+                    </form>
+                    @endif
                     </div>
+                    
+                    @if($errors->has('info'))
+                    <div class="info" name="info">
+                        <p>{{$errors->first('info')}}</p>
+                    </div>
+                    @endif
 </div>
 
 </div>

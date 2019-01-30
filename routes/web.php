@@ -76,10 +76,14 @@ Route::post('/connexion', 'ConnexionCtrl@Log_in');
 Route::get('/deconnexion', 'Log_outCtrl@Log_out');
 
 
+Route::post('/change_status', 'ConnexionCtrl@Change_status');
+
+Route::get('/change_status', 'ConnexionCtrl@View_change_status');
 
 
 
 
+Route::post('/pdf', 'Event_user@Tab_sign');// a revoir
 
 Route::post('/notify_photo', 'PhotosCtrl@Notify_photo');
 
@@ -88,6 +92,15 @@ Route::post('/delete_com', 'PhotosCtrl@Delete_comments');
 Route::get('/maj_events', 'Create_eventCtrl@MAJ_event');
 
 Route::post('/post_photo', 'PhotosCtrl@Create_photos');
+
+//Boutique
+
+Route::get('/pannier', 'PannierCtrl@View_pannier');
+
+Route::get('/create_product', 'BoutiqueCtrl@View_create_product');
+
+Route::post('/create_product', 'BoutiqueCtrl@Create_product');
+
 
 /*
 Auth::routes();

@@ -1,0 +1,37 @@
+form{
+    margin: auto;
+    width: 100%;
+    display: block;
+}
+
+/*Field of form*/
+form .field{
+    margin: 5px;
+    padding: 0px;
+    width: 100%;
+    border-radius: 5px;
+    font-family: 'Cantarell', sans-serif;
+}
+
+/*Container of form*/
+form{
+    margin: 30px auto ;
+    width: 75%;
+    height: 100%;
+    background-color: #ffffff;
+    text-align:center;
+}
+/*Text on the top of the statut select*/
+.administration p{
+    text-align: center;
+}
+
+.input input:focus:invalid{
+    border-color:#d45252;
+    box-shadow: #d45252 0 0 5px; 
+ }
+ 
+ .input input:focus:valid{
+     border-color:#009933;
+     box-shadow: #009933 0 0 5px; 
+  }

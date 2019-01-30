@@ -39,7 +39,8 @@
         </select>
        <p> @if($errors->has('localisation_user'))
             {{$errors->first('localisation_user')}}
-        @endif</p>
+            @endif
+        </p>
 
       <input class="field" type="email" name="email_user" placeholder="Adresse mail">
       @if($errors->has('email_user'))

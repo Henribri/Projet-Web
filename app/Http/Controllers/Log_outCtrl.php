@@ -6,11 +6,12 @@ use Illuminate\Http\Request;
 
 class Log_outCtrl extends Controller
 {
-    //
+    
 
+    //--FUNCTION TO LOG OUT
     public function Log_out(){
         
-        
+        //--DELETE SESSION
         if(session()->get('Status_user')){
 
             session()->flush();

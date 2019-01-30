@@ -20,6 +20,9 @@ use Illuminate\Support\Facades\DB;
 class Create_eventCtrl extends Controller
 {
 
+
+    //--VIEW TO CREATE IDEA
+
     public function View_create_idea(){
         
         if(session()->get('Status_user')){
@@ -33,14 +36,15 @@ class Create_eventCtrl extends Controller
 
     }
 
-    
+    //--VIEW TO CREATE EVENT
     public function View_create_event(){
         
 
+        //--CHECK CONNEXION
 
         if(session()->get('Status_user')=='BDE'){
 
-
+            //--CHECK IF AN IDEA IS USE TO CREATE AN EVENT
             $Idea=false;
             if(request('id_event')){
                 $Idea = Events::
@@ -62,59 +66,53 @@ class Create_eventCtrl extends Controller
     }
 
 
-    //
+    //--FUNCTION CREATE EVENT
     public function Create_event(request $request){
-        //TODO Session a verifier status = BDE
+
+        //--CHECK IF THE USER IS BDE
         if(session()->get('Status_user')=='BDE'){
 
-    request()->validate([
-        //on verifie le formulaire
-        'name_event'=>['required','unique:_event,Name_event'],
-        'description_event'=>['required'],
-        'date_event'=>['required'],
-        'recurent_event'=>['required'], 
-        'public_event'=>['required'], 
-        'cost_event'=>['required'],
-        'image_event'=>['required'],
-        ]);
-
-//recuperation de l'image
+            request()->validate([
+                'name_event'=>['required','unique:_event,Name_event'],
+                'description_event'=>['required'],
+                'date_event'=>['required'],
+                'recurent_event'=>['required'], 
+                'public_event'=>['required'], 
+                'cost_event'=>['required'],
+                'image_event'=>['required'],
+                ]);
 
 
 
-        //On enregistre notre image
+
+
+                //CREATE IMAGE
 
         $extension=$request->image_event->extension();
         
-        //on verifie que ce soit la bonne extension
+                //CHECK EXTENSION
         if($extension!='png'&&$extension!='jpg'&&$extension!='jpeg'){
 
             return "mauvais format d'image";
         }
-        //creer image
 
         $imagetraitement=$request->file('image_event');
         $input['imagename']= time().'.'.$extension;
         $path=public_path('Images');
         $imagetraitement->move($path, $input['imagename']);
 
-
-        //on recupere le chemin relatif
         $pathimage='/Images'.'/'.$input['imagename'];
 
+        $Image= Image::create([
+                'Image'=>$pathimage
+                ]);
 
-
-
-       $Image= Image::create([
-            'Image'=>$pathimage
-        ]);
-
-        //ORM      
-        //on cherche l'id du status evenement
+            //--FIND ID STATUS OF MONTH
           $Status = State::select('Id_state')
             ->where('State', 'Month')
             ->first();
 
+            //--CREATE EVENT
         DB::transaction(function () use($Status, $Image) {
         Events::create([
         'Name_event'=>request('name_event'),
@@ -140,18 +138,20 @@ class Create_eventCtrl extends Controller
     
 
     public function Suggest(){
-        //TODO Session a verifier status = Etudiant
+        //--CHECK CONNEXION
         if(session()->get('Status_user')){
 
+            //--FIND ID OF IDEA STATE
             $Idee = State::select('Id_state')
             ->where('State', 'Idea')
-            ->first();//on recupere l'id correspondant a Idee
+            ->first();
 
         request()->validate([
             'name_event'=>['required','unique:_event,Name_event'],
             'description_event'=>['required'],
             ]);
 
+            //--CREATE AN IDEA
 
             DB::transaction(function ()  use($Idee) {
                 Events::create([
@@ -159,7 +159,7 @@ class Create_eventCtrl extends Controller
                 'Description_event'=>request('description_event'),
                 'Public_event'=>1,
                 'Id_state'=>$Idee->Id_state,
-                'Id_user_suggest'=>session()->get('Id_user'),// Session utilisateur en cour
+                'Id_user_suggest'=>session()->get('Id_user'),
                 ]); 
                 });
          }
@@ -168,18 +168,17 @@ class Create_eventCtrl extends Controller
             ]);
         }
 
+
+        //--FUNCTION TO UPGRADE AN IDEA TO EVENT
     
     public function Upgrade(request $request){
 
-
-
+            //--CHECK CONNEXION
         if(session()->get('Status_user')=='BDE'){
-
-
 
             $Prochainement = State::select('Id_state')
             ->where('State', 'Month')
-            ->first();//on recupere l'id correspondant a Idee
+            ->first();
 
 
         request()->validate([
@@ -191,32 +190,28 @@ class Create_eventCtrl extends Controller
             'image_event'=>['required'], 
             ]);
 
-        //On enregistre notre image
 
+            //--CREATE IMAGE
 
         $extension=$request->image_event->extension();
-        
-        //on verifie que ce soit la bonne extension
+
         if($extension!='png'&&$extension!='jpg'&&$extension!='jpeg'){
 
             return "mauvais format d'image";
         }
-        //creer image
 
         $imagetraitement=$request->file('image_event');
         $input['imagename']= time().'.'.$extension;
         $path=public_path('Images');
         $imagetraitement->move($path, $input['imagename']);
 
-
-        //on recupere le chemin relatif
         $pathimage='/Images'.'/'.$input['imagename'];
-
+        
        $Image= Image::create([
             'Image'=>$pathimage
         ]);
 
-
+        //--UPDATE IDEA TO EVENT
         
         DB::transaction(function () use($Prochainement, $Image) {
         Events::where('Id_event', request('id_event'))
@@ -226,17 +221,18 @@ class Create_eventCtrl extends Controller
                 'Description_event' => request('description_event'),
                 'Recurent_event' => request('recurent_event'),
                 'Cost_event' => request('cost_event'),
-                'Id_user_create' => session()->get('id_user'),//Session utilisateur en cour
-                'Id_state'=>$Prochainement->Id_state,//evenement
+                'Id_user_create' => session()->get('id_user'),
+                'Id_state'=>$Prochainement->Id_state,
                 'Id_image'=>$Image->Id_image,
                 ]);
             });
 
+
+            //--SEND MAIL TO THE IDEA CREATER
+
                 $Idea=Events::where('Id_event', request('id_event') )
                 ->first();
-
-
-                
+    
                 $Suggester = Users:://on retrouve la personne qui a suggest l'idee
                 join('_event', '_user.Id_user', '=', '_event.Id_user_suggest')
                 ->select('Email_user')
@@ -254,28 +250,34 @@ class Create_eventCtrl extends Controller
             ]);
     }   
 
+
+    //--FUNCTION TO NOTIFY BDE
+
     public function Notify_event(){
-        //TO DO Session verifier status = Tuteur
+        //--CHECK CONNEXION
         if(session()->get('Status_user')=='Tuteur'){
 
             request()->validate(['id_event'=>['required']]);
 
+            //--MAKE INVISIBLE THE EVENT
             DB::transaction(function () {
                 Events::where('Id_event', request('id_event'))
                 ->update([
-                    'Id_user_approve'=>session()->get('Id_user'),//Session utilisateur 
+                    'Id_user_approve'=>session()->get('Id_user'),
                     'Date_Approbation_events'=>date('Y/m/d'),
-                    'Public_event'=>0,//rend non public
+                    'Public_event'=>0,
                 ]);
             });
+
+
+        //--FIND THE EVENT UPDATE ->> PROBLEMS CAUSE BY TRANSACTION
 
        $Event= Events::
             where('Id_event', request('id_event'))
             ->first();
 
 
-
-
+            //--SEND MAIL TO BDE
         $BDE = Users::
             join('_status', '_user.Id_status', '=', '_status.Id_status')
             ->select('Email_user')
@@ -303,25 +305,29 @@ class Create_eventCtrl extends Controller
                 ]);
     }
 
+
+
+    //--CHANGE THE STATE OF EVENTS
+
     public function MAJ_event(){
 
+
+        //--CHECK CONNEXION
         if(session()->get('Status_user')=='BDE'){
 
-
-
+            //--FIND EVENTS WITH PAST DATE
         $Events = Events::
         where('Date_event','<' , date('Y/m/d'))
         ->get();
 
-
-
+            //--FIND ID OF PAST
         $Past = State::
         select('Id_state')
         ->where('State', 'Past')
         ->first();
 
 
-
+            //--UPDATE STATE OF EACH EVENTS
         foreach($Events as $Event){
 
         DB::transaction(function () use($Past, $Event) {
@@ -343,13 +349,13 @@ class Create_eventCtrl extends Controller
 }
 
 
+    //--FUNCTION TO DELETE AN EVENT PAST
 public function Delete_past(){
+
     if(session()->get('Status_user')=='BDE'){
     
+        //--DELETE COMMENTS
 
-
-
-        //supression des comments
         DB::transaction(function ()  {
             Comments::
             join('_photo', '_photo.Id_photo', '=', '_comment.Id_photo')
@@ -358,7 +364,9 @@ public function Delete_past(){
                 ->delete('_comment.*');
                 });
 
-        //Supression des likes
+
+        //--THEN DELETE LIKES
+
         DB::transaction(function ()  {
             Likes::
             join('_photo', '_photo.Id_photo', '=', '_like.Id_photo')
@@ -367,7 +375,8 @@ public function Delete_past(){
                 ->delete('_like.*');
                 });
 
-        //suppression des photos
+
+        //--THEN DELETE PHOTOS
         DB::transaction(function () {
             Photos::
             join('_event', '_photo.Id_event', '=', '_event.Id_event')
@@ -375,7 +384,7 @@ public function Delete_past(){
                 ->delete('_photo.*');
                 });
 
-            //suprression de l event
+            //--THEN DELETE EVENTS
             DB::transaction(function () {
                 Events::
                     where('Id_event', request('id_event'))

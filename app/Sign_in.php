@@ -11,5 +11,5 @@ class Sign_in extends Model
     public $timestamps = false;
     protected $table="_sign_in";
     protected $fillable=['Id_user','Id_event'];
-    protected $primaryKey=['Id_user','Id_event'];
+
 }

@@ -20,14 +20,11 @@ class Event_user extends Controller
 {
     //
 
+    //--VIEW EVENTS MONTH
 
     public function View_events_month(){
-        
-
-    //on verifie si on est connecté
-
-
-        
+                
+        //--SELECT MONTH EVENTS
         $Events = Events::
             join('_state', '_event.Id_state', '=', '_state.Id_state')
             ->join('_image', '_image.Id_image','=', '_event.Id_image')
@@ -37,11 +34,6 @@ class Event_user extends Controller
             ])
             ->get();
 
-
-
-        
-
-
         return view('Events_month',[
             'Events'=>$Events,
         ]);
@@ -50,10 +42,10 @@ class Event_user extends Controller
 
     }
 
-
+    //--VIEW EVENTS IDEA
     public function View_events_idea(){
         
-
+            //--FIND ID OF IDEA
             $Events = Events::
                 join('_state', '_event.Id_state', '=', '_state.Id_state')
 
@@ -69,9 +61,11 @@ class Event_user extends Controller
 
         }
 
+        //--VIEW PAST EVENTS
+
     public function View_events_past(){
 
-        //on verifie si on est connecté
+        //--SELECT PAST EVENTS
 
             $Events = Events::
             join('_state', '_event.Id_state', '=', '_state.Id_state')
@@ -88,12 +82,17 @@ class Event_user extends Controller
             ]);
         }
 
-        public function View_events_private(){
+        
+        //--VIEW PRIVATE EVENTS
 
-            //on verifie si on est connecté
-         
+        public function View_events_private(){
+            
+            //--CHECK CONNEXION AS BDE
+
             if(session()->get('Status_user')=='BDE'){
         
+                //--SELECT PRIVATE EVENTS
+
                 $Events = Events::
                 join('_state', '_event.Id_state', '=', '_state.Id_state')
                 ->join('_image', '_image.Id_image','=', '_event.Id_image')
@@ -105,17 +104,28 @@ class Event_user extends Controller
                     'Events'=>$Events,
                 ]);}
             
-                return back();//Renvoi a la page louis doit prevoir un champs pour les retours d'erreur.
+                return back();
         }
+
+
+        //--FUNCTION TO SIGN IN
 
     public function Sign_in_event(){
 
-        
+        //--CHECK CONNEXION
 
-        if(session()->get('Status_user')){
-            //try catch pour tester si un utilisateur s'est déja inscrit à un évènement.
-           try{ 
+            if(session()->get('Status_user')){
+          
 
+                //--COUNT PEOPLE SIGN IN
+            $Inscrits=Sign_in::where('Id_event', request('id_event'))
+            ->get();
+
+            $nbInscrits=count($Inscrits);
+          
+
+            //--ADD TO THE SIGN IN TABLE
+            try{ 
             DB::transaction(function () {
             Sign_in::create([
                 'Id_user'=>session()->get('Id_user'),
@@ -125,10 +135,15 @@ class Event_user extends Controller
         }
         catch(\Illuminate\Database\QueryException $e){
                 
-            return "vous etes déjà inscrit a l'event";
+            //--DISPLAY ERRORS OR INFOS
+            return back()->withErrors([
+                'info' => 'Vous êtes déjà inscrit. '. $nbInscrits .' Inscrits'
+                ]);//renvoyer erreur dans la div info
             }
 
-            return 'Bien inscrit';
+            return back()->withErrors([
+                'info' => 'Vous êtes bien inscrit. '. $nbInscrits .' Inscrits'
+                ]);//renvoyer erreur dans la div info
 
         }
 
@@ -138,34 +153,50 @@ class Event_user extends Controller
 
     }
 
+    //--FUNCTION VOTE
     public function Vote_event(){
 
-        try{
+            //--CHECK CONNEXION
             if(session()->get('Status_user')){
+                try{
+                    //--COUNT VOTE
 
-            DB::transaction(function () {
-            Vote::create([
+                    $Votes=Vote::where('Id_event', request('id_event'))
+                    ->get();
 
-                'Id_user'=>session()->get('Id_user'),
-                'Id_event'=> request('id_event'),
+                    $nbVotes=count($Votes);
 
-            ]);
-            });
-           
-            return 'Vote bien pris en compte';
+                    //--ADD TO VOTE TABLE
+
+                    DB::transaction(function () {
+                    Vote::create([
+
+                        'Id_user'=>session()->get('Id_user'),
+                        'Id_event'=> request('id_event'),
+
+                    ]);
+                    });
+                }catch(\Illuminate\Database\QueryException $e){
+                    
+                    //--DISPLAY ERRORS OR INFOS
+                return back()->withErrors([
+                    'info' => 'Vous avez déjà voté. '. $nbVotes .' Votes'
+                    ]);
+
+        }
+            return back()->withErrors([
+                'info' => 'Vote bien pris en compte. '. $nbVotes .' Votes'
+                ]);
             }
         
-            }catch(\Illuminate\Database\QueryException $e){
-                
-            return "vous avez deja voté pour l'idée";//renvoyer erreur dans la div info
 
-            }
 
         return redirect('/connexion')->withErrors([
             'email_user' => 'Veuillez vous authentifier'
             ]);
 
     }
+
 
 }
 

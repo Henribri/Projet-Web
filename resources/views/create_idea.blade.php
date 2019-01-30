@@ -28,7 +28,13 @@
     <form action="" method=post>
     {{ csrf_field() }}
       <input class="field" type="text" name="name_event" placeholder="Nom de l'idée">
+        @if($errors->has('name_event'))
+            {{$errors->first('name_event')}}
+        @endif
       <textarea class="field" name="description_event" id="description" cols="30" rows="10"placeholder="Description de l'idée"></textarea>
+        @if($errors->has('description_event'))
+            {{$errors->first('description_event')}}
+        @endif
       <input class="field" type="submit" value="Envoyer"/> 
     </form>
 </div>

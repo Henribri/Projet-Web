@@ -60,6 +60,11 @@
                         {{ csrf_field() }}
                             <button class="like" name='id_photo' value='{{$Photo->Id_photo}}'> <img src="/pictures/like.png" alt="Cloche notifié"/></button>
                         </form>
+
+
+
+
+
                         @if(session()->get('Status_user')=='Tuteur')
                         <form method='post' action='/notify_photo'>
                         {{ csrf_field() }}
@@ -67,6 +72,12 @@
                         </form>
                         @endif
                         </div>
+                        
+                        @if($errors->has('info'))
+                    <div class="info" name="info">
+                        <p>{{$errors->first('info')}}</p>
+                    </div>
+                    @endif
             
             @foreach($Comments as $Comment)
                         @if($Comment->Id_photo==$Photo->Id_photo)
