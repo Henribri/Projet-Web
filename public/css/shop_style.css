@@ -213,7 +213,7 @@ h2{
 
 /*///////////////////////////////////*/
 /*									 */
-/*		   BUTTONS ON EVENTS		 */
+/*		   BUTTONS ON SHOP		     */
 /*									 */
 /*///////////////////////////////////*/
 
@@ -300,6 +300,27 @@ button:active{
     text-align: center;
 }
 
+/*Button delete*/
+.delete{
+    display: flex;
+	flex-direction: row;
+    justify-content: right;
+}
+
+.delete_button img{
+    width: 2em;
+    height: 2em;
+}
+
+.delete_button{
+    display:block;
+    background-color:white;
+    border:5px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 5px;
+    padding: 5px;
+}
 /*///////////////////////////////////*/
 /*									 */
 /*		 INFORMATIONS OF EVENTS	     */

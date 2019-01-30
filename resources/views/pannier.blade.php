@@ -9,27 +9,27 @@
 @endsection
 
 @section('main_content')
+<div id="container_nav">
+        <ul class="nav_bar">
+            <li><a href="shop">Boutique</a></li>
+            <li><a href="add_product">Ajouter un produit</a></li>
+            <li><a href="pannier">Mon panier</a></li>
+        </ul>
+</div>
     <div class ="container">
         <div class="container_bill">
-            <div class="informations">
-                <h2>Nom:</h2>
-                <p>Pour DK</p>
-            </div>
-
-            <div class="informations">
-                <h2>Quantité:</h2>
-                <p>Pour DK</p>
-            </div>
-
-            <div class="informations">
-                <h2>Prix:</h2>
-                <p>Pour DK</p>
-            </div>
+            <h2>Nom:</h2>
+            <p>Pour DK</p>
+            <h2>Quantité:</h2>
+            <p>Pour DK</p>
+            <h2>Prix:</h2>
+            <p>Pour DK</p>
+        </div>
+        <div class="total_price">
+            <h2>Prix total:</h2>
+        </div>
     </div>
 
-            <div class="total_price">
-                <h2>Prix total:</h2>
-            </div>
     </div>
 
     <div class="button">

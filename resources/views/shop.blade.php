@@ -15,6 +15,7 @@
         <ul class="nav_bar">
             <li><a href="shop">Boutique</a></li>
             <li><a href="add_product">Ajouter un produit</a></li>
+            <li><a href="pannier">Mon panier</a></li>
         </ul>
 </div>
 
@@ -68,6 +69,9 @@
         </section>
         <div class="container">
                 <h3>Les sweats de l'école</h3>
+                <div class="delete">
+                    <button class="delete_button"> <img src="/pictures/delete.png" alt="Supprimer l'événement"/></button>
+                </div>
                 <img class= "img_product" src="/pictures/shop.png" alt="Sweat Cesi"/></a>
                         <div class="information">
                             <div class ="price"><p>5€</p></div>
@@ -96,6 +100,9 @@
 
         <div class="container">
                 <h3>Les sweats de l'école</h3>
+                <div class="delete">
+                    <button class="delete_button"> <img src="/pictures/delete.png" alt="Supprimer l'événement"/></button>
+                </div>
                 <img class= "img_product" src="/pictures/shop.png" alt="Sweat Cesi"/></a>
                         <div class="information">
                             <div class ="price"><p>5€</p></div>
@@ -124,6 +131,9 @@
 
         <div class="container">
                 <h3>Les sweats de l'école</h3>
+                <div class="delete">
+                    <button class="delete_button"> <img src="/pictures/delete.png" alt="Supprimer l'événement"/></button>
+                </div>
                 <img class= "img_product" src="/pictures/shop.png" alt="Sweat Cesi"/></a>
                         <div class="information">
                             <div class ="price"><p>5€</p></div>
@@ -152,6 +162,9 @@
 
         <div class="container">
                 <h3>Les sweats de l'école</h3>
+                <div class="delete">
+                    <button class="delete_button"> <img src="/pictures/delete.png" alt="Supprimer l'événement"/></button>
+                </div>
                 <img class= "img_product" src="/pictures/shop.png" alt="Sweat Cesi"/></a>
                         <div class="information">
                             <div class ="price"><p>5€</p></div>
@@ -180,6 +193,9 @@
 
         <div class="container">
                 <h3>Les sweats de l'école</h3>
+                <div class="delete">
+                    <button class="delete_button"> <img src="/pictures/delete.png" alt="Supprimer l'événement"/></button>
+                </div>
                 <img class= "img_product" src="/pictures/shop.png" alt="Sweat Cesi"/></a>
                         <div class="information">
                             <div class ="price"><p>5€</p></div>
@@ -208,6 +224,9 @@
 
         <div class="container">
                 <h3>Les sweats de l'école</h3>
+                <div class="delete">
+                    <button class="delete_button"> <img src="/pictures/delete.png" alt="Supprimer l'événement"/></button>
+                </div>
                 <img class= "img_product" src="/pictures/shop.png" alt="Sweat Cesi"/></a>
                         <div class="information">
                             <div class ="price"><p>5€</p></div>
