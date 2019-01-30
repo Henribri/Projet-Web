@@ -10,6 +10,7 @@
 @endsection
 
 @section('main_content')
+<input type="hidden" id="session_user" value="{{session()->get('Id_user')}}"/>
 
 <div id="container_nav">
         <ul>
@@ -19,6 +20,7 @@
 </div>
 
 <div id ="global_container">
+
     <h2>Bienvenue dans la boutique, ici tu peux trouver les goodies de notre bureau des élèves !</h2>
         <div class="research">
             <div class="category_bar">

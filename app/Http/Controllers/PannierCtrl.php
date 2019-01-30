@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Order;
 use App\Select;
 use App\Users;
+use App\Mail\Product;
 class PannierCtrl extends Controller
 {
     //
@@ -129,7 +130,7 @@ class PannierCtrl extends Controller
             $user_surname=session()->get('Surname_user');
             
                 
-            Mail::to($Member)->send(new Notification($user_name, $user_surname));
+            Mail::to($Member)->send(new Product($user_name, $user_surname));
 
 
         }

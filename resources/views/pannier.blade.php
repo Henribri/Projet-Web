@@ -9,7 +9,10 @@
 @endsection
 
 @section('main_content')
+
     <div class ="container">
+
+
     <?php $Total_price=0; ?>
     @foreach($Orders as $Order)
 
@@ -29,7 +32,7 @@
                 <p>{{$Order->Price_product}}</p>
             </div>
     </div>
-    <?php $Total_price=$Total_price+$Order->Price_product;?>
+    <?php $Total_price=$Total_price+($Order->Price_product*$Order->Quantity);?>
     @endforeach
             <div class="total_price">
                 <h2>Prix total:</h2>
