@@ -11,9 +11,9 @@
 @section('main_content')
 
 <div id="container_nav">
-        <ul>
+        <ul class="nav_bar">
             <li><a href="shop">Boutique</a></li>
-            <li><a href="create_product">Ajouter un produit</a></li>
+            <li><a href="add_product">Ajouter un produit</a></li>
         </ul>
 </div>
 

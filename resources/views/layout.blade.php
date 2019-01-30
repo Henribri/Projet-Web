@@ -33,18 +33,18 @@
                             <span></span>
                             <span></span>
                             <ul id="menu">
-                                <li><a href="subscribe">Inscription</a></li>
-                                <li><a href="login">Connexion</a></li>
-                                <li><a href="#">Déconnexion</a></li>
-                                <li><a href="cesi">Cesi</a></li>
-                                <li><a href="bde">BDE</a></li>
-                                <li><a href="associations">Associations</a></li>
-                                <li><a href="month_events">Evènements</a></li>
-                                <li><a href="#">Mettre à jour évènements</a></li>
-                                <li><a href="suggestion_box">Boîte à idées</a></li>
-                                <li><a href="shop">Boutique</a></li>
-                                <li><a href="legal_notice">Mentions légales</a></li>
-                                <li><a href="administration">Administration</a></li>
+                                <li class="hb_part"><a href="subscribe">Inscription</a></li>
+                                <li class="hb_part"><a href="login">Connexion</a></li>
+                                <li class="hb_part"><a href="#">Déconnexion</a></li>
+                                <li class="hb_part"><a href="cesi">Cesi</a></li>
+                                <li class="hb_part"><a href="bde">BDE</a></li>
+                                <li class="hb_part"><a href="associations">Associations</a></li>
+                                <li class="hb_part"><a href="month_events">Evènements</a></li>
+                                <li class="hb_part"><a href="#">Mettre à jour évènements</a></li>
+                                <li class="hb_part"><a href="suggestion_box">Boîte à idées</a></li>
+                                <li class="hb_part"><a href="shop">Boutique</a></li>
+                                <li class="hb_part"><a href="legal_notice">Mentions légales</a></li>
+                                <li class="hb_part"><a href="administration">Administration</a></li>
                             </ul>
                         </div>
                     </nav> 

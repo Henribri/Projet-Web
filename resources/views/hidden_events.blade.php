@@ -10,12 +10,12 @@
 
 @section('main_content')
 <div id="container_nav">
-        <ul>
+        <ul class="nav_bar">
             <li><a href="month_events">Evènements du mois</a></li>
             <li><a href="past_events">Evènements passés</a></li>
-            <li ><a href= "create_event">Créer un évènement</a></li>
-            <li ><a href= "create_idea">Créer une idée</a></li>
-            <li ><a href= "hidden_events">Evènements cachés</a></li>
+            <li><a href= "create_event">Créer un évènement</a></li>
+            <li><a href= "create_idea">Créer une idée</a></li>
+            <li><a href= "hidden_events">Evènements cachés</a></li>
         </ul>
 </div>
 

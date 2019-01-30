@@ -297,7 +297,7 @@ p{
     top:10px;
 }
 
-ul {
+.nav_bar  {
     display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -321,6 +321,4 @@ ul {
     width: 15%;
     height: 5%;
 }
-
-
 }
