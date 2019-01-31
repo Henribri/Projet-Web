@@ -162,6 +162,8 @@ class Create_eventCtrl extends Controller
                 'Id_user_suggest'=>session()->get('Id_user'),
                 ]); 
                 });
+
+                return redirect('/events_idea');
          }
          return redirect('/connexion')->withErrors([
             'email_user' => 'Vous devez être connecté pour faire cette action'
@@ -242,7 +244,7 @@ class Create_eventCtrl extends Controller
 
                 Mail::to($Suggester->Email_user)->send(new IdeeRetenue);
 
-                return redirect("/home");
+                return redirect('/events_month');
 
          }
          return redirect('/connexion')->withErrors([

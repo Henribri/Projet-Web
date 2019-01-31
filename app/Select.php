@@ -8,6 +8,6 @@ class Select extends Model
 {
     //
     public $timestamps = false;
-    protected $table="_like";
+    protected $table="_select";
     protected $fillable=['Id_product','Id_order','Quantity'];
 }

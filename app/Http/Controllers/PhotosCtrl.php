@@ -29,7 +29,9 @@ class PhotosCtrl extends Controller
 
         if($extension!='png'&&$extension!='jpg'&&$extension!='jpeg'){
 
-            return "mauvais format d'image";
+            return back()->withErrors([
+                'info' => 'Mauvais format.'
+                ]);
         }
 
         $imagetraitement=$request->file('photo');

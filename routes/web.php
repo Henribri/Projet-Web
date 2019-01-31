@@ -120,6 +120,8 @@ Route::get('/shop', 'BoutiqueCtrl@View_shop');
 Route::post('/add_product', 'PannierCtrl@Add_product');
 
 Route::post('/validate_order', 'PannierCtrl@Validate_order');
+
+Route::post('/delete_select', 'PannierCtrl@Delete_product_pannier');
 //
 
 

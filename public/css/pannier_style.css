@@ -58,15 +58,12 @@
 /*///////////////////////////////////*/
 
 .container{
-    width: 70%;
-    height: 100px;
+    width: 90%;
+    height: 120px;
     border-width:4px;
     border-style: double;
     border-radius: 10px;
     border-color:rgba(18, 62, 207, 0.623);
-    display: flex;
-	flex-direction: row;
-    justify-content: center;
     margin: 10px auto 10px auto;
     margin-bottom: 5px;
     margin-top:20px; 
@@ -85,13 +82,18 @@
     margin-top:20px;
     margin-left:2px;
     margin-right:2px;
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+    flex-wrap: wrap;
 }
 
 /*Div who contain all informations*/
  .container_bill{
-   display: flex;
+    display: flex;
     width: 50%;
     height: 50px;
+    margin-left: 10px;
 }
 
 /*Div who contain total price*/
@@ -103,25 +105,33 @@
 
 /*General button*/
 
+.container1{
+    margin: 10px;
+    width: 20%;
+    display: block;
+    background-color: #ffffff;
+}
+
 .container2{
-    text-align: center;
+    margin: auto;
     width: 100%;
+    display: block;
+    margin: 30px auto ;
+    height: 100%;
+    background-color: #ffffff;
+    text-align:center;
 }
 
-button{
-    display: flex;
-	flex-direction: row;
-    justify-content: center;
-    }
-    
-.validate:hover {
-    box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
-    transform: scale(1.01);
-}
-
-.validate:active {
-    box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
-    transform: scale(0.98);
+.delete{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border:5px;
+    border-radius: 10px;
+    font-family: 'Cantarell';
+    cursor: pointer;
+    margin: 5px;
+    padding: 5px;
 }
 
 .validate{
@@ -132,9 +142,19 @@ button{
     border-radius: 10px;
     font-family: 'Cantarell';
     cursor: pointer;
-    margin: 5px;
+    margin: 20px;
     padding: 5px;
-    width: 5%;
+
+}
+   
+button:hover {
+    box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
+    transform: scale(1.01);
+}
+
+button:active {
+    box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
+    transform: scale(0.98);
 }
 
 /*///////////////////////////////////*/

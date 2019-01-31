@@ -206,7 +206,7 @@ class Event_user extends Controller
     public function Download_photos_events(){
 
         //--CONNEXION CHECK
-        if(session()->get('Status_user')=='BDE'){
+        if(session()->get('Status_user')=='Tuteur'){
 
             $photos = Photos::
                 join('_image', '_image.Id_image','=','_photo.Id_image')

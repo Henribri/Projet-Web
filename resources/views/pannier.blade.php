@@ -41,13 +41,25 @@
                 <h2>Prix:</h2>
                 <p>{{$Order->Price_product}}</p>
 
+
+                <div class="container1">
+                    <form action="/delete_select" method="post">
+                    {{ csrf_field() }}
+                        <button class ="delete" name="id_product" value="{{$Order->Id_product}}">Supprimer</button>
+                    </form>
+                 </div>
     </div>
+
+
+
     <?php $Total_price=$Total_price+($Order->Price_product*$Order->Quantity);?>
     @endforeach
-            <div class="total_price">
-                <h2>Prix total:</h2>
-                <h2>{{$Total_price}}</h2>
+
+
+             <div class="total_price">
+                <h2>Prix total: {{$Total_price}} €</h2>
             </div>
+
     </div>
 
     <div class="container2">
@@ -56,7 +68,6 @@
         <button class ="validate" name="orders" value="{{$Orders}}">Valider la commande</button>
         </form>
     </div>
-
 
 @endsection
 

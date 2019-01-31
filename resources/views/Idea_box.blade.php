@@ -12,7 +12,11 @@
 
 
 @foreach($Events as $Event)
-
+@if($errors->has('info'))
+                    <div class="information" name="info">
+                        <p>{{$errors->first('info')}}</p>
+                    </div>
+                    @endif
 
 <div class ="global_container">
 <div class="container">
@@ -46,11 +50,7 @@
                     </div>
 
                     
-                    @if($errors->has('info'))
-                    <div class="information" name="info">
-                        <p>{{$errors->first('info')}}</p>
-                    </div>
-                    @endif
+
 
 
 

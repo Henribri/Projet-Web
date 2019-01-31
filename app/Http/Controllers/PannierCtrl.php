@@ -58,9 +58,9 @@ public function Delete_product_pannier()
             ->where([
             ['_order.Id_user', $user],
             ['_select.Id_product',$id_product],])
-            ->delete('*');
+            ->delete('_select.*');
         });
-        return "Votre article à bien été supprimé";
+        return back();
     }
     return redirect('/connexion')->withErrors([
         'email_user' => 'Veuillez vous authentifier'

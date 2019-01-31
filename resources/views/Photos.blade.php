@@ -33,6 +33,11 @@
                 <button id="file2"type="submit" name="id_event" value="{{$Id_event}}">Poster</button>
             </form>
 </div>
+@if($errors->has('info'))
+                    <div class="information" name="info">
+                        <p>{{$errors->first('info')}}</p>
+                    </div>
+                    @endif
 @foreach($Photos as $Photo)
 
 
@@ -72,11 +77,7 @@
                         @endif
                         </div>
                         
-                        @if($errors->has('info'))
-                    <div class="information" name="info">
-                        <p>{{$errors->first('info')}}</p>
-                    </div>
-                    @endif
+
             
             @foreach($Comments as $Comment)
                         @if($Comment->Id_photo==$Photo->Id_photo)
