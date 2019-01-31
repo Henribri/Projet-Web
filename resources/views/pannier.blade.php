@@ -19,22 +19,24 @@
     <div class ="container">
         <div class="container_bill">
             <h2>Nom:</h2>
-            <p>Pour DK</p>
+            <p>1234</p>
             <h2>Quantité:</h2>
-            <p>Pour DK</p>
+            <p>1234</p>
             <h2>Prix:</h2>
-            <p>Pour DK</p>
+            <p>1234</p>
         </div>
+        <div class="container1">
+                <button class ="delete">Supprimer</button>
+            </div>
         <div class="total_price">
             <h2>Prix total:</h2>
         </div>
     </div>
 
     </div>
-
-        <div class="container2">
-            <button class ="validate">Valider la commande</button>
-        </div>
+    <div class="container2">
+        <button class ="validate">Valider la commande</button>
+    </div>
 
 @endsection
 
