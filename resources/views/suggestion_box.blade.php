@@ -29,6 +29,7 @@
                         <div class ="button">
                             <button class ="vote"> <img src="/pictures/vote.png" alt="Photo Cesi"/></button>
                             <button class ="reuse"> <img src="/pictures/reuse.png" alt="Photo Cesi"/></button>
+                            <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
                         </div>
                         <div class="information">
                             <p>T'as deja like</p>
@@ -53,6 +54,7 @@
                         <div class ="button">
                             <button class ="vote"> <img src="/pictures/vote.png" alt="Photo Cesi"/></button>
                             <button class ="reuse"> <img src="/pictures/reuse.png" alt="Photo Cesi"/></button>
+                            <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
                         </div>
                         <div class="information">
                             <p>T'as deja like</p>
@@ -77,6 +79,7 @@
                         <div class ="button">
                             <button class ="vote"> <img src="/pictures/vote.png" alt="Photo Cesi"/></button>
                             <button class ="reuse"> <img src="/pictures/reuse.png" alt="Photo Cesi"/></button>
+                            <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
                         </div>
                         <div class="information">
                             <p>T'as deja like</p>
@@ -101,6 +104,7 @@
                         <div class ="button">
                             <button class ="vote"> <img src="/pictures/vote.png" alt="Photo Cesi"/></button>
                             <button class ="reuse"> <img src="/pictures/reuse.png" alt="Photo Cesi"/></button>
+                            <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
                         </div>
                         <div class="information">
                             <p>T'as deja like</p>
@@ -125,6 +129,7 @@
                         <div class ="button">
                             <button class ="vote"> <img src="/pictures/vote.png" alt="Photo Cesi"/></button>
                             <button class ="reuse"> <img src="/pictures/reuse.png" alt="Photo Cesi"/></button>
+                            <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
                         </div>
                         <div class="information">
                             <p>T'as deja like</p>
@@ -149,6 +154,7 @@
                         <div class ="button">
                             <button class ="vote"> <img src="/pictures/vote.png" alt="Photo Cesi"/></button>
                             <button class ="reuse"> <img src="/pictures/reuse.png" alt="Photo Cesi"/></button>
+                            <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
                         </div>
                         <div class="information">
                             <p>T'as deja like</p>

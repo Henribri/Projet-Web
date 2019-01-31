@@ -64,6 +64,18 @@ button img{
     width: 3em;
 }
 
+/*Notification button image size*/
+.notify img{
+    height: 3em;
+    width: 3em;
+}
+
+/*Notification button size*/
+.notify{
+    width: 15%;
+    height: 5%;
+    }
+
 /*///////////////////////////////////*/
 /*									 */
 /*		      INFORMATIONS			 */
@@ -89,9 +101,14 @@ button img{
 
 @media (min-width: 640px) {
 
-    .global_container{
-        margin:2px;
-        }        
+.global_container{
+    margin:2px;
+        }
+/* Button for notify size */
+.notify{
+    width: 8%;
+    height: 5%;
+}       
 }
 
 /*///////////////////////////////////*/
@@ -117,6 +134,12 @@ text-align: center;
     margin: 50px;
     margin-top: 50px;
     padding:5px;
-            }
+    }
+/* Button for notify size */
+.notify{
+    width: 15%;
+    height: 5%;
+}
+
 }
 
