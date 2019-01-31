@@ -13,9 +13,10 @@
 <input type="hidden" id="session_user" value="{{session()->get('Id_user')}}"/>
 
 <div id="container_nav">
-        <ul>
+        <ul class="nav_bar">
             <li><a href="/shop">Boutique</a></li>
             <li><a href="/create_product">Créer un produit</a></li>
+            <li><a href="/pannier">Mon panier</a></li>
         </ul>
 </div>
 
@@ -35,7 +36,7 @@
             </div>
             <div class="research_name">
                 <input id="search" name="search" type="text" placeholder="Rechercher" />
-                <button type="submit" onclick="search()">Valider</button>
+                <button id="search-btn" type="submit" onclick="search()">Valider</button>
             </div>
             <div class="price_order">
                 <input id="price_min" name="price_min" type="number" placeholder="prix minimum" />
@@ -52,17 +53,17 @@
         <section class="best_sale">
             <div class="best_sale_product">
                 <h4>Sweats</h4>
-                <img src="/pictures/gourde.jpg" alt="Gourde">
+                <img src="/pictures/shop.png" alt="Gourde">
                 <p>Sweats sympa</p>
             </div>
             <div class="best_sale_product">
                 <h4>Porte clés</h4>
-                <img src="/pictures/shop.png" alt="Gourde">
+                <img src="/pictures/keychain.png" alt="Gourde">
                 <p>Porte clés cool</p>
             </div>
             <div class="best_sale_product">
                 <h4>Gourde</h4>
-                <img src="/pictures/keychain.png" alt="Gourde">
+                <img src="/pictures/gourde.jpg" alt="Gourde">
                 <p>Gourde utile</p>
             </div>
         </section>

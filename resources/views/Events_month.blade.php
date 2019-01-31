@@ -11,7 +11,7 @@
 @section('main_content')
 
 <div id="container_nav">
-        <ul>
+    <ul class="nav_bar">    
             <li><a href="events_month">Evènements du mois</a></li>
             <li><a href="events_past">Evènements passés</a></li>
             @if(session()->get('Status_user')=='BDE')
@@ -28,13 +28,13 @@
 @foreach($Events as $Event)
 
 
-<div class ="global_container">
-<div class="container">
+<div class ="global_container"><!--global_container allow to place event -->
+<div class="container"> <!--container allow to put informations of event -->
                     <h2>{{$Event->Name_event}}</h2>
 
                     <img class= "events" src="{{$Event->Image}}" alt="Photo Cesi"/></a>
 
-                    <div class="information">
+                    <div class="informations"><!--container of informations -->
                     
                     <div class ="price"><p>{{$Event->Cost_event}}</p></div>
                     <div class="date"><p>{{$Event->Date_event}}</p></div>
@@ -77,7 +77,7 @@
                     </div>
                     
                     @if($errors->has('info'))
-                    <div class="info" name="info">
+                    <div class="information" name="info">
                         <p>{{$errors->first('info')}}</p>
                     </div>
                     @endif

@@ -9,8 +9,9 @@
 @endsection
 
 @section('main_content')
+<!--Navigation bar-->
 <div id="container_nav">
-        <ul>
+        <ul class="nav_bar">
         <li><a href="events_month">Evènements du mois</a></li>
             <li><a href="events_past">Evènements passés</a></li>
             <li ><a href= "create_events">Créer un évènement</a></li>
@@ -23,15 +24,12 @@
 @foreach($Events as $Event)
 
 
-<div class ="global_container">
-<div class="container">
+<div class ="global_container"><!--global_container allow to seperate hidden event -->
+<div class="container"><!--container allow to put informations hidden event -->
                         <h3>{{$Event->Name_event}}</h3>
             <img class= "events" src="{{$Event->Image}}" alt="Photo Cesi"/></a>
                      <p>{{$Event->Description_event}}</p>
-                    <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
-                    <button class ="comment">Commenter</button>
-                    <button class="like"><img src="/pictures/like.png" alt="Like"/></button>
-</div>
+
 @endforeach
 </div>
 @endsection

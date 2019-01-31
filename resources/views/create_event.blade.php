@@ -9,9 +9,9 @@
 @endsection
 
 @section('main_content')
-
+<!--Navigation bar-->
 <div id="container_nav">
-        <ul>
+<ul class="nav_bar">
             <li><a href="events_month">Evènements du mois</a></li>
             <li><a href="events_past">Evènements passés</a></li>
             <li ><a href= "create_events">Créer un évènement</a></li>
@@ -21,8 +21,10 @@
         </ul>
 </div>
 
+<!--Form for the create event -->
 <div class="form">
 @if($Idea)
+<div class="input">
     <form action='/upgrade_event' method='post' enctype="multipart/form-data">
     {{ csrf_field() }}
       <input class="field" type="text" name="name_event" placeholder="{{$Idea->Name_event}}" value="{{$Idea->Name_event}}">
@@ -59,18 +61,25 @@
               {{$errors->first('public_event')}}
             @endif
 
-      <input class="field" type="file" name="image_event" value="">
+      <label for="file" class="label-file">Choisir une image</label>
+      <input id="file" class="field" type="file" name="image_event" value="">
+      @if($errors->has('image_event'))
+              {{$errors->first('image_event')}}
+            @endif
+
+      <label for="file" class="label-file">Choisir une image</label>
+      <input id="file" class="input-file" type="file" name="image_event" value="">
       @if($errors->has('image_event'))
               {{$errors->first('image_event')}}
             @endif
 
 
-      <!-- Rajouter import d'image -->
-
       <button class="field" type="submit" name='id_event' value="{{$Idea->Id_event}}">Envoyer </button>
     </form>
-  @else
 
+    </div>
+  @else
+  <div class="input">
   <form action='' method='post'  enctype="multipart/form-data">
     {{ csrf_field() }}
       <input class="field" type="text" name="name_event" placeholder="Nom de lévènement">
@@ -111,18 +120,17 @@
               {{$errors->first('public_event')}}
             @endif
 
-
-      <input class="field" type="file" name="image_event" value="">
+      <label for="file" class="label-file">Choisir une image</label>
+      <input id="file" class="input-file" type="file" name="image_event" value="">
       @if($errors->has('image_event'))
               {{$errors->first('image_event')}}
             @endif
 
 
-      <!-- Rajouter import d'image -->
 
       <input class="field" type="submit" value="Envoyer"/> 
     </form>
-
+  </div>
 
   @endif
 

@@ -11,7 +11,7 @@
 @section('main_content')
 
 <div id="container_nav">
-        <ul>
+        <ul class="nav_bar">
             <li><a href="/connexion">Se connecter</a></li>
             <li><a href="/subscribe">S'inscrire</a></li>
         </ul>

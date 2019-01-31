@@ -25,7 +25,7 @@
                      <form action="" method="post">
                         {{ csrf_field() }}
                         <!-- Vote -->
-                        <button class="form" name="id_event" value="{{$Event->Id_event}}"> <img src="/pictures/vote.png" alt="Photo Cesi"/></button>
+                        <button class="vote" name="id_event" value="{{$Event->Id_event}}"> <img src="/pictures/vote.png" alt="Photo Cesi"/></button>
                     </form>
 
 
@@ -47,7 +47,7 @@
 
                     
                     @if($errors->has('info'))
-                    <div class="info" name="info">
+                    <div class="information" name="info">
                         <p>{{$errors->first('info')}}</p>
                     </div>
                     @endif

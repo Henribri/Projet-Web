@@ -1,6 +1,65 @@
+/*///////////////////////////////////*/
+/*									 */
+/*		      NAVIGATION BAR		 */
+/*									 */
+/*///////////////////////////////////*/
+
+/*container of navigation bar*/
+#container_nav{
+    width: 100%;
+    margin-top: 5px;
+}
+
+/*Container of each point of navigation bar*/
+.nav_bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f3f3f3;
+}
+
+/*Text on point navigation bar*/
+.nav_bar li a {
+    display: block;
+    color: #666;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+}
+
+/*Point of navigation bar*/
+.nav_bar li{
+    margin:2px;
+}
+
+/*Animation on navigation bar*/
+.nav_bar li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+/*Animation on navigation bar*/
+.nav_bar li a:hover{
+    box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
+    transform: scale(1.01);
+}
+
+/*Animation on navigation bar*/
+.nav_bar li a:active{
+    box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
+    transform: scale(0.98);
+}
+
+/*///////////////////////////////////*/
+/*									 */
+/*		      PANNIER		         */
+/*									 */
+/*///////////////////////////////////*/
+
 .container{
     width: 70%;
-    height: 70%;
+    height: 100px;
     border-width:4px;
     border-style: double;
     border-radius: 10px;
@@ -13,66 +72,82 @@
     margin-top:20px; 
 }
 
+/*Title of each part*/
 .container h2{
     text-align: center;
-    margin-top:0 ;
-    height: 20%;
-}
-/*Title of each part*/
-h2{
     font-size: 20px;
+    height: 10px;
+    margin-left:2px;
+    margin-right:2px;
+}
+
+.container_bill p{
+    margin-top:20px;
+    margin-left:2px;
+    margin-right:2px;
 }
 
 /*Div who contain all informations*/
  .container_bill{
-    display: flex;
-    justify-content: center;
+   display: flex;
     width: 50%;
-    height: 500px;
-}
-
-/*Div who contain informations*/
-.informations{
-    text-align: center;
-    height: 100%;
-    width: 100%;
-    border-width: 3px;
+    height: 50px;
 }
 
 /*Div who contain total price*/
 .total_price{
-    text-align: center;
-    position:absolute;
-    bottom: 20%;
+    height:50px;
+    margin-top: 40px;
+    right:20px;
 }
 
-/*Validate button*/
 /*General button*/
-.button{
+
+.container2{
+    text-align: center;
+    width: 100%;
+}
+
+button{
     display: flex;
 	flex-direction: row;
     justify-content: center;
     }
     
-.button :hover {
+.validate:hover {
     box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
     transform: scale(1.01);
 }
 
-.button:active {
+.validate:active {
     box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
     transform: scale(0.98);
 }
 
-.button .validate{
+.validate{
     text-decoration: none;
     color: black;
-    display:block;
-    background-color: #F2EFEF;
+    background-color: white;
     border:5px;
     border-radius: 10px;
     font-family: 'Cantarell';
     cursor: pointer;
     margin: 5px;
     padding: 5px;
+    width: 5%;
+}
+
+/*///////////////////////////////////*/
+/*									 */
+/*		      MEDIA QUERIES			 */
+/*			    Computer			 */
+/*///////////////////////////////////*/
+
+@media (min-width: 1200px) {
+.nav_bar  {
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+    flex-wrap: wrap;
+}
 }

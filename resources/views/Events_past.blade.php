@@ -10,7 +10,7 @@
 
 @section('main_content')
 <div id="container_nav">
-        <ul>
+<ul class="nav_bar">
             <li><a href="events_month">Evènements du mois</a></li>
             <li><a href="events_past">Evènements passés</a></li>
             @if(session()->get('Status_user')=='BDE')
@@ -46,7 +46,7 @@
 
             
                      <p>{{$Event->Description_event}}</p>
-                     <div class="button">
+                     <div class="redirection">
                      <form action="/view_photos" method="get">
                      {{ csrf_field() }}   
                      <button class ="event-1" name="id_event" value="{{$Event->Id_event}}" type="submit">Voir les photos</button>
@@ -56,7 +56,6 @@
                      <div class="button">
                      <form action="/Download" method='post'>
                      {{ csrf_field() }}  
-
                         <button class="download" name='id_event' value="{{$Event->Id_event}}"> <img src="/pictures/download.png" alt="Télécharger les images"/></button>
                     </form>
                     </div>

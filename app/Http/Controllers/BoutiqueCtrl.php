@@ -35,7 +35,9 @@ class BoutiqueCtrl extends Controller
 
         if(session()->get('Status_user')=='BDE'){
 
-            return view('add_product');
+            return view('add_product',[
+                'Categories'=>Category::all(),
+            ]);
 
 
 
@@ -52,7 +54,7 @@ class BoutiqueCtrl extends Controller
                 'name_product'=>['required','unique:_product,Name_product'],
                 'description_product'=>['required'],
                 'price_product'=>['required'],
-                'category'=>['required'],
+                'id_category'=>['required'],
                 'image_product'=>['required'],
                 ]);
 
@@ -80,19 +82,15 @@ class BoutiqueCtrl extends Controller
                     'Image'=>$pathimage
                 ]);
 
-                $Category = Category::select('Id_category')
-                ->where('Category', request('category'))
-                ->first();
-
               
                 //--CREATE A PRODUCT
 
-            DB::transaction(function () use($Category, $Image) {
+            DB::transaction(function () use($Image) {
             $products= Product::create([
                 'Name_product'=>request('name_product'),
                 'Description_product'=>request('description_product'),
                 'Price_product'=>request('price_product'),
-                'Id_category'=>$Category->Id_category,
+                'Id_category'=>request('id_category'),
                 'Id_image'=>$Image->Id_image,
             ]);
         });

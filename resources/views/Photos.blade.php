@@ -9,7 +9,7 @@
 @endsection
 
 @section('main_content')
-
+<!--Navigation bar-->
 <div id="container_nav">
         <ul>
             <li><a href="events_month">Evènements du mois</a></li>
@@ -36,11 +36,11 @@
 @foreach($Photos as $Photo)
 
 
-<div class ="global_container">
-<div class="container">
+<div class ="global_container"><!--global_container allow to place event -->
+<div class="container"><!--container allow to put informations of event -->
             <img class= "events" src="{{$Photo->Image}}" alt="Photo Cesi"/>
 
-
+            <!--Button for notify event, like event, and download pictures-->
             <div class="button">
 
                 <form method='post' action='/create_comment'> 
@@ -49,7 +49,7 @@
                             @if($errors->has('comment_comment'))
                                 {{$errors->first('comment_comment')}}
                             @endif
-                            <button class="comment" name="id_photo" value="{{$Photo->Id_photo}}">Commenter</button>
+                            <button class="comment" name="id_photo" value="{{$Photo->Id_photo}}">Commenter</button> <!--Button comment-->
                             </form>
                         </div>
 

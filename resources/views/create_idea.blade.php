@@ -9,9 +9,9 @@
 @endsection
 
 @section('main_content')
-
+<!--Navigation bar-->
 <div id="container_nav">
-        <ul>
+<ul class="nav_bar">
             <li><a href="events_month">Evènements du mois</a></li>
             <li><a href="events_past">Evènements passés</a></li>
             @if(session()->get('Status_user')=='BDE')
@@ -24,6 +24,7 @@
 
         </ul>
 </div>
+<!--Form for the create idea -->
 <div class="form">
     <form action="" method=post>
     {{ csrf_field() }}

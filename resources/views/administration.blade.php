@@ -9,6 +9,7 @@
 @endsection
 
 @section('main_content')
+<!--Administration form-->
 <div class="administration">
     <p>Veuillez choisir votre statut :</p>
     <form action="" method="post">

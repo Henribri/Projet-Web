@@ -10,12 +10,16 @@
 
 @section('main_content')
 
+@section('main_content')
+<!--Navigation bar-->
 <div id="container_nav">
-        <ul>
+        <ul class="nav_bar">
             <li><a href="/shop">Boutique</a></li>
-            <li><a href="/create_product">Créer un produit</a></li>
+            <li><a href="/create_product">Ajouter un produit</a></li>
+            <li><a href="/pannier">Mon panier</a></li>
         </ul>
 </div>
+<!--Form for add a product-->
 
 <div class="form">
     <form action="" method="post" enctype="multipart/form-data">
@@ -29,8 +33,10 @@
            @if($errors->has('price_product'))
               {{$errors->first('price_product')}}
             @endif
-      <select class="field" id="state" name="category">
-        <option value="Goodies">Goodies</option>
+      <select class="field" id="state" name="id_category">
+        @foreach($Categories as $Category)
+        <option value="{{$Category->Id_category}}">{{$Category->Category}}</option>
+        @endforeach
         <option value="Clothes">Clothes</option>
       </select>
             @if($errors->has('category'))

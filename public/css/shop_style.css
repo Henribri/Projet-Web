@@ -64,7 +64,7 @@ button img{
 /*///////////////////////////////////*/
 
 /*Container of each product on shop*/
-.global_container .container{
+#global_container #products .container{
     height: auto;
     border-width:4px;
     border-style: double;
@@ -74,7 +74,7 @@ button img{
 }
 
 /*Image on product in shop*/
-.global_container .img_product{
+#global_container #products .img_product{
     height: auto;
     margin-top: 7px;
 }
@@ -92,7 +92,7 @@ h2{
 }
 
 /*Best sale title*/
-.container h3{
+#products .container h3{
     text-align: center;
 }
 
@@ -213,7 +213,7 @@ h2{
 
 /*///////////////////////////////////*/
 /*									 */
-/*		   BUTTONS ON EVENTS		 */
+/*		   BUTTONS ON SHOP		     */
 /*									 */
 /*///////////////////////////////////*/
 
@@ -296,10 +296,31 @@ button:active{
     transform: scale(0.98);
 }
 
-.quantity{
+#quantity{
     text-align: center;
 }
 
+/*Button delete*/
+.delete{
+    display: flex;
+	flex-direction: row;
+    justify-content: right;
+}
+
+.delete_button img{
+    width: 2em;
+    height: 2em;
+}
+
+.delete_button{
+    display:block;
+    background-color:white;
+    border:5px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 5px;
+    padding: 5px;
+}
 /*///////////////////////////////////*/
 /*									 */
 /*		 INFORMATIONS OF EVENTS	     */
@@ -342,7 +363,7 @@ button:active{
 
 @media (min-width: 640px) {
 
-.global_container{
+#global_container{
     margin:2px;
     } 
 
@@ -384,11 +405,11 @@ button:active{
     height: auto;
     }
 
-.global_container{
+#global_container{
     text-align: center;
-    }
+}
 
-.global_container .container{
+#global_container #products .container{
     display: inline-block;
     width: 25%;
     margin: 50px;
