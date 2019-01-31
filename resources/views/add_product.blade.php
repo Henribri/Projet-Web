@@ -15,7 +15,9 @@
 <div id="container_nav">
         <ul class="nav_bar">
             <li><a href="/shop">Boutique</a></li>
-            <li><a href="/create_product">Ajouter un produit</a></li>
+            @if(session()->get('Status_user')=='BDE')
+            <li><a href="/create_product">Créer un produit</a></li>
+            @endif
             <li><a href="/pannier">Mon panier</a></li>
         </ul>
 </div>

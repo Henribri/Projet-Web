@@ -39,9 +39,8 @@ class BoutiqueCtrl extends Controller
                 'Categories'=>Category::all(),
             ]);
 
-
-
         }
+
     }
 
 

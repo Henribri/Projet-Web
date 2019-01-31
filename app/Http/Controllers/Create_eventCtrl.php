@@ -128,7 +128,7 @@ class Create_eventCtrl extends Controller
 
     ]);
         });
-
+        return redirect('/events_month');
         }
         return redirect('/connexion')->withErrors([
             'email_user' => 'Vous devez être membre du BDE pour faire cette action'
