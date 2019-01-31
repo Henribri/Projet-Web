@@ -2,7 +2,6 @@
 
 @section('css_link')
 <link rel="stylesheet" type="text/css" href="/css/shop_style.css">
-<link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
 @endsection
 
 @section('header_content')
@@ -31,19 +30,19 @@
                     <select id="category" name="category">
                         <option value="0"></option>
                         @foreach($categories as $category)
-                        <option value="{{$category->Id_ategory}}">{{$category->Category}}</option>
+                        <option value="{{$category->Id_category}}">{{$category->Category}}</option>
                         @endforeach
                     </select>
-                    <button type="submit" onclick="categorie()">Valider</button>
+                    <button type="submit" onclick="getCategorie()">Valider</button>
             </div>
             <div class="research_name">
                 <input id="search" name="search" type="text" placeholder="Rechercher" />
-                <button id="search-btn" type="submit" onclick="search()">Valider</button>
+                <button id="search-btn" type="submit" onclick="getSearch()">Valider</button>
             </div>
             <div class="price_order">
                 <input id="price_min" name="price_min" type="number" placeholder="prix minimum" />
                 <input id="price_max" name="price_max" type="number" placeholder="prix maximum" />
-                <button type="submit" onclick="price()">Valider</button>
+                <button type="submit" onclick="getPrice()">Valider</button>
             </div>
         </div>
 
@@ -78,6 +77,6 @@
 @endsection
 
 @section('script_link')
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="/js/shop1.js"></script>
 @endsection

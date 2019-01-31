@@ -1,7 +1,9 @@
 function getCategorie() {
     $category = document.getElementById('category').value;
-    $i = 1;
+    $i = 0;
+    $id = 1;
     $init = true;
+    yHandler();
 }
 
 function getSearch() {
@@ -9,8 +11,10 @@ function getSearch() {
     if ($name == "") {
         $name = 0;
     }
-    $i = 1;
+    $i = 0;
+    $id = 1;
     $init = true;
+    yHandler();
 }
 
 function getPrice() {
@@ -22,8 +26,23 @@ function getPrice() {
     if ($price_max == "") {
         $price_max = 99999999999;
     }
-    $i = 1;
+    $i = 0;
+    $id = 1;
     $init = true;
+    yHandler();
+}
+function getNBRProducts(){
+    $.ajax({
+        type: 'GET',
+        url: 'http://localhost:3000/api/product/',
+        success: function (allProducts) {
+            $nbrProducts = allProducts.length
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            alert("Status: " + textStatus);
+            alert("Error: " + errorThrown);
+        }
+    });
 }
 
 function yHandler() {
@@ -32,41 +51,48 @@ function yHandler() {
     var yOffset = window.pageYOffset; //Get the vertical scroll
     var y = yOffset + window.innerHeight;
 
+    
     if (y >= contentHeight || $init == true) {
         // Ajax call
         $(function () {
             var $products = $('#products');
             $.ajax({
                 type: 'GET',
-                url: 'http://localhost:3000/api/product/' + $i,
+                url: 'http://localhost:3000/api/product/' + $id,
                 success: function (products) {
-                    $.each(products, function (i, product) {
-                        if (($category == product.Id_category || $category == 0) && ($name == product.Name_product || $name == 0) && ($price_min <= product.Price_product && $price_max >= product.Price_product)) {
-                            var HTMLproduct = '<div class="container">' +
-                                '<h3>' + product.Name_product + '</h3>' +
-                                '<img class= "img_product" src="' + product.Image + '" alt="' + product.Name_product + '"/></img>' +
-                                '<div class="information">' +
-                                '<div class ="price">' +
-                                '<p>' + product.Price_product + '€</p>' +
-                                '</div>' +
-                                '</div>' +
-                                '<p>' + product.Description_product + '</p>' +
-                                '<div class="button">' +
-                                '<input id="quantity" type="number" name="quantity" value="1" min="1" max="50">' +
-                                '<button onclick="Panier(' + product.Id_product + ')" class="add">' +
-                                '<img src="/pictures/plus.png" alt="Ajouter au panier"/>' +
-                                '</button>' +
-                                '</div>' +
-                                '</div>';
-                            if ($init == true) {
-                                $products.html(HTMLproduct);
-                            } else {
-                                $products.append(HTMLproduct);
+                    if($i < $nbrProducts){
+                        console.log($i);
+                        console.log($id);
+                        if(products.length > 0){
+                            $i++;
+                            if (($category == products[0].Id_category && $category != 0 || $category == 0) && ($name == products[0].Name_product && $name != "0" || $name == "0") && ($price_min <= products[0].Price_product && $price_max >= products[0].Price_product)) {
+                                var HTMLproduct = '<div class="container">' +
+                                    '<h3>' + products[0].Name_product + '</h3>' +
+                                    '<img class= "img_product" src="' + products[0].Image + '" alt="' + products[0].Name_product + '"/></img>' +
+                                    '<div class="information">' +
+                                    '<div class ="price">' +
+                                    '<p>' + products[0].Price_product + '€</p>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '<p>' + products[0].Description_product + '</p>' +
+                                    '<div class="button">' +
+                                    '<input id="quantity" type="number" name="quantity" value="1" min="1" max="50">' +
+                                    '<button onclick="Panier(' + products[0].Id_product + ')" class="add">' +
+                                    '<img src="/pictures/plus.png" alt="Ajouter au panier"/>' +
+                                    '</button>' +
+                                    '</div>' +
+                                    '</div>';
+                                if ($init == true) {
+                                    $products.html(HTMLproduct);
+                                } else {
+                                    $products.append(HTMLproduct);
+                                }
+                                $init = false;
                             }
-                            $init = false;
                         }
-                        $i++;
-                    });
+                        $id++;
+                        yHandler();
+                    }
                 },
                 error: function (XMLHttpRequest, textStatus, errorThrown) {
                     alert("Status: " + textStatus);
@@ -223,6 +249,7 @@ function putData(datajson, id_product, $id_order) {
 window.onload = getCategorie();
 window.onload = getSearch();
 window.onload = getPrice();
+window.onload = getNBRProducts();
 window.onload = yHandler;
 window.onscroll = yHandler;
 $id_order=null;
