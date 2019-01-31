@@ -37,6 +37,13 @@ function getNBRProducts(){
         url: 'http://localhost:3000/api/product/',
         success: function (allProducts) {
             $nbrProducts = allProducts.length
+            var autoCompArray = [];
+            for(i=0; i<$nbrProducts; i++){
+                autoCompArray.push(allProducts[i].Name_product);
+            }
+            $("#search").autocomplete({
+                source: autoCompArray
+            });
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
             alert("Status: " + textStatus);
