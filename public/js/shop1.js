@@ -1,10 +1,10 @@
-function categorie() {
+function getCategorie() {
     $category = document.getElementById('category').value;
     $i = 1;
     $init = true;
 }
 
-function search() {
+function getSearch() {
     $name = document.getElementById('search').value;
     if ($name == "") {
         $name = 0;
@@ -13,7 +13,7 @@ function search() {
     $init = true;
 }
 
-function price() {
+function getPrice() {
     $price_min = document.getElementById('price_min').value;
     $price_max = document.getElementById('price_max').value;
     if ($price_min == "") {
@@ -52,7 +52,7 @@ function yHandler() {
                                 '</div>' +
                                 '<p>' + product.Description_product + '</p>' +
                                 '<div class="button">' +
-                                '<input id="quantity" type="number" name="quantity" value="1">' +
+                                '<input id="quantity" type="number" name="quantity" value="1" min="1" max="50">' +
                                 '<button onclick="Panier(' + product.Id_product + ')" class="add">' +
                                 '<img src="/pictures/plus.png" alt="Ajouter au panier"/>' +
                                 '</button>' +
@@ -77,50 +77,105 @@ function yHandler() {
     }
 }
 
-function Panier(id_product) {
+function getId_user(){
     var id_user = document.getElementById('session_user').value;
+    return id_user;
+}
+
+function getId_order(id_user){
     $.ajax({
         type: 'GET',
         url: 'http://localhost:3000/api/order/user/' + id_user,
+        async: false,
         success: function (orders) {
             if ($.trim(orders)) {
                 $.each(orders, function (i, order) {
                     if (order.Validate == 0) {
                         $id_order = order.Id_order;
-                        return true;
                     } else {
-                        $id_order = undefined;
+                        $id_order = null;
                     }
                 });
             } else {
-                $id_order = undefined;
+                $id_order = null;
             }
-            if ($id_order == undefined || $id_order == null) {
-                //Ajax post order
-                var data = {};
-                var now = new Date();
-                var annee = now.getFullYear();
-                var mois = now.getMonth() + 1;
-                var jour = now.getDate();
-                data["Date_order"] = annee + '-' + mois + '-' + jour;
-                data["Validate"] = 0;
-                data["Id_user"] = id_user;
-
-                postData(data, "order");
-            }
-            console.log($id_order);
-            // Ajax post select
-            postData(data, "select");
+            return $id_order;
         },
         error: function (textStatus, errorThrown) {
             alert("Status: " + textStatus);
             alert("Error: " + errorThrown);
-            $id_order = undefined;
+            $id_order = null;
+        }
+    });
+    return $id_order;
+}
+
+function getQuantity(){
+    var quantity = document.getElementById('quantity').value;
+    return quantity;
+}
+
+function Panier(id_product) {
+    var id_user = getId_user();
+    $id_order = getId_order(id_user);
+    console.log($id_order);
+
+    if ($id_order == null) {
+        //Ajax post order
+        var data = {};
+        var now = new Date();
+        var annee = now.getFullYear();
+        var mois = now.getMonth() + 1;
+        var jour = now.getDate();
+        data["Date_order"] = annee + '-' + mois + '-' + jour;
+        data["Validate"] = 0;
+        data["Id_user"] = id_user;
+
+        $id_order = postData(data, "order", id_user);
+        console.log($id_order);
+    }
+    var quantity = getQuantity();
+
+    var data = {};
+    $.ajax({
+        type: 'GET',
+        url: 'http://localhost:3000/api/select/' + $id_order,
+        success: function (selects) {
+            if ($.trim(selects)) {
+                $.each(selects, function (i, select) {
+                    if (select.Id_product == id_product) {
+                        $selectAlreadyExist = true;
+                        return true;
+                    } else {
+                        $selectAlreadyExist = false;
+                    }
+                });
+            } else {
+                $selectAlreadyExist = false;
+            }
+            if ($selectAlreadyExist == false) {
+                data["Id_product"] = id_product;
+                data["Id_order"] = $id_order;
+                data["Quantity"] = quantity;
+
+                postData(data, "select", id_user);
+            } else {
+                data["Quantity"] = quantity;
+                console.log(quantity);
+                console.log(id_product);
+                console.log($id_order);
+                putData(data, id_product, $id_order)
+            }
+
+        },
+        error: function (textStatus, errorThrown) {
+            alert("Status: " + textStatus);
+            alert("Error: " + errorThrown);
         }
     });
 }
 
-function postData(datajson, table) {
+function postData(datajson, table, id_user) {
     $.ajax({
         type: "POST",
         url: "http://localhost:3000/api/" + table + "/",
@@ -128,9 +183,13 @@ function postData(datajson, table) {
         contentType: "application/json; charset=utf-8",
         crossDomain: true,
         dataType: "json",
-        success: function () {
+        async: false,
+        success: function (data) {
+            console.log(data);
             if(table == "order"){
-                
+                $id_order = getId_order(id_user);
+                console.log($id_order);
+                return $id_order;
             }
         },
         error: function (jqXHR, status) {
@@ -142,8 +201,28 @@ function postData(datajson, table) {
     return $id_order;
 }
 
-window.onload = categorie();
-window.onload = search();
-window.onload = price();
+function putData(datajson, id_product, $id_order) {
+    $.ajax({
+        type: "PUT",
+        url: "http://localhost:3000/api/select/" + id_product + "/" + $id_order,
+        data: JSON.stringify(datajson),
+        contentType: "application/json; charset=utf-8",
+        crossDomain: true,
+        dataType: "json",
+        success: function (data) {
+            console.log(data);
+        },
+        error: function (jqXHR, status) {
+            // error handler
+            console.log(jqXHR);
+            alert('fail' + status.code);
+        }
+    });
+}
+
+window.onload = getCategorie();
+window.onload = getSearch();
+window.onload = getPrice();
 window.onload = yHandler;
 window.onscroll = yHandler;
+$id_order=null;

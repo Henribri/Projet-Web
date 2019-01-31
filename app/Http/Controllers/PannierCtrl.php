@@ -19,15 +19,16 @@ class PannierCtrl extends Controller
         //--CONNEXION CHECK
         if(session()->get('Status_user')){
             //--SELECT ORDER OF THE CONNECT USER
-        $Orders=Order::
+        $Products=Order::
         join('_select', '_order.Id_order', '=', '_select.Id_order')
         ->join('_product', '_select.Id_product','=', '_product.Id_product')
         ->where([['_order.Id_user', session()->get('Id_user')],
                 ['_order.Validate', 0]])
         ->get();
 
+
         return view('pannier',[
-            'Orders'=>$Orders,
+            'Orders'=>$Products,
         ]);
 
         }  
@@ -37,92 +38,6 @@ class PannierCtrl extends Controller
             ]);
 
     }
-
-
-    //--FUNCTION TO ADD PRODUCT TO CART
-    public function Add_product()
-    {
-        //--CONNEXION CHECK
-        if(session()->get('Status_user'))
-        {
-            //--FIND ID OF THE PRODUCT CHOOSE
-            /*$Id_product = Produit::
-            select('_product.Id_product')
-            ->where('_product.Name_product', request('name_product'))
-            ->first();*/
-
-
-            //--TRY TO FIND AN EXISTING ORDER OF THE USER
-            $user = session()->get('Id_user');      
-            $order = Order::
-            join('_user', '_order.Id_user', '=', '_user.Id_user')
-            ->select('_order.Id_order')
-            ->where([
-                ['_order.Id_user', $user],
-                ['Validate', '0'],
-            ])
-            ->first();
-
-            //--IF AN ORDER DOESNT EXIST CREATE AN ORDER
-            if(isset($order))
-            {
-                request()->validate([
-                    'quantity'=>['required'],
-                ]);
-    
-                DB::transaction(function () use($Id_product) {
-                Select::create([
-                    'Id_product'=>request('id_product'),
-                    'Id_order'=>$order->Id_order,
-                    'Quantity'=>request('quantity')]);
-                    return redirect('/pannier');
-                });
-            }
-
-            //--ELSE USE AN EXISTING ORDER
-            else
-            {
-                $date = date("Y/m/d");
-
-                $order=Order::create([
-                    'Date_order'=>$date,
-                    'Validate'=>"0",
-                    'Id_user'=>$user]);
-                
-
-                request()->validate([
-                    'quantity'=>['required'],
-                ]);
-        
-                /*
-                $order=Order::
-                join('_user', '_order.Id_user', '=', '_user.Id_user')
-                ->select('_order.Id_order')
-                ->where([
-                    ['_order.Id_user', $user],
-                    ['Validate', '0'],
-                ])
-                ->first();
-        */
-
-                //--CREATE A NEW SELECT WITH ORDER PRODUCT AND QUANTITY
-
-                DB::transaction(function () use($order) {
-                Select::create([
-                    'Id_product'=>request('id_product'),
-                    'Id_order'=>$order->Id_order,
-                    'Quantity'=>request('quantity')]);
-                    return redirect('/pannier');
-                });
-            }
-
-
-        return redirect('/connexion')->withErrors([
-            'email_user' => 'Veuillez vous authentifier'
-            ]);
-    }
-
-}
 
 
 

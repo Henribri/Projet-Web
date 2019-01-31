@@ -1,5 +1,5 @@
 Bonjour,
-l'utilisateur {{$user_name}} {{$user_surname}} a acheté des produits:
+l'utilisateur {{$user_name}} {{$user_surname}} a acheté des produits:</br>
 <?php $Total_price=0 ?>
 
 @foreach($orders as $order)
