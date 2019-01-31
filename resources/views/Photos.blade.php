@@ -73,7 +73,7 @@
                         </div>
                         
                         @if($errors->has('info'))
-                    <div class="info" name="info">
+                    <div class="information" name="info">
                         <p>{{$errors->first('info')}}</p>
                     </div>
                     @endif

@@ -219,6 +219,28 @@ button:active{
     display: none;
 }
 
+/*///////////////////////////////////*/
+/*									 */
+/*		      INFORMATIONS			 */
+/*			            			 */
+/*///////////////////////////////////*/
+.information{
+    text-align: center;
+    margin-left: 100px;
+    margin-right:100px;
+    padding: 0;
+    background-color:red;
+}
+
+.information p{
+    color:white;
+}
+/*Container of events informations */
+.informations{
+    display:flex;
+    justify-content: center;
+    margin-top:15px;
+}
 
 /*///////////////////////////////////*/
 /*									 */
@@ -278,6 +300,3 @@ ul {
     flex-wrap: wrap;
 }
 }
-
-
-

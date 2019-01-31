@@ -51,24 +51,29 @@
                      {{ csrf_field() }}   
                      <button class ="event-1" name="id_event" value="{{$Event->Id_event}}" type="submit">Voir les photos</button>
                      </form>
-                     
+                    </div>
+
+
                      @if(session()->get('Status_user')=='Tuteur')
                      <div class="button">
                      <form action="/Download" method='post'>
                      {{ csrf_field() }}  
                         <button class="download" name='id_event' value="{{$Event->Id_event}}"> <img src="/pictures/download.png" alt="Télécharger les images"/></button>
                     </form>
-                    </div>
-                    @endif
 
-                     @if(session()->get('Status_user')=='Tuteur')
-                     <form action="/notify" method="post">
-                         {{ csrf_field() }}
+                    
+                    @if(session()->get('Status_user')=='Tuteur')
 
-                        <button class="notify" name='id_event' value='{{$Event->Id_event}}'> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
+                    <form action="/notify" method="post">
+                        {{ csrf_field() }}
+                    <button class="notify" name='id_event' value='{{$Event->Id_event}}'> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
                     </form>
+
                     @endif
                     </div>
+                    @endif
+
+
 </div>
 @endforeach
 </div>

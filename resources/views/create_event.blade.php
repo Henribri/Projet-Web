@@ -62,12 +62,6 @@
             @endif
 
       <label for="file" class="label-file">Choisir une image</label>
-      <input id="file" class="field" type="file" name="image_event" value="">
-      @if($errors->has('image_event'))
-              {{$errors->first('image_event')}}
-            @endif
-
-      <label for="file" class="label-file">Choisir une image</label>
       <input id="file" class="input-file" type="file" name="image_event" value="">
       @if($errors->has('image_event'))
               {{$errors->first('image_event')}}
