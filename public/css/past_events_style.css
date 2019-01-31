@@ -87,9 +87,11 @@ p{
 
 /*Download button*/
 
-button {
-    text-align: center;
-}
+.button{
+    display: flex;
+	flex-direction: row;
+    justify-content: center;
+    }
     
 .button .download {
     text-decoration: none;
@@ -172,6 +174,30 @@ button:active {
     transform: scale(0.98);
 }
 
+.button .notify {
+    text-decoration: none;
+    color: black;
+    display:block;
+    background-color: white;
+    border:5px;
+    border-radius: 10px;
+    font-family: 'Cantarell';
+    cursor: pointer;
+    margin: 5px;
+    padding: 5px;
+}
+
+/*Notification button image size*/
+.notify img{
+    height: 3em;
+    width: 3em;
+}
+
+/*Notification button size*/
+.notify{
+    width: 20%;
+    height: 5%;
+    }
 
 /*///////////////////////////////////*/
 /*									 */
@@ -195,7 +221,6 @@ button:active {
     }
 
 }
-
 /*///////////////////////////////////*/
 /*									 */
 /*		      MEDIA QUERIES			 */
@@ -233,4 +258,11 @@ button:active {
     width: 30%;
     height: 5%;
     }
+
+/* Button for notify size */
+.notify{
+    width: 15%;
+    height: 5%;
+}
+
 }

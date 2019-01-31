@@ -45,6 +45,7 @@
                         <a href="event-1">En savoir plus</a>
                     </div>
                     <div class="button">
+                        <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
                         <button class="download"> <img src="/pictures/download.png" alt="Télécharger les images"/></button>
                     </div>
     </div>
@@ -72,6 +73,7 @@
                         <a href="event-1">En savoir plus</a>
                     </div>
                     <div class="button">
+                        <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
                         <button class="download"> <img src="/pictures/download.png" alt="Télécharger les images"/></button>
                     </div>
 </div>
@@ -98,6 +100,7 @@
                         <a href="event-1">En savoir plus</a>
                     </div>
                     <div class="button">
+                        <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
                         <button class="download"> <img src="/pictures/download.png" alt="Télécharger les images"/></button>
                     </div>
 </div>
@@ -124,6 +127,7 @@
                         <a href="event-1">En savoir plus</a>
                     </div>
                     <div class="button">
+                        <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
                         <button class="download"> <img src="/pictures/download.png" alt="Télécharger les images"/></button>
                     </div>
 </div>
@@ -150,6 +154,7 @@
                         <a href="event-1">En savoir plus</a>
                     </div>
                     <div class="button">
+                        <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
                         <button class="download"> <img src="/pictures/download.png" alt="Télécharger les images"/></button>
                     </div>
 </div>
@@ -176,6 +181,7 @@
                         <a href="event-1">En savoir plus</a>
                     </div>
                     <div class="button">
+                        <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
                         <button class="download"> <img src="/pictures/download.png" alt="Télécharger les images"/></button>
                     </div>
     </div>
