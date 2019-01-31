@@ -53,9 +53,10 @@
 
 /*///////////////////////////////////*/
 /*									 */
-/*		      PANNIER		          */
+/*		      PANNIER		         */
 /*									 */
 /*///////////////////////////////////*/
+
 .container{
     width: 70%;
     height: 100px;
@@ -70,6 +71,7 @@
     margin-bottom: 5px;
     margin-top:20px; 
 }
+
 /*Title of each part*/
 .container h2{
     text-align: center;
@@ -78,6 +80,7 @@
     margin-left:2px;
     margin-right:2px;
 }
+
 .container_bill p{
     margin-top:20px;
     margin-left:2px;
@@ -99,26 +102,31 @@
 }
 
 /*General button*/
-.button{
+
+.container2{
+    text-align: center;
+    width: 100%;
+}
+
+button{
     display: flex;
 	flex-direction: row;
     justify-content: center;
     }
     
-.button :hover {
+.validate:hover {
     box-shadow: 6px 6px 25px 5px rgba(0, 0, 0, 0.18);
     transform: scale(1.01);
 }
 
-.button:active {
+.validate:active {
     box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.23);
     transform: scale(0.98);
 }
 
-.button .validate{
+.validate{
     text-decoration: none;
     color: black;
-    display:block;
     background-color: white;
     border:5px;
     border-radius: 10px;
@@ -126,6 +134,7 @@
     cursor: pointer;
     margin: 5px;
     padding: 5px;
+    width: 5%;
 }
 
 /*///////////////////////////////////*/

@@ -20,190 +20,241 @@
         </ul>
 </div>
 
-<div class ="global_container">
-    <div class="container">
+<div class ="global_container"><!--global_container allow to place event -->
+    <div class="container"> <!--container allow to put informations of event -->
+        <h2>Titre de lévènement</h2>
+        <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/>
+            <div class="informations"><!--container of informations -->
+                <div class="date">
+                    <p>12/5/2018</p>
+                </div>
+                <div class ="price">
+                    <p>5€</p>
+                </div>
+                <div class="recurent">
+                    <p>Une fois par mois</p>
+                </div>
+    </div>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+    </p>
+    <div class="button">
+        <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
+        <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
+        <button class ="pdf"><img src="/pictures/pdf.png" alt="Télécharger pdf"/></button>
+    </div>
+    <div class="information">
+        <p>T'as deja like</p>
+    </div>
+</div>
+
+        <div class="container"><!--container allow to put informations of event -->
             <h2>Titre de lévènement</h2>
-                <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/>
-                    <div class="informations">
-                        <div class="date"><p>12/5/2018</p></div>
-                        <div class ="price"><p>5€</p></div>
-                        <div class="recurent"><p>Une fois par mois</p></div>
+            <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/>
+                <div class="informations"><!--container of informations -->
+                    <div class="date">
+                        <p>12/5/2018</p>
                     </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum.</p>
-                        <div class="button">
-                            <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
-                            <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
-                            <button class ="pdf"><img src="/pictures/pdf.png" alt="Télécharger pdf"/></button>
-                        </div>
-                        <div class="information">
-                            <p>T'as deja like</p>
-                        </div>
+                    <div class ="price">
+                        <p>5€</p>
+                    </div>
+                    <div class="recurent">
+                        <p>Une fois par mois</p>
+                    </div>
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.
+        </p>
+        <div class="button">
+            <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
+            <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
+            <button class ="pdf"><img src="/pictures/pdf.png" alt="Télécharger pdf"/></button>
+        </div>
+        <div class="information">
+            <p>T'as deja like</p>
+        </div>
     </div>
 
-    <div class="container">
-                <h2>Titre de lévènement</h2>
-                <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/>
-                    <div class="informations">
-                            <div class="date"><p>12/5/2018</p></div>
-                            <div class ="price"><p>5€</p></div>
-                            <div class="recurent"><p>Une fois par mois</p></div>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum.</p>
-                        <div class="button">
-                            <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
-                            <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
-                            <button class ="pdf"><img src="/pictures/pdf.png" alt="Télécharger pdf"/></button>
-                        </div>
-                        <div class="information">
-                            <p>T'as deja like</p>
-                        </div>
+        <div class="container"><!--container allow to put informations of event -->
+            <h2>Titre de lévènement</h2>
+            <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/>
+                <div class="informations"><!--container of informations -->
+                    <div class="date">
+                        <p>12/5/2018</p>
+                    </div>
+                    <div class ="price">
+                        <p>5€</p>
+                    </div>
+                    <div class="recurent">
+                        <p>Une fois par mois</p>
+                    </div>
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.
+        </p>
+        <div class="button">
+            <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
+            <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
+            <button class ="pdf"><img src="/pictures/pdf.png" alt="Télécharger pdf"/></button>
+        </div>
+        <div class="information">
+            <p>T'as deja like</p>
+        </div>
     </div>
 
-    <div class="container">
-                <h2>Titre de lévènement</h2>
-                <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/>
-                    <div class="informations">
-                            <div class="date"><p>12/5/2018</p></div>
-                            <div class ="price"><p>5€</p></div>
-                            <div class="recurent"><p>Une fois par mois</p></div>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum.</p>
-                        <div class="button">
-                            <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
-                            <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
-                            <button class ="pdf"><img src="/pictures/pdf.png" alt="Télécharger pdf"/></button>
-                        </div>
-                        <div class="information">
-                            <p>T'as deja like</p>
-                        </div>
+        <div class="container"><!--container allow to put informations of event -->
+            <h2>Titre de lévènement</h2>
+            <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/>
+                <div class="informations"><!--container of informations -->
+                    <div class="date">
+                        <p>12/5/2018</p>
+                    </div>
+                    <div class ="price">
+                        <p>5€</p>
+                    </div>
+                    <div class="recurent">
+                        <p>Une fois par mois</p>
+                    </div>
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.
+        </p>
+        <div class="button">
+            <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
+            <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
+            <button class ="pdf"><img src="/pictures/pdf.png" alt="Télécharger pdf"/></button>
+        </div>
+        <div class="information">
+            <p>T'as deja like</p>
+        </div>
     </div>
 
-    <div class="container">
-                <h2>Titre de lévènement</h2>
-                <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/>
-                    <div class="informations">
-                            <div class="date"><p>12/5/2018</p></div>
-                            <div class ="price"><p>5€</p></div>
-                            <div class="recurent"><p>Une fois par mois</p></div>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum.</p>
-                        <div class="button">
-                            <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
-                            <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
-                            <button class ="pdf"><img src="/pictures/pdf.png" alt="Télécharger pdf"/></button>
-                        </div>  
-                        <div class="information">
-                            <p>T'as deja like</p>
-                        </div>
+        <div class="container"><!--container allow to put informations of event -->
+            <h2>Titre de lévènement</h2>
+            <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/>
+                <div class="informations"><!--container of informations -->
+                    <div class="date">
+                        <p>12/5/2018</p>
+                    </div>
+                    <div class ="price">
+                        <p>5€</p>
+                    </div>
+                    <div class="recurent">
+                        <p>Une fois par mois</p>
+                    </div>
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.
+        </p>
+        <div class="button">
+            <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
+            <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
+            <button class ="pdf"><img src="/pictures/pdf.png" alt="Télécharger pdf"/></button>
+        </div>
+        <div class="information">
+            <p>T'as deja like</p>
+        </div>
     </div>
 
-    <div class="container">
-                <h2>Titre de lévènement</h2>
-                <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/>
-                    <div class="informations">
-                            <div class="date"><p>12/5/2018</p></div>
-                            <div class ="price"><p>5€</p></div>
-                            <div class="recurent"><p>Une fois par mois</p></div>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum.</p>
-                        <div class="button">
-                            <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
-                            <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
-                            <button class ="pdf"><img src="/pictures/pdf.png" alt="Télécharger pdf"/></button>
-                        </div>
-                        <div class="information">
-                            <p>T'as deja like</p>
-                        </div>
+        <div class="container"><!--container allow to put informations of event -->
+            <h2>Titre de lévènement</h2>
+            <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/>
+                <div class="informations"><!--container of informations -->
+                    <div class="date">
+                        <p>12/5/2018</p>
+                    </div>
+                    <div class ="price">
+                        <p>5€</p>
+                    </div>
+                    <div class="recurent">
+                        <p>Une fois par mois</p>
+                    </div>
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.
+        </p>
+        <div class="button">
+            <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
+            <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
+            <button class ="pdf"><img src="/pictures/pdf.png" alt="Télécharger pdf"/></button>
+        </div>
+        <div class="information">
+            <p>T'as deja like</p>
+        </div>
     </div>
-
-    <div class="container">
-                <h2>Titre de lévènement</h2>
-                <img class= "events" src="/pictures/cesi.jpg" alt="Photo Cesi"/>
-                    <div class="informations">
-                            <div class="date"><p>12/5/2018</p></div>
-                            <div class ="price"><p>5€</p></div>
-                            <div class="recurent"><p>Une fois par mois</p></div>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                        <div class="button">
-                            <button class="form"> <img src="/pictures/form.png" alt="Photo Cesi"/></button>
-                            <button class="notify"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
-                            <button class ="pdf"><img src="/pictures/pdf.png" alt="Télécharger pdf"/></button>
-                        </div>
-                        <div class="information">
-                            <p>T'as deja like</p>
-                        </div>
+</div>
 @endsection
 
 

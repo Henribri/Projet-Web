@@ -23,7 +23,7 @@
     <h2>Bienvenue dans la boutique, ici tu peux trouver les goodies de notre bureau des élèves !</h2>
         <div class="research">
             <div class="category_bar">
-                <label for="category">Catégorie</label>
+                <label >Catégorie</label>
                 <select id="category" name="state">
                     <option value="public">Vêtements</option>
                     <option value="private">Goodies</option>
@@ -37,7 +37,7 @@
             </form>
             </div>
             <div class="price_order">
-                <label for="price">Prix</label>
+                <label>Prix</label>
                 <select  id="price-select" name="state">
                     <option value="public">Croissant</option>
                     <option value="private">Décroissant</option>
@@ -90,8 +90,8 @@
                             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                             mollit anim id est laborum.</p>
                             <div class="quantity">
-                                <label for="quantity">Quantité</label>
-                                <input type="number" id="quantity" name="tentacles"min="1" max="50">
+                                <label>Quantité</label>
+                                <input type="number" class="quantity" name="tentacles"min="1" max="50">
                             </div>
                             <div class="button">
                                 <button class="add">Ajouter au panier</button>
@@ -121,8 +121,8 @@
                             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                             mollit anim id est laborum.</p>
                             <div class="quantity">
-                                <label for="quantity">Quantité</label>
-                                <input type="number" id="quantity" name="tentacles"min="1" max="50">
+                                <label>Quantité</label>
+                                <input type="number" class="quantity" name="tentacles"min="1" max="50">
                             </div>
                             <div class="button">
                                 <button class="add">Ajouter au panier</button>
@@ -152,8 +152,8 @@
                             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                             mollit anim id est laborum.</p>
                             <div class="quantity">
-                                <label for="quantity">Quantité</label>
-                                <input type="number" id="quantity" name="tentacles"min="1" max="50">
+                                <label>Quantité</label>
+                                <input type="number" class="quantity" name="tentacles"min="1" max="50">
                             </div>
                             <div class="button">
                                 <button class="add">Ajouter au panier</button>
@@ -183,8 +183,8 @@
                             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                             mollit anim id est laborum.</p>
                             <div class="quantity">
-                                <label for="quantity">Quantité</label>
-                                <input type="number" id="quantity" name="tentacles"min="1" max="50">
+                                <label>Quantité</label>
+                                <input type="number" class="quantity" name="tentacles"min="1" max="50">
                             </div>
                             <div class="button">
                                 <button class="add">Ajouter au panier</button>
@@ -214,8 +214,8 @@
                             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                             mollit anim id est laborum.</p>
                             <div class="quantity">
-                                <label for="quantity">Quantité</label>
-                                <input type="number" id="quantity" name="tentacles"min="1" max="50">
+                                <label>Quantité</label>
+                                <input type="number" class="quantity" name="tentacles"min="1" max="50">
                             </div>
                             <div class="button">
                                 <button class="add">Ajouter au panier</button>
@@ -245,8 +245,8 @@
                             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                             mollit anim id est laborum.</p>
                             <div class="quantity">
-                                <label for="quantity">Quantité</label>
-                                <input type="number" id="quantity" name="tentacles"min="1" max="50">
+                                <label>Quantité</label>
+                                <input type="number" class="quantity" name="tentacles"min="1" max="50">
                             </div>
                             <div class="button">
                                 <button class="add">Ajouter au panier</button>
@@ -255,6 +255,5 @@
 @endsection
 
 @section('script_link')
-<script src="/vendor/jquery/jquery-3.3.1.min.js"></script>
-<script src="/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+
 @endsection

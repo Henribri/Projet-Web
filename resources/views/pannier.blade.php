@@ -32,9 +32,10 @@
 
     </div>
 
-    <div class="button">
-        <button class ="validate">Valider la commande</button>
-    </div>
+        <div class="container2">
+            <button class ="validate">Valider la commande</button>
+        </div>
+
 @endsection
 
 

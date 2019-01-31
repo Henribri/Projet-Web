@@ -9,7 +9,7 @@
 @endsection
 
 @section('main_content')
-
+<!--Navigation bar-->
 <div id="container_nav">
         <ul class="nav_bar">
             <li><a href="month_events">Evènements du mois</a></li>
@@ -20,23 +20,24 @@
         </ul>
 </div>
 
+<!--Form for the create event -->
 <div class="form">
-    <form>
-      <div class="input">
-      <input class="field" type="text" name="event_name" placeholder="Nom de lévènement" required>
-      <input class="field" id="type"type="text" name="public_event" placeholder="Type de l'évènement"required>
-      <input class="field" type="text" name="event_date" placeholder="Date de l'évènement"required>
-      <input class="field"id="number" type="text" name="recurence" placeholder="Nombre de récurence" required>
-      <textarea class="field" name="description" id="description" cols="30" rows="10"placeholder="Description de l'évènements"required></textarea>
-      <select class="field" id="state" name="state">
-        <option value="public">Publique</option>
-        <option value="private">Privée</option>
-      </select>
-      <label for="file" class="label-file">Choisir une image</label>
-      <input id="file" class="input-file" type="file"> 
-      </div> 
-      <input class="field" type="submit" value="Envoyer"/>
-    </form>
+  <form>
+    <div class="input">
+        <input class="field" type="text" name="event_name" placeholder="Nom de lévènement" required>
+        <input class="field" id="type"type="text" name="public_event" placeholder="Type de l'évènement"required>
+        <input class="field" type="text" name="event_date" placeholder="Date de l'évènement"required>
+        <input class="field"id="number" type="text" name="recurence" placeholder="Nombre de récurence" required>
+        <textarea class="field" name="description" id="description" cols="30" rows="10"placeholder="Description de l'évènements"required></textarea>
+        <select class="field" id="state" name="state">
+          <option value="public">Publique</option>
+          <option value="private">Privée</option>
+        </select>
+        <label for="file" class="label-file">Choisir une image</label>
+        <input id="file" class="input-file" type="file"> 
+    </div> 
+    <input class="field" type="submit" value="Envoyer"/>
+  </form>
     
 </div>
 

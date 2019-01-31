@@ -9,20 +9,21 @@
 @endsection
 
 @section('main_content')
+<!--Administration form-->
 <div class="administration">
     <p>Veuillez choisir votre statut :</p>
     <form >
-   <div class ="input">
-        <input class="field "type="email" name="email" placeholder="Adresse mail" required>
-    </div>
+        <div class ="input">
+            <input class="field "type="email" name="email" placeholder="Adresse mail" required>
+        </div>
         <select class="field" id="state" name="state">
-                <option value="public">BDE</option>
-                <option value="private">Tuteur</option>
-                <option value="private">Etudiant</option>
+            <option value="public">BDE</option>
+            <option value="private">Tuteur</option>
+            <option value="private">Etudiant</option>
         </select>
-        <input class="field" id ="blocked" type="submit" value="S'inscrire"required/> 
-    </form>
-    
+            <input class="field" id ="blocked" type="submit" value="S'inscrire"required/> 
+        </form>
+        
 </div>
 @endsection
 

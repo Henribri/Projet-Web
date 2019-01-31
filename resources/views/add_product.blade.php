@@ -9,7 +9,7 @@
 @endsection
 
 @section('main_content')
-
+<!--Navigation bar-->
 <div id="container_nav">
         <ul class="nav_bar">
             <li><a href="shop">Boutique</a></li>
@@ -17,17 +17,17 @@
             <li><a href="pannier">Mon panier</a></li>
         </ul>
 </div>
-
+<!--Form for add a product-->
 <div class="form">
     <form>
       <div class="input">
-      <input class="field" type="text" name="event_name" placeholder="Nom du produit" required>
-      <input class="field" type="text" name="event_name" placeholder="Prix" required>
-      <select class="field" id="state" name="state">
-        <option value="public">Vêtements</option>
-        <option value="private">Accessoires</option>
-      </select>
-      <textarea class="field" name="description" id="description" cols="30" rows="10"placeholder="Description du produit"required></textarea>
+          <input class="field" type="text" name="event_name" placeholder="Nom du produit" required>
+          <input class="field" type="text" name="event_name" placeholder="Prix" required>
+          <select class="field" id="state" name="state">
+            <option value="public">Vêtements</option>
+            <option value="private">Accessoires</option>
+          </select>
+          <textarea class="field" name="description" id="description" cols="30" rows="10"placeholder="Description du produit"required></textarea>
       </div> 
       <label for="file" class="label-file">Choisir une image</label>
       <input id="file" class="input-file" type="file">
