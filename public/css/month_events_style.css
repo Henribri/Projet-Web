@@ -159,7 +159,12 @@ button:active{
 .information p{
     color:white;
 }
-
+/*Container of events informations */
+.informations{
+    display:flex;
+    justify-content: center;
+    margin-top:15px;
+}
 /*///////////////////////////////////*/
 /*									 */
 /*		 INFORMATIONS OF EVENTS	     */
@@ -172,12 +177,7 @@ button:active{
     margin-top: 7px;
 }
 
-/*Container of events informations */
-.informations{
-    display:flex;
-    justify-content: center;
-    margin-top:15px;
-}
+
 
 /*Price information settings*/
 .price p{

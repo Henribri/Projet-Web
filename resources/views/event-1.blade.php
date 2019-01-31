@@ -69,7 +69,9 @@
                 <p>DK fait le rapport !!!</p>
                 <button class="notify_2"> <img src="/pictures/bell.png" alt="Cloche notifié"/></button>
             </div>
-     
+            <div class="information">
+                <p>T'as deja like</p>
+            </div>
     </div>
 </div>
 
