@@ -19,7 +19,9 @@
             @if(session()->get('Status_user')=='BDE')
             <li><a href="/create_product">Créer un produit</a></li>
             @endif
+            @if(session()->get('Status_user'))
             <li><a href="/pannier">Mon panier</a></li>
+            @endif
         </ul>
 </div>
 
@@ -30,7 +32,7 @@
             <div class="category_bar">
                     <label for="category">Catégorie</label>
                     <select id="category" name="category">
-                        <option value="0">Choose</option>
+                        <option value="0">Toutes</option>
                         @foreach($categories as $category)
                         <option value="{{$category->Id_category}}">{{$category->Category}}</option>
                         @endforeach

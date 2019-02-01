@@ -1,3 +1,4 @@
+// Récupère la valeur de la catégorie recherchée et réinitialise les compteurs
 function getCategorie() {
     $category = document.getElementById('category').value;
     $i = 0;
@@ -6,6 +7,7 @@ function getCategorie() {
     yHandler();
 }
 
+// Récupère la valeur du nom de produit recherché et réinitialise les compteurs
 function getSearch() {
     $name = document.getElementById('search').value;
     if ($name == "") {
@@ -17,6 +19,7 @@ function getSearch() {
     yHandler();
 }
 
+// Récupère la valeur des prix recherchées et réinitialise les compteurs
 function getPrice() {
     $price_min = document.getElementById('price_min').value;
     $price_max = document.getElementById('price_max').value;
@@ -31,12 +34,15 @@ function getPrice() {
     $init = true;
     yHandler();
 }
+
+// Récupère le nombre de produit disponible à la vente
 function getNBRProducts(){
     $.ajax({
         type: 'GET',
         url: 'http://localhost:3000/api/product/',
         success: function (allProducts) {
             $nbrProducts = allProducts.length
+            // Récupère dans un tableau les noms des produits et propose l'auto complétion
             var autoCompArray = [];
             for(i=0; i<$nbrProducts; i++){
                 autoCompArray.push(allProducts[i].Name_product);
@@ -52,13 +58,14 @@ function getNBRProducts(){
     });
 }
 
+// fonction de chargement des produits
 function yHandler() {
     var products = document.getElementById('products');
     var contentHeight = products.offsetHeight; //Height of the content
     var yOffset = window.pageYOffset; //Get the vertical scroll
     var y = yOffset + window.innerHeight;
 
-    
+    // prend en compte la position de l'utilisateur sur le site et la taille du contenu pour charger les produits suivants
     if (y >= contentHeight || $init == true) {
         // Ajax call
         $(function () {
@@ -67,9 +74,12 @@ function yHandler() {
                 type: 'GET',
                 url: 'http://localhost:3000/api/product/' + $id,
                 success: function (products) {
+                    // Vérifie si on a chargé tous les produits de la bdd
                     if($i < $nbrProducts){
+                        // Vérifie si la requete renvoie un produit
                         if(products.length > 0){
                             $i++;
+                            // Si les produits repondent aux critères de recherche, on les affichent.
                             if (($category == products[0].Id_category && $category != 0 || $category == 0) && ($name == products[0].Name_product && $name != "0" || $name == "0") && ($price_min <= products[0].Price_product && $price_max >= products[0].Price_product)) {
                                 var HTMLproduct = '<div class="container">' +
                                     '<h3>' + products[0].Name_product + '</h3>' +
@@ -87,6 +97,7 @@ function yHandler() {
                                     '</button>' +
                                     '</div>' +
                                     '</div>';
+                                // Vérifie si la recherche a été réinitialiser pour savoir si on doit ajouter un produit à l'affichage ou réinitialiser l'affichage 
                                 if ($init == true) {
                                     $products.html(HTMLproduct);
                                 } else {
@@ -108,11 +119,13 @@ function yHandler() {
     }
 }
 
+// Récupère l'id de l'utilisateur connectée
 function getId_user(){
     var id_user = document.getElementById('session_user').value;
     return id_user;
 }
 
+// Récupère l'id de la commande de l'utilisateur
 function getId_order(id_user){
     $.ajax({
         type: 'GET',
@@ -141,6 +154,7 @@ function getId_order(id_user){
     return $id_order;
 }
 
+// Récupère la quantité de produit selectionné
 function getQuantity(){
     var quantity = document.getElementById('quantity').value;
     return quantity;
@@ -148,9 +162,11 @@ function getQuantity(){
 
 function Panier(id_product) {
     var id_user = getId_user();
+    // Vérifie que l'utilisateur est connecté
     if(id_user){
         $id_order = getId_order(id_user);
 
+        // Vérifie si l'utilisateur a deja une commande en cours
         if ($id_order == null) {
             //Ajax post order
             var data = {};
@@ -167,6 +183,8 @@ function Panier(id_product) {
         var quantity = getQuantity();
 
         var data = {};
+
+        // Récupère les produits de la commande et modifie ou ajoute des produits en fonction
         $.ajax({
             type: 'GET',
             url: 'http://localhost:3000/api/select/' + $id_order,
@@ -199,52 +217,55 @@ function Panier(id_product) {
             }
         });
     }
-
-    function postData(datajson, table, id_user) {
-        $.ajax({
-            type: "POST",
-            url: "http://localhost:3000/api/" + table + "/",
-            data: JSON.stringify(datajson),
-            contentType: "application/json; charset=utf-8",
-            crossDomain: true,
-            dataType: "json",
-            async: false,
-            success: function (data) {
-                console.log(data);
-                if(table == "order"){
-                    $id_order = getId_order(id_user);
-                    console.log($id_order);
-                    return $id_order;
-                }
-            },
-            error: function (jqXHR, status) {
-                // error handler
-                console.log(jqXHR);
-                alert('fail' + status.code);
-            }
-        });
-        return $id_order;
-    }
-
-    function putData(datajson, id_product, $id_order) {
-        $.ajax({
-            type: "PUT",
-            url: "http://localhost:3000/api/select/" + id_product + "/" + $id_order,
-            data: JSON.stringify(datajson),
-            contentType: "application/json; charset=utf-8",
-            crossDomain: true,
-            dataType: "json",
-            success: function (data) {
-                console.log(data);
-            },
-            error: function (jqXHR, status) {
-                // error handler
-                console.log(jqXHR);
-                alert('fail' + status.code);
-            }
-        });
-    }
 }
+
+// Insert dans la BDD des données
+function postData(datajson, table, id_user) {
+    $.ajax({
+        type: "POST",
+        url: "http://localhost:3000/api/" + table + "/",
+        data: JSON.stringify(datajson),
+        contentType: "application/json; charset=utf-8",
+        crossDomain: true,
+        dataType: "json",
+        async: false,
+        success: function (data) {
+            console.log(data);
+            if(table == "order"){
+                $id_order = getId_order(id_user);
+                console.log($id_order);
+                return $id_order;
+            }
+        },
+        error: function (jqXHR, status) {
+            // error handler
+            console.log(jqXHR);
+            alert('fail' + status.code);
+        }
+    });
+    return $id_order;
+}
+
+// Modifie la table select dans la bdd 
+function putData(datajson, id_product, $id_order) {
+    $.ajax({
+        type: "PUT",
+        url: "http://localhost:3000/api/select/" + id_product + "/" + $id_order,
+        data: JSON.stringify(datajson),
+        contentType: "application/json; charset=utf-8",
+        crossDomain: true,
+        dataType: "json",
+        success: function (data) {
+            console.log(data);
+        },
+        error: function (jqXHR, status) {
+            // error handler
+            console.log(jqXHR);
+            alert('fail' + status.code);
+        }
+    });
+}
+
 
 window.onload = getCategorie();
 window.onload = getSearch();

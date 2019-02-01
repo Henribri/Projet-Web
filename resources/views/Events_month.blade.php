@@ -41,7 +41,7 @@
 
                     <div class="informations"><!--container of informations -->
                     
-                    <div class ="price"><p>{{$Event->Cost_event}}</p></div>
+                    <div class ="price"><p>{{$Event->Cost_event}} €</p></div>
                     <div class="date"><p>{{$Event->Date_event}}</p></div>
                     <div class="recurent">
                     @if($Event->Recurent_event==1)
