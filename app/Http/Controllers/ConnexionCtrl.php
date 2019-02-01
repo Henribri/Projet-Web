@@ -122,7 +122,7 @@ class ConnexionCtrl extends Controller
 
                 
             return back()->withErrors([
-                'email_user' => 'Status bien changé'
+                'email_user' => 'Statut bien changé'
                 ]);
 
             }

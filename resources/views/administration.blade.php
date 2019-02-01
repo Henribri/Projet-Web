@@ -25,7 +25,7 @@
                 <option value="Tuteur">Tuteur</option>
                 <option value="Etudiant">Etudiant</option>
         </select>
-        <input class="field" id ="blocked" type="submit" value="S'inscrire"required/> 
+        <input class="field" id ="blocked" type="submit" value="Administrer"required/> 
     </form>
     
 </div>

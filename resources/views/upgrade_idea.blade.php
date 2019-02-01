@@ -23,9 +23,8 @@
 
 <!--Form for the create event -->
 <div class="form">
-@if($Idea)
 <div class="input">
-    <form action='/upgrade_event' method='post' enctype="multipart/form-data">
+    <form action='/upgrade_idea' method='post' enctype="multipart/form-data">
     {{ csrf_field() }}
       <input class="field" type="text" name="name_event" placeholder="{{$Idea->Name_event}}" value="{{$Idea->Name_event}}">
             @if($errors->has('name_event'))
@@ -72,63 +71,7 @@
     </form>
 
     </div>
-  @else
-  <div class="input">
-  <form action='/create_events' method='post'  enctype="multipart/form-data">
-    {{ csrf_field() }}
-      <input class="field" type="text" name="name_event" placeholder="Nom de lévènement">
-      @if($errors->has('name_event'))
-              {{$errors->first('name_event')}}
-            @endif
-
-      <input class="field" type="number" name="cost_event" placeholder="Prix de lévènement">
-      @if($errors->has('cost_event'))
-              {{$errors->first('cost_event')}}
-            @endif
-
-      <input class="field" type="date" name="date_event" placeholder="Date de l'évènement">
-      @if($errors->has('date_event'))
-              {{$errors->first('date_event')}}
-            @endif
-
-      <textarea class="field" name="description_event" id="description" cols="30" rows="10"placeholder="Description de l'évènements"></textarea>
-      @if($errors->has('description_event'))
-              {{$errors->first('description_event')}}
-            @endif
-
-      
-      <select class="field" id="state" name="recurent_event">
-        <option value="1">Récurent</option>
-        <option value="0">Ponctuel</option>
-      </select>
-      @if($errors->has('recurent_event'))
-              {{$errors->first('recurent_event')}}
-            @endif
-
-
-      <select class="field" id="state" name="public_event">
-        <option value="1">Publique</option>
-        <option value="0">Privée</option>
-      </select>
-      @if($errors->has('public_event'))
-              {{$errors->first('public_event')}}
-            @endif
-
-      <label for="file" class="label-file">Choisir une image</label>
-      <input id="file" class="input-file" type="file" name="image_event">
-      @if($errors->has('image_event'))
-              {{$errors->first('image_event')}}
-            @endif
-
-
-
-      <input class="field" type="submit" value="Envoyer"/> 
-    </form>
-  </div>
-
-  @endif
-
-
+  
 
 
 </div>

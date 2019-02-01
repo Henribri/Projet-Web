@@ -56,6 +56,9 @@ Route::get('/create_events', 'Create_eventCtrl@View_create_event');
 
 Route::post('/create_events', 'Create_eventCtrl@Create_event');
 
+//we have a get ccreate upgrade for the error of t
+Route::get('/create_upgrade_event', 'Create_eventCtrl@View_create_event');
+
 Route::post('/create_upgrade_event', 'Create_eventCtrl@View_create_event');
 
 Route::post('/upgrade_event', 'Create_eventCtrl@Upgrade');

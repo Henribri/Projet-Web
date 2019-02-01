@@ -6,12 +6,14 @@ use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
 
 use App\Image;
+use App\Sign_in;
 use App\Events;
 use App\State;
 use App\Status;
 use App\Comments;
 use App\Photos;
 use App\Likes;
+use App\Vote;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Notification;
 use App\Mail\IdeeRetenue;
@@ -36,6 +38,9 @@ class Create_eventCtrl extends Controller
 
     }
 
+
+
+    
     //--VIEW TO CREATE EVENT
     public function View_create_event(){
         
@@ -93,7 +98,9 @@ class Create_eventCtrl extends Controller
                 //CHECK EXTENSION
         if($extension!='png'&&$extension!='jpg'&&$extension!='jpeg'){
 
-            return "mauvais format d'image";
+            return back()->withErrors([
+                'image_event' => 'Mauvais format'
+                ]);;
         }
 
         $imagetraitement=$request->file('image_event');
@@ -188,8 +195,10 @@ class Create_eventCtrl extends Controller
             'description_event'=>['required'],
             'date_event'=>['required'],
             'recurent_event'=>['required'], 
+            'public_event'=>['required'], 
             'cost_event'=>['required'],
-            'image_event'=>['required'], 
+            'image_event'=>['required'],
+            
             ]);
 
 
@@ -199,7 +208,9 @@ class Create_eventCtrl extends Controller
 
         if($extension!='png'&&$extension!='jpg'&&$extension!='jpeg'){
 
-            return "mauvais format d'image";
+            return back()->withErrors([
+                'image_event' => 'Mauvais format'
+                ]);;
         }
 
         $imagetraitement=$request->file('image_event');
@@ -346,7 +357,7 @@ class Create_eventCtrl extends Controller
     }
 
     return redirect('/connexion')->withErrors([
-        'email_user' => 'Vous devez être tuteur pour faire cette action'
+        'email_user' => 'Vous devez être membre du BDE pour faire cette action'
         ]);
 }
 
@@ -377,6 +388,19 @@ public function Delete_past(){
                 ->delete('_like.*');
                 });
 
+        DB::transaction(function ()  {
+            Sign_in::
+                join('_event', '_sign_in.Id_event', '=', '_event.Id_event')
+                ->where('_event.Id_event', request('id_event'))
+                ->delete('_sign_in.*');
+                });
+
+        DB::transaction(function ()  {
+            Vote::
+                join('_event', '_vote.Id_event', '=', '_event.Id_event')
+                ->where('_event.Id_event', request('id_event'))
+                ->delete('_vote.*');
+                });
 
         //--THEN DELETE PHOTOS
         DB::transaction(function () {

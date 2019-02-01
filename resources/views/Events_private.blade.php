@@ -30,8 +30,9 @@
             <img class= "events" src="{{$Event->Image}}" alt="Photo Cesi"/></a>
                      <p>{{$Event->Description_event}}</p>
 
+                     </div>
 @endforeach
-</div>
+
 @endsection
 
 

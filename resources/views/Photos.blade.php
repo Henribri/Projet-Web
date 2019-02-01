@@ -17,7 +17,7 @@
             @if(session()->get('Status_user')=='BDE')
             <li ><a href= "create_events">Créer un évènement</a></li>
             @endif
-            <li ><a href= "create_idea">Créer une idée</a></li>
+            <li ><a href= "create_events_idea">Créer une idée</a></li>
             @if(session()->get('Status_user')=='BDE')
             <li ><a href= "events_private">Evènements cachés</a></li>
             @endif

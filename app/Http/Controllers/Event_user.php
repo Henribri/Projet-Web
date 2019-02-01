@@ -215,6 +215,7 @@ class Event_user extends Controller
 
 
 
+                if($photos==null){
                     $imgs_path = array();
 
 
@@ -245,8 +246,9 @@ class Event_user extends Controller
 
                     return \Response::download('images_event.zip',
                     'filename.zip', $headers)->deleteFileAfterSend(true);
-
-
+                }
+                
+                return back();
 
                         }
 

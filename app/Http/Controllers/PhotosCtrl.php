@@ -59,7 +59,9 @@ class PhotosCtrl extends Controller
 
         return back();
         }
-
+        return redirect('/connexion')->withErrors([
+            'email_user' => 'Veuillez vous authentifier'
+            ]);
     }
 
 
