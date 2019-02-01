@@ -44,11 +44,13 @@
                                 <li class="hb_part"><a href="/connexion">Connexion</a></li>
                                 <li class="hb_part"><a href="/deconnexion">Déconnexion</a></li>
                                 <li class="hb_part"><a href="/events_month">Evènements</a></li>
-                                <li class="hb_part"><a href="/maj_events">Mettre à jour évènements</a></li>
                                 <li class="hb_part"><a href="/events_idea">Boîte à idées</a></li>
                                 <li class="hb_part"><a href="shop">Boutique</a></li>
                                 <li class="hb_part"><a href="/legal_notice">Mentions légales</a></li>
+                                @if(session()->get('Status_user')=='BDE')
                                 <li class="hb_part"><a href="/change_status">Administration</a></li>
+                                <li class="hb_part"><a href="/maj_events">Mettre à jour évènements</a></li>
+                                @endif
                             </ul>
                         </div>
                     </nav> 

@@ -24,7 +24,7 @@
         </ul>
 </div>
 
-
+@if(session()->get('Status_user'))
 <div class="import">
 <label for="file" class="label-file">Choisir une image</label>
             <form action="/post_photo" method='post' enctype="multipart/form-data">
@@ -33,6 +33,7 @@
                 <button id="file2"type="submit" name="id_event" value="{{$Id_event}}">Poster</button>
             </form>
 </div>
+@endif
 @if($errors->has('info'))
                     <div class="information" name="info">
                         <p>{{$errors->first('info')}}</p>

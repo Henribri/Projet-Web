@@ -45,7 +45,7 @@
               {{$errors->first('description_event')}}
             @endif
 
-      <select class="field" id="state" name="recurent_event">
+      <select class="field" class="state" name="recurent_event">
         <option value="1">Récurent</option>
         <option value="0">Ponctuel</option>
       </select>
@@ -53,7 +53,7 @@
               {{$errors->first('recurent_event')}}
             @endif
 
-      <select class="field" id="state" name="public_event">
+      <select class="field" class="state" name="public_event">
         <option value="1">Publique</option>
         <option value="0">Privée</option>
       </select>
@@ -97,7 +97,7 @@
             @endif
 
       
-      <select class="field" id="state" name="recurent_event">
+      <select class="field" class="state" name="recurent_event">
         <option value="1">Récurent</option>
         <option value="0">Ponctuel</option>
       </select>
@@ -106,7 +106,7 @@
             @endif
 
 
-      <select class="field" id="state" name="public_event">
+      <select class="field" class="state" name="public_event">
         <option value="1">Publique</option>
         <option value="0">Privée</option>
       </select>

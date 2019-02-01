@@ -37,7 +37,7 @@
 <div class="container"> <!--container allow to put informations of event -->
                     <h2>{{$Event->Name_event}}</h2>
 
-                    <img class= "events" src="{{$Event->Image}}" alt="Photo Cesi"/></a>
+                    <img class= "events" src="{{$Event->Image}}" alt="Photo Cesi"/>
 
                     <div class="informations"><!--container of informations -->
                     

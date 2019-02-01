@@ -30,7 +30,7 @@
             <div class="category_bar">
                     <label for="category">Catégorie</label>
                     <select id="category" name="category">
-                        <option value="0"></option>
+                        <option value="0">Choose</option>
                         @foreach($categories as $category)
                         <option value="{{$category->Id_category}}">{{$category->Category}}</option>
                         @endforeach

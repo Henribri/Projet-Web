@@ -93,7 +93,6 @@ button{
     font-family: 'Cantarell';
     cursor: pointer;
     margin: 3px;
-    padding: 5px;
     }
 
 /*Notification button image size*/
@@ -222,13 +221,6 @@ p{
     height:100%;
     text-align: center;
 }
-/*///////////////////////////////////*/
-/*									 */
-/*		        POP-UP		         */
-/*			    			         */
-/*///////////////////////////////////*/
-
-
 
 /*///////////////////////////////////*/
 /*									 */

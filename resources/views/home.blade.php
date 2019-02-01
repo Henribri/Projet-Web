@@ -17,30 +17,24 @@
       
       <div class="container"><!--Contain each button menu -->
       <div class="image">
-            <a href="cesi"><img src="/pictures/cesi.jpg"alt="Cesi"/></a>
+            <a href="/connexion"><img src="/pictures/bde.jpg"alt="BDE"/></a>
       </div>
+     
       <div class="image">
-            <a href="bde"><img src="/pictures/bde.jpg"alt="BDE"/></a>
+            <a href="/events_month"><img src="/pictures\Events-Whats-on-in-Farnham-Surrey.jpg"alt="Cesi"/></a>
       </div>
+
 </div>
 
 <div class="container"><!--Contain each button menu -->
       <div class="image">
-            <a href="associations"><img src="/pictures/associations.jpg"alt="Associations"/></a>
+            <a href="/shop"><img src="\pictures\12-512.png"alt="Associations"/></a>
       </div>       
       <div class="image">
-            <a href="month_events"><img src="/pictures/evenements.jpg"alt="Evènements"/></a>
+            <a href="/events_idea"><img src="/pictures/boite_a_idees.jpg"alt="Boîte à idées"/></a>
       </div>
 </div>
                   
-<div class="container"><!--Contain each button menu -->
-      <div class="image">
-            <a href="suggestion_box"><img src="/pictures/boite_a_idees.jpg"alt="Boîte à idées"/></a>
-      </div>
-      <div class="image">
-            <a href="shop"><img src="/pictures/shop.png"alt="Boutique"/></a>
-      </div>
-</div>
 
 @endsection
 
